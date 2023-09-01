@@ -1,6 +1,7 @@
 import React from "react";
-import Intersect from "../../../libs/svg/intersect";
 import { motion } from "framer-motion";
+import IntersectSVG from "../../../libs/svg/IntersectSVG";
+
 const Cases = () => {
   const cases = [
     {
@@ -40,7 +41,7 @@ const Cases = () => {
             key={index}
             className="w-full md:w-1/2   flex lg:flex-row flex-col items-center justify-around "
           >
-            <Intersect />
+            <IntersectSVG />
             <p className="lg:text-[50px] text-xl font-medium font-Manrope capitalize">
               {item.title}
             </p>

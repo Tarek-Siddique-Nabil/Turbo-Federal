@@ -1,6 +1,6 @@
 import React from "react";
 
-const Intersect = () => {
+const IntersectSVG = () => {
   return (
     <>
       <div style={{ width: "45px", height: "55px" }}>
@@ -19,4 +19,4 @@ const Intersect = () => {
   );
 };
 
-export default Intersect;
+export default IntersectSVG;
