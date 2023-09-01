@@ -1,16 +1,27 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
-    <footer className="lg:px-16 md:px-10 px-5 md:py-10 py-4">
+    <footer className="lg:px-40 md:px-10 px-5 md:py-10 py-4">
       <hr className="border border-violet-500 my-5" />
       <section className="flex flex-col gap-10">
-        <div>
+        <motion.div
+          initial={{ opacity: 0.5, y: "50vh" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "linear" }}
+        >
           <p className="text-3xl font-Manrope">Stay in the loop</p>
           <p className="text-3xl font-Manrope">Sign up for the updates</p>
-        </div>
+        </motion.div>
 
-        <div className="flex gap-3">
+        <motion.div
+          initial={{ opacity: 0.5, y: "50vh" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "linear" }}
+          className="flex gap-3"
+        >
           <input
             placeholder="email@framer.com"
             className="px-6 py-3 bg-slate-200 rounded-2xl"
@@ -18,7 +29,7 @@ const Footer = () => {
           <button className="px-3 py-3 bg-violet-700 text-white font-Manrope rounded-lg">
             Sign Up
           </button>
-        </div>
+        </motion.div>
         <section>
           <container className="flex justify-between md:text-xl font-light font-Manrope capitalize">
             <div className="flex flex-col gap-1">

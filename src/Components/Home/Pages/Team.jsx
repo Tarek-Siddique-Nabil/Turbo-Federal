@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Team = () => {
   const person = [
     {
@@ -34,11 +34,17 @@ const Team = () => {
     },
   ];
   return (
-    <div className="lg:px-16 md:px-10 px-5 md:py-10 py-4">
-      <p className="text-4xl">
+    <motion.div
+      initial={{ opacity: 0.75, y: "50vh" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3, ease: "linear", delay: 0.2 }}
+      className="lg:px-40 md:px-10 px-5 md:py-10 py-4"
+    >
+      <p className="text-4xl lg:text-6xl ">
         Our Team<span className="text-blue-700">✸</span>
       </p>
-      <section className="flex flex-wrap md:justify-start justify-center gap-10 py-10">
+      <section className="flex flex-wrap md:justify-start justify-center lg:justify-between gap-10 py-10">
         {person.map((i, index) => (
           <div key={index} className="flex flex-col items-start gap-3">
             <img
@@ -52,7 +58,7 @@ const Team = () => {
           </div>
         ))}
       </section>
-    </div>
+    </motion.div>
   );
 };
 

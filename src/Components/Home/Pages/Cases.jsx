@@ -1,6 +1,6 @@
 import React from "react";
 import Intersect from "../../../libs/svg/intersect";
-
+import { motion } from "framer-motion";
 const Cases = () => {
   const cases = [
     {
@@ -21,10 +21,16 @@ const Cases = () => {
     },
   ];
   return (
-    <section className="lg:px-16 md:px-10 px-5 md:py-10 py-4 flex flex-col gap-14">
-      <div>
-        <p className="text-blue-800">2021-2021</p>
-        <p className="text-4xl font-Manrope">
+    <motion.section
+      initial={{ opacity: 0.75, y: "50vh" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3, ease: "linear" }}
+      className="h-full lg:px-40 md:px-10 px-5 md:py-32  py-4 flex flex-col justify-center gap-40"
+    >
+      <div className="flex flex-col justify-start gap-5">
+        <p className="text-blue-800 text-xl">2021-2021</p>
+        <p className="text-4xl lg:text-6xl font-Manrope">
           Use cases <span className="text-blue-800">●</span>
         </p>
       </div>
@@ -35,7 +41,7 @@ const Cases = () => {
             className="w-full md:w-1/2   flex lg:flex-row flex-col items-center justify-around "
           >
             <Intersect />
-            <p className="text-xl font-medium font-Manrope capitalize">
+            <p className="lg:text-[50px] text-xl font-medium font-Manrope capitalize">
               {item.title}
             </p>
             <p className="text-center text-base font-normal font-Manrope capitalize">
@@ -44,7 +50,7 @@ const Cases = () => {
           </div>
         ))}
       </section>
-    </section>
+    </motion.section>
   );
 };
 
