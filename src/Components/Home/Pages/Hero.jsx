@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <>
-      <main className="grid md:grid-cols-2 grid-cols-1  justify-center md:justify-between gap-5 lg:px-40 md:px-10 px-5 md:py-10 py-4">
+      <main className="grid -z-50 md:grid-cols-2 grid-cols-1  justify-center md:justify-between gap-5 lg:px-40 md:px-10 px-5 md:py-10 py-4">
         <motion.div
           initial={{ x: "-100vh", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -13,12 +13,12 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="text-3xl md:text-5xl lg:text-6xl font-semibold"
+          className=" text-3xl md:text-5xl lg:text-6xl font-semibold -z-50"
         >
           <p>
             Accelerating <span className="text-blue-700">✸</span>{" "}
           </p>
-          <p className="flex items-center gap-1">
+          <p className="flex flex-wrap items-center gap-1">
             <span>mission</span>
             <span>
               <svg
@@ -47,7 +47,7 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="order-last md:order-none flex justify-center md:justify-end"
+          className=" order-last md:order-none flex justify-center md:justify-end -z-50"
         >
           <img className="base-image object-cover" src={aiImage} alt="" />
         </motion.figure>
@@ -60,8 +60,9 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
+          className="-z-50"
         >
-          <p className="text-lg">
+          <p className="text-lg ">
             Turbo Federal is a Top-Secret cleared trusted provider of digital
             transformation, application modernization, cybersecurity, training,
             and program management/PMO services to federal government customers.
@@ -82,15 +83,15 @@ const Hero = () => {
           className="hidden md:flex flex-col items-end gap-1"
         >
           <motion.button
-            whileHover={{ width: "300px" }}
+            whileHover={{ width: "350px" }}
             style={{ boxShadow: "10px 10px  black  " }}
-            className="year-box -translate-x-3 bg-[#050757]"
+            className="year-box -translate-x-5 bg-[#050757]"
           >
             2020
           </motion.button>
 
           <motion.button
-            whileHover={{ width: "300px" }}
+            whileHover={{ width: "350px" }}
             style={{ boxShadow: "7px 7px 1px 1px black " }}
             className="year-box transform-gpu z-50  shadow-gray-800 bg-[#BF3B41]"
           >
@@ -104,7 +105,7 @@ const Hero = () => {
             <button className="hero-btn">Contact Us</button>
             <button className="hero-btn">News letter</button>
             <button className="hero-btn">Twitter</button>
-            <motion.button className="lg:ml-12 group relative w-[150px] h-10 bg-violet-600 text-white rounded-3xl ">
+            <motion.button className="-z-50 lg:ml-12 group relative w-[150px] h-10 bg-violet-600 text-white rounded-3xl ">
               <span className="w-7 h-7 top-1/2 right-2 group-focus:w-8/12 -translate-y-1/2 absolute rounded-full transition-all duration-150 ease-in-out bg-gray-200">
                 <span className="group-focus:flex items-center justify-center hidden text-black text-xs transition-all duration-150 delay-100 ease-in-out w-full h-full">
                   WE ARE HIRING!

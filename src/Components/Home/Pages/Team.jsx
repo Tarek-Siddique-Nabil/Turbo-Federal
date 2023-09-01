@@ -35,7 +35,7 @@ const Team = () => {
   ];
   return (
     <motion.div
-      initial={{ opacity: 0.75, y: "50vh" }}
+      initial={{ opacity: 0.75, y: "30vh" }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, ease: "linear", delay: 0.2 }}

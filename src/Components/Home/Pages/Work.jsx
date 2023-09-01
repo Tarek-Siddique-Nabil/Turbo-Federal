@@ -12,7 +12,7 @@ const Work = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: "linear" }}
-          className="flex flex-col items-center md:gap-10 gap-7 px-48"
+          className="flex flex-col items-center md:gap-10 gap-7 lg:px-48 md:px-20 px-5"
         >
           <p className="text-4xl lg:text-6xl text-[#373ae4] capitalize">
             Our Work

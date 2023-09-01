@@ -25,7 +25,7 @@ const Navbar = () => {
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
-        className="flex  justify-between items-center lg:px-16 md:px-10 px-5 md:py-10 py-4"
+        className="  flex  justify-between items-center lg:px-40 md:px-10  px-5 md:py- py-4"
       >
         <div>
           <img className="w-64 h-12" src={logo} alt="" />
@@ -73,7 +73,7 @@ const Navbar = () => {
             initial={{ x: "-100%" }}
             animate={{ x: isSidebarOpen ? "0" : "-100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 h-screen w-56 bg-white shadow-md p-4"
+            className="fixed z-50 top-0 left-0 h-screen w-1/2  bg-white shadow-md p-4"
           >
             <motion.ul
               transition={{

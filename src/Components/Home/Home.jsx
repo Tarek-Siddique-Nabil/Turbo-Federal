@@ -8,14 +8,14 @@ import Footer from "./Pages/Footer";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Hero />
       <Carousel />
       <Cases />
       <Work />
       <Team />
       <Footer />
-    </>
+    </div>
   );
 };
 

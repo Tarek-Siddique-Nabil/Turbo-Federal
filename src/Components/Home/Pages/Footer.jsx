@@ -6,7 +6,7 @@ const Footer = () => {
       <hr className="border border-violet-500 my-5" />
       <section className="flex flex-col gap-10">
         <motion.div
-          initial={{ opacity: 0.5, y: "50vh" }}
+          initial={{ opacity: 0.5, y: "10vh" }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: "linear" }}
@@ -16,7 +16,7 @@ const Footer = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0.5, y: "50vh" }}
+          initial={{ opacity: 0.5, y: "10vh" }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: "linear" }}

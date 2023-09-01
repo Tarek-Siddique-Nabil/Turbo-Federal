@@ -8,7 +8,7 @@
   @apply w-[310px] md:w-[272px] lg:w-[398px] h-[141px] lg:h-[170px] md:h-[116px] shadow-lg rounded-tl-[50px] rounded-br-[50px];
 }
 .year-box {
-  @apply h-[65px] w-[100px] rounded-lg text-4xl font-semibold text-center text-white    p-2   shadow-gray-800;
+  @apply h-[95px] w-[155px] rounded-lg text-4xl font-semibold text-center text-white  shadow-gray-800;
 }
 .hero-btn {
   @apply border-black bg-black text-white rounded-3xl px-7 py-2 hover:bg-violet-700 transition-colors duration-150 ease-in-out;
