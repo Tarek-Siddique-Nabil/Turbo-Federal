@@ -1,10 +1,16 @@
 import React from "react";
 import aiImage from "../../../assets/ai.webp";
 import { motion } from "framer-motion";
+import { useSidebar } from "../../Header/zustand";
 const Hero = () => {
+  const { isSidebarOpen } = useSidebar();
   return (
     <>
-      <main className="grid -z-50 md:grid-cols-2 grid-cols-1  justify-center md:justify-between gap-5 lg:px-40 md:px-10 px-5 md:py-10 py-4">
+      <main
+        className={`${
+          isSidebarOpen && " -z-50"
+        } grid -z-50 md:grid-cols-2 grid-cols-1   justify-center md:justify-between gap-5 lg:px-40 md:px-10 px-5 md:py-10 py-4`}
+      >
         <motion.div
           initial={{ x: "-100vh", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -99,13 +105,17 @@ const Hero = () => {
           </motion.button>
         </motion.div>
       </main>
-      <section className=" lg:px-16 md:px-10 px-5 md:py-10 py-4">
+      <section className=" lg:px-40 md:px-10 px-5 md:py-10 py-4">
         <div className="w-full flex flex-wrap justify-center items-center gap-10 md:gap-0 lg:gap-0 md:justify-between">
           <div className="md:w-1/2 flex flex-wrap  gap-4 justify-center md:justify-start">
             <button className="hero-btn">Contact Us</button>
             <button className="hero-btn">News letter</button>
             <button className="hero-btn">Twitter</button>
-            <motion.button className="-z-50 lg:ml-12 group relative w-[150px] h-10 bg-violet-600 text-white rounded-3xl ">
+            <motion.button
+              className={`${
+                isSidebarOpen && "-z-50"
+              } relative lg:ml-12 group  w-[150px] h-10 bg-violet-600 text-white rounded-3xl `}
+            >
               <span className="w-7 h-7 top-1/2 right-2 group-focus:w-8/12 -translate-y-1/2 absolute rounded-full transition-all duration-150 ease-in-out bg-gray-200">
                 <span className="group-focus:flex items-center justify-center hidden text-black text-xs transition-all duration-150 delay-100 ease-in-out w-full h-full">
                   WE ARE HIRING!

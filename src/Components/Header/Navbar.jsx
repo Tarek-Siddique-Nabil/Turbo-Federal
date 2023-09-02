@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import logo from "../../../src/assets/logo.jpg";
 import { motion } from "framer-motion";
 import navItem from ".";
+import { useSidebar } from "./zustand";
 
 const Navbar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const handleSidebarToggle = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const { isSidebarOpen, toggleSidebar } = useSidebar();
+
   const Path = (props) => (
     <motion.path
       fill="transparent"
@@ -38,7 +37,7 @@ const Navbar = () => {
         <div className="lg:hidden">
           <button
             className="flex items-center px-4 py-2 text-gray-500"
-            onClick={handleSidebarToggle}
+            onClick={() => toggleSidebar()}
           >
             <svg width="23" height="23" viewBox="0 0 23 23">
               <Path
@@ -73,7 +72,7 @@ const Navbar = () => {
             initial={{ x: "-100%" }}
             animate={{ x: isSidebarOpen ? "0" : "-100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed z-50 top-0 left-0 h-screen w-1/2  bg-white shadow-md p-4"
+            className="fixed  top-0 left-0 h-screen w-1/2  bg-white shadow-md p-4"
           >
             <motion.ul
               transition={{
@@ -85,7 +84,7 @@ const Navbar = () => {
             >
               {navItem?.map((i, index) => (
                 <motion.li
-                  className="text-lg font-semibold"
+                  className="text-4xl font-semibold"
                   animate={{
                     x: isSidebarOpen ? 0 : -50,
                     opacity: isSidebarOpen ? 1 : 0,
@@ -94,7 +93,7 @@ const Navbar = () => {
                     stiffness: 1000,
                     velocity: -1000,
                     duration: 0.5,
-                    delay: 0.2 * index, // Adjust the delay based on the index
+                    delay: 0.2 * index,
                     ease: "linear",
                   }}
                   whileHover={{ scale: 1.1 }}
@@ -114,7 +113,7 @@ const Navbar = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="fixed top-0 left-0 z-50  h-screen w-screen "
-              onClick={handleSidebarToggle}
+              onClick={() => toggleSidebar()}
             ></motion.div>
           )}
         </div>

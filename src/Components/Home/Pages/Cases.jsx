@@ -26,7 +26,7 @@ const Cases = () => {
       initial={{ opacity: 0.5, y: "50vh" }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "linear", delay: 0.5 }}
+      transition={{ duration: 0.5, ease: "linear", delay: 0.2 }}
       className="h-full lg:px-40 md:px-10 px-5 md:py-32  py-4 flex flex-col justify-center gap-40"
     >
       <div className="flex flex-col justify-start gap-5">
