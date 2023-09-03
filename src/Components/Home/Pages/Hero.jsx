@@ -19,10 +19,10 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className=" text-3xl md:text-5xl lg:text-6xl font-semibold -z-50"
+          className="font-Manrope text-3xl md:text-5xl lg:text-6xl font-medium -z-50"
         >
           <p>
-            Accelerating <span className="text-blue-700">✸</span>{" "}
+            Accelerating <span className="text-[#050757]">✸</span>{" "}
           </p>
           <p className="flex flex-wrap items-center gap-1">
             <span>mission</span>
@@ -68,7 +68,7 @@ const Hero = () => {
           }}
           className="-z-50"
         >
-          <p className="text-lg ">
+          <p className="text-[20px] font-Manrope">
             Turbo Federal is a Top-Secret cleared trusted provider of digital
             transformation, application modernization, cybersecurity, training,
             and program management/PMO services to federal government customers.
@@ -91,17 +91,17 @@ const Hero = () => {
           <motion.button
             whileHover={{ width: "350px" }}
             style={{ boxShadow: "10px 10px  black  " }}
-            className="year-box -translate-x-5 bg-[#050757]"
+            className="year-box font-Manrope  bg-[#050757]"
           >
-            2020
+            AI
           </motion.button>
 
           <motion.button
             whileHover={{ width: "350px" }}
             style={{ boxShadow: "7px 7px 1px 1px black " }}
-            className="year-box transform-gpu z-50  shadow-gray-800 bg-[#BF3B41]"
+            className="year-box   transform-gpu z-50  shadow-gray-800 bg-[#BF3B41]"
           >
-            2021
+            IT
           </motion.button>
         </motion.div>
       </main>
@@ -114,11 +114,11 @@ const Hero = () => {
             <motion.button
               className={`${
                 isSidebarOpen && "-z-50"
-              } relative lg:ml-12 group  w-[150px] h-10 bg-violet-600 text-white rounded-3xl `}
+              } relative lg:ml-12 group  w-[150px] h-10 bg-[#050757] text-white rounded-3xl `}
             >
               <span className="w-7 h-7 top-1/2 right-2 group-focus:w-8/12 -translate-y-1/2 absolute rounded-full transition-all duration-150 ease-in-out bg-gray-200">
-                <span className="group-focus:flex items-center justify-center hidden text-black text-xs transition-all duration-150 delay-100 ease-in-out w-full h-full">
-                  WE ARE HIRING!
+                <span className="capitalize group-focus:flex items-center justify-center hidden text-black text-xs transition-all duration-150 delay-100 ease-in-out w-full h-full">
+                  We are Hiring
                 </span>
               </span>
             </motion.button>
@@ -126,7 +126,7 @@ const Hero = () => {
 
           <div className="md:w-1/2 ">
             <p className="flex justify-start md:justify-end text-3xl">
-              Next-Gen AI <span className="text-blue-800">✸</span> services
+              Next-Gen AI <span className="text-[#050757]">✸</span> services
             </p>
           </div>
         </div>
