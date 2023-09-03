@@ -13,53 +13,93 @@
 .hero-btn {
   @apply border-black bg-black text-white rounded-3xl px-7 py-2 hover:bg-violet-700 transition-colors duration-150 ease-in-out;
 }
-@keyframes slide {
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 100%;
+  animation: scroll 200s linear infinite reverse;
+}
+
+.marquee__group2 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 100%;
+  animation: scroll2 200s linear infinite;
+}
+
+@keyframes scroll {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 2rem));
   }
 }
 
-.logos {
-  overflow: hidden;
-  padding: 60px 0;
-  background: white;
-  white-space: nowrap;
-  position: relative;
+@keyframes scroll2 {
+  from {
+    transform: translateX(calc(-50%));
+  }
+  to {
+    transform: translateX(calc(-150% - 2rem));
+  }
 }
 
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
+/* Mobile Devices (up to 767px) */
+@media screen and (max-width: 767px) {
+  .marquee1 {
+    display: flex;
+    height: 10vh;
+    user-select: none;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+/* Tablets (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .marquee1 {
+    display: flex;
+    height: 10vh;
+    user-select: none;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transform: rotate(-7deg) translateY(-10%) translateX(50%);
+  }
 }
 
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
+/* Desktops and Laptops (1024px and above) */
+@media screen and (min-width: 1024px) {
+  .marquee1 {
+    display: flex;
+    height: 10vh;
+    user-select: none;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transform: rotate(-7deg) translateY(-100%) translateX(60px);
+  }
+  .marquee2 {
+    display: flex;
+    height: 10vh;
+    user-select: none;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-.logos:hover .logos-slide {
-  animation-play-state: paused;
-}
-
-.logos-slide {
-  display: inline-block;
-  animation: 35s slide infinite linear;
-}
-
-.logos-slide img {
-  height: 50px;
-  margin: 0 40px;
+    transform: rotate(-7deg) translateY(-50%) translateX(60px);
+  }
 }
