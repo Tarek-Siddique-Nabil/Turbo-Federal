@@ -1,5 +1,6 @@
 import React from "react";
-import ChatSvg from "../../../libs/svg/ChatSvg";
+import Table_Image1 from "../../../assets/table1.jpg";
+import Table_Image2 from "../../../assets/table2.jpg";
 import { delay, motion } from "framer-motion";
 
 const Work = () => {
@@ -18,14 +19,7 @@ const Work = () => {
             Our Work
           </p>
           <p className="lg:text-[45px] text-3xl">interactive experiences</p>
-          <p className="font-Manrope text-xl text-center ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </p>
+          <img className="scale-110" src={Table_Image1} />
         </motion.div>
       </section>
       <motion.div
@@ -33,10 +27,10 @@ const Work = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.3, ease: "linear", delay: 0.2 }}
-        className="flex lg:flex-row flex-col-reverse justify-center gap-10 items-center bg-black px-4 py-5 md:py-0"
+        className="flex lg:flex-row flex-col-reverse justify-center gap-10 items-center bg-black px-4 py-5 "
       >
         <div className="">
-          <ChatSvg />
+          <img className="" src={Table_Image2} />
         </div>
         <div className="w-1/2  lg:text-end md:text-end text-center text-white flex flex-col gap-5">
           <p className="text-4xl lg:text-6xl">Better company</p>

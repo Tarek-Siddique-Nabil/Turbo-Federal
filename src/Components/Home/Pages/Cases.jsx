@@ -5,20 +5,12 @@ import IntersectSVG from "../../../libs/svg/IntersectSVG";
 const Cases = () => {
   const cases = [
     {
-      title: "DATASAN",
-      description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      title: "It Sevrvices",
+      description:
+        "IT Consultancy & Advisory Program & Project Mgmt, PMO & Enablement Change Mgmt & IT Governance Digital Transformation & Operations Low-Code App/SW Dev & MgmtCase Management dev (simple / complex)App Modernization & Portfolio Rationalization Cybersecurity Managed Services & Infrastructure Mgmt.Service Desk Training services Long/short-term staffing Business Process & Workflow Automation",
     },
     {
       title: "Flip.co",
-      description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-    {
-      title: "Mare",
-      description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-    {
-      title: "Fisga",
-      description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
   ];
   return (
@@ -31,21 +23,20 @@ const Cases = () => {
     >
       <div className="flex flex-col justify-start gap-5">
         <p className="text-blue-800 text-xl">2021-2021</p>
-        <p className="text-4xl lg:text-6xl font-Manrope">
-          Use cases <span className="text-blue-800">●</span>
+        <p className="text-4xl lg:text-6xl font-Manrope font-semibold">
+          Turbo Federal Offers
         </p>
       </div>
       <section className="flex flex-wrap justify-center md:justify-between gap-y-40">
         {cases?.map((item, index) => (
           <div
             key={index}
-            className="w-full md:w-1/2   flex lg:flex-row flex-col items-center justify-around "
+            className="w-full md:w-1/2   flex  flex-col gap-5 items-start  "
           >
-            <IntersectSVG />
-            <p className="lg:text-[50px] text-xl font-medium font-Manrope capitalize">
-              {item.title}
+            <p className="lg:text-[50px]   text-xl font-medium font-Manrope capitalize">
+              <span className="text-blue-800">●</span> {item.title}
             </p>
-            <p className="text-center text-base font-normal font-Manrope capitalize">
+            <p className="text-justify text-base font-normal font-Manrope capitalize">
               {item.description}
             </p>
           </div>
