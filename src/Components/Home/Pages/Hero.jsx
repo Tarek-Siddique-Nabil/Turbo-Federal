@@ -125,8 +125,8 @@ const Hero = () => {
           </div>
 
           <div className="md:w-1/2 ">
-            <p className="flex justify-start md:justify-end text-3xl">
-              Next-Gen AI <span className="text-[#050757]">✸</span> services
+            <p className="flex justify-start md:justify-end text-4xl">
+              Next-Gen AI <span className="text-[#050757]">✸ </span> Services
             </p>
           </div>
         </div>

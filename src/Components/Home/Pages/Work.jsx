@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <>
       <section className="lg:px-40 md:px-10 px-5 md:py-32 py-4">
-        <hr className="border border-violet-500 my-5" />
+        <hr className="border rounded-lg border-[#050757] my-5" />
         <motion.div
           initial={{ opacity: 0.75, y: "50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,8 +15,8 @@ const Work = () => {
           transition={{ duration: 0.3, ease: "linear" }}
           className="flex flex-col items-center md:gap-10 gap-7 lg:px-48 md:px-20 px-5"
         >
-          <p className="text-4xl lg:text-6xl text-[#373ae4] capitalize">
-            Our Work
+          <p className="text-4xl lg:text-6xl text-[#050757] font-Manrope  capitalize">
+            Contract Vehicles
           </p>
           <p className="lg:text-[45px] text-3xl">interactive experiences</p>
           <img className="scale-110" src={Table_Image1} />

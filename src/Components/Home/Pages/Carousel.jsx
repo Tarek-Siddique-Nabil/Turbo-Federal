@@ -86,7 +86,7 @@ const Carousel = () => {
   ];
 
   return (
-    <section className="lg:px-40 md:px-10 px-5 md:py-10 py-4">
+    <section className="lg:px-40 md:px-10 px-5 md:py-3 py-4">
       <div className="h-[215px] lg:h-[420px] md:h-[208px] bg-black rounded-xl flex gap-5 items-center relative overflow-hidden">
         {/* marque1 */}
         <div className="marquee1">

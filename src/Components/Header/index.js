@@ -4,16 +4,20 @@ const navItem = [
     href: "/",
   },
   {
-    label: "Solutions",
-    href: "/solutions",
+    label: "Mission Statement",
+    href: "/mission-statement",
   },
   {
-    label: "Contact",
-    href: "/contact",
+    label: "Services",
+    href: "/services",
   },
   {
-    label: "Use Cases",
-    href: "/use-case",
+    label: "Team",
+    href: "/team",
+  },
+  {
+    label: "Contact us",
+    href: "/contact-us",
   },
 ];
 export default navItem;
