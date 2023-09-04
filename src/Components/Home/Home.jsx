@@ -8,7 +8,7 @@ import Footer from "./Pages/Footer";
 
 const Home = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-hidden">
       <Hero />
       <Carousel />
       <Cases />
