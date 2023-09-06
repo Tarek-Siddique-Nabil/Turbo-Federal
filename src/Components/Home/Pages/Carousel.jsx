@@ -96,8 +96,8 @@ const Carousel = () => {
                 key={index}
                 className={`w-[290px] mx-5 flex flex-col gap-3 rounded-lg  ${
                   index % 2 === 0
-                    ? "bg-violet-500 "
-                    : "bg-transparent border border-slate-500"
+                    ? "bg-[#BF3B41] "
+                    : "bg-[#050757] border border-slate-500"
                 } p-4`}
               >
                 <svg
@@ -128,8 +128,8 @@ const Carousel = () => {
                 key={index}
                 className={`w-[290px] mx-5 flex flex-col gap-3 rounded-lg  ${
                   index % 2 === 0
-                    ? "bg-violet-500 "
-                    : "bg-transparent border border-slate-500"
+                    ? "bg-[#BF3B41] "
+                    : "bg-[#050757] border border-slate-500"
                 } p-4`}
               >
                 <svg
@@ -163,8 +163,8 @@ const Carousel = () => {
                 key={index}
                 className={`w-[290px] mx-5 flex flex-col gap-3 rounded-lg  ${
                   index % 2 === 0
-                    ? "bg-violet-500 "
-                    : "bg-transparent border border-slate-500"
+                    ? "bg-[#BF3B41] "
+                    : "bg-[#050757] border border-slate-500"
                 } p-4`}
               >
                 <svg
@@ -195,8 +195,8 @@ const Carousel = () => {
                 key={index}
                 className={`w-[290px] mx-5 flex flex-col gap-3 rounded-lg  ${
                   index % 2 === 0
-                    ? "bg-violet-500 "
-                    : "bg-transparent border border-slate-500"
+                    ? "bg-[#BF3B41] "
+                    : "bg-[#050757] border border-slate-500"
                 } p-4`}
               >
                 <svg

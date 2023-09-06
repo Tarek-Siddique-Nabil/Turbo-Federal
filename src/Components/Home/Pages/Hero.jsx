@@ -33,7 +33,7 @@ const Hero = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-10 h-10 text-red-600 mt-2 animation-pulse"
+                className="w-10 lg:w-24 lg:h-24 h-10 text-red-600 mt-2 animation-pulse"
               >
                 <path
                   strokeLinecap="round"
