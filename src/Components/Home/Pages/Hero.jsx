@@ -22,7 +22,8 @@ const Hero = () => {
           className="font-Manrope text-3xl md:text-5xl lg:text-8xl font-medium -z-50"
         >
           <p>
-            Accelerating <span className="text-[#050757] animate-">✸</span>{" "}
+            Accelerating{" "}
+            <span className="text-[#050757] animate-spin">&#10040;</span>{" "}
           </p>
           <p className="flex flex-wrap items-center gap-1">
             <span>mission</span>

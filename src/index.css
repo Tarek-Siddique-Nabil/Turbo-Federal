@@ -27,7 +27,7 @@
   justify-content: space-between;
   gap: 2rem;
   min-width: 100%;
-  animation: scroll 200s linear infinite reverse;
+  animation: scroll 25s linear infinite reverse;
 }
 
 .marquee__group2 {
@@ -37,7 +37,7 @@
   justify-content: space-between;
   gap: 2rem;
   min-width: 100%;
-  animation: scroll2 200s linear infinite;
+  animation: scroll2 25s linear infinite;
 }
 
 @keyframes pulse {
