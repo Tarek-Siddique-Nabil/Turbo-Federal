@@ -5,7 +5,7 @@
   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
 }
 .base-image {
-  @apply w-[310px] md:w-[272px] lg:w-[398px] h-[141px] lg:h-[170px] md:h-[116px] shadow-lg rounded-tl-[50px] rounded-br-[50px];
+  @apply w-[330px] md:w-[272px] lg:w-[398px] h-[141px] lg:h-[249px] md:h-[116px] shadow-lg rounded-tl-[50px] rounded-br-[50px];
 }
 .year-box {
   @apply h-[95px] w-[155px] rounded-lg text-6xl font-Manrope font-medium text-center text-white  shadow-gray-800;
@@ -13,7 +13,13 @@
 .hero-btn {
   @apply border-black bg-black text-white rounded-3xl px-7 py-2 hover:bg-violet-700 transition-colors duration-150 ease-in-out;
 }
-
+.navbar-backdrop-blur {
+  background: rgba(255, 255, 255, 0.58);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
 .marquee__group {
   flex-shrink: 0;
   display: flex;
@@ -34,6 +40,14 @@
   animation: scroll2 200s linear infinite;
 }
 
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+.animation-pulse {
+  animation: pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 @keyframes scroll {
   from {
     transform: translateX(0);

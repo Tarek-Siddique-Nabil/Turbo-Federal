@@ -89,7 +89,7 @@ const Carousel = () => {
     <section className="lg:px-40 md:px-10 px-5 md:py-3 py-4">
       <div className="h-[215px] lg:h-[420px] md:h-[208px] bg-black rounded-xl flex gap-5 items-center relative overflow-hidden">
         {/* marque1 */}
-        <div className="marquee1">
+        <div className="marquee1 z-10">
           <div className="marquee__group">
             {datas?.map((data, index) => (
               <div
@@ -156,7 +156,7 @@ const Carousel = () => {
           </div>
         </div>
         {/* marquee 2 */}
-        <div className="marquee2 hidden lg:flex">
+        <div className="marquee2 hidden lg:flex z-10">
           <div className="marquee__group2">
             {datas?.map((data, index) => (
               <div

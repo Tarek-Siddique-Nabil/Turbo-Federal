@@ -18,10 +18,10 @@ const Footer = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0.5, y: "10vh" }}
+            initial={{ opacity: 0.5, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, ease: "linear" }}
+            transition={{ duration: 0.3, ease: "linear", delay: 0.3 }}
             className="flex gap-3"
           >
             <input

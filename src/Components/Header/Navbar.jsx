@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../../src/assets/logo.jpg";
 import { motion } from "framer-motion";
 import navItem from ".";
@@ -6,6 +6,26 @@ import { useSidebar } from "./zustand";
 
 const Navbar = () => {
   const { isSidebarOpen, toggleSidebar } = useSidebar();
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      const scrollPercentage =
+        (scrollTop / (documentHeight - windowHeight)) * 100;
+      setScrollPercentage(scrollPercentage);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const progressStyle = {
+    height: `${scrollPercentage}%`,
+  };
 
   const Path = (props) => (
     <motion.path
@@ -21,10 +41,14 @@ const Navbar = () => {
   return (
     <>
       <motion.header
-        initial={{ y: "-100vh" }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
-        className="  flex  justify-between items-center lg:px-40 md:px-10  px-5 md:py- py-4"
+        initial={{ opacity: 0, y: "-50%" }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
+        className={`${
+          progressStyle?.height > "1%"
+            ? "fixed w-full bg-white z-50 "
+            : "relative  "
+        }  flex  justify-between items-center lg:px-40 md:px-10  px-5 md:py- py-4 transition-all duration-150 ease-linear`}
       >
         <div>
           <img className="w-64 h-12" src={logo} alt="" />

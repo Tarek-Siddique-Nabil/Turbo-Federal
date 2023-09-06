@@ -19,7 +19,7 @@ const Work = () => {
             Contract Vehicles
           </p>
           <p className="lg:text-[45px] text-3xl">interactive experiences</p>
-          <img className="scale-110" src={Table_Image1} />
+          <img className="  -z-50" src={Table_Image1} />
         </motion.div>
       </section>
       <motion.div
@@ -29,8 +29,8 @@ const Work = () => {
         transition={{ duration: 0.3, ease: "linear", delay: 0.2 }}
         className="flex lg:flex-row flex-col-reverse justify-center gap-10 items-center bg-black px-4 py-5 "
       >
-        <div className="">
-          <img className="" src={Table_Image2} />
+        <div className="relative">
+          <img className="object-cover -z-50 " src={Table_Image2} />
         </div>
         <div className="w-1/2  lg:text-end md:text-end text-center text-white flex flex-col gap-5">
           <p className="text-4xl lg:text-6xl">Better company</p>
