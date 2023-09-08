@@ -75,8 +75,7 @@ const Hero = () => {
           </p>
           <ul className="text-[22px] font-Manrope list-inside list-disc">
             <li>10x Productivity</li>
-            <li>Gain Efficiencies</li>
-            <li>Lower Operational Costs</li>
+            <li>Lower Costs</li>
             <li>Accelerate Objectives</li>
             <li>Extract Knowledge & Insights</li>
           </ul>

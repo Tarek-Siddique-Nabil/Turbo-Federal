@@ -3,6 +3,7 @@ import logo from "../../../src/assets/logo.jpg";
 import { motion } from "framer-motion";
 import navItem from ".";
 import { useSidebar } from "./zustand";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { isSidebarOpen, toggleSidebar } = useSidebar();
@@ -33,7 +34,7 @@ const Navbar = () => {
       strokeWidth="3"
       stroke="currentColor"
       strokeLinecap="round"
-      className={!isSidebarOpen ? "text-blue-600" : "text-red-500"}
+      className={!isSidebarOpen ? "text-[#050757]" : "text-red-500"}
       {...props}
     />
   );
@@ -55,7 +56,9 @@ const Navbar = () => {
         </div>
         <div className="hidden text-lg lg:flex gap-5 ">
           {navItem.map((i, index) => (
-            <button key={index}>{i.label}</button>
+            <NavLink to={i.href} key={index}>
+              {i.label}
+            </NavLink>
           ))}
         </div>
         <div className="lg:hidden">
@@ -124,7 +127,7 @@ const Navbar = () => {
                   whileTap={{ scale: 0.95 }}
                   key={index}
                 >
-                  {i.label}
+                  <NavLink to={i.href}>{i.label}</NavLink>
                 </motion.li>
               ))}
             </motion.ul>
