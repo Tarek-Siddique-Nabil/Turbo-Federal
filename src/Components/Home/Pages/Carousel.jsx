@@ -45,19 +45,22 @@ const Carousel = () => {
         {/* marque1 */}
         <div className="marquee1 z-10">
           <div className="marquee__group">
+            <p className="text-white font-Manrope text-2xl text-center">
+              Clients
+            </p>
             {datas?.map(
               (data, index) =>
                 data?.image && (
                   <div
                     key={index}
-                    className={`w-[290px]  mx-5 flex flex-col gap-1 rounded-lg 
+                    className={`w-[290px]   flex flex-col gap-1 rounded-lg 
                       index % 2 === 0
                       
-                         "bg-transparent border border-slate-500"
+                         "bg-transparent py-2"
                      p-4`}
                   >
                     <img
-                      className="w-full h-[100px] object-fill"
+                      className="lg:w-[75%] lg:h-[75%] w-[70%] h-[70%] "
                       src={data?.image}
                       alt={data?.title}
                     />
@@ -66,19 +69,22 @@ const Carousel = () => {
             )}
           </div>
           <div className="marquee__group" aria-hidden="true">
+            <p className="text-white font-Manrope text-2xl text-center">
+              Clients
+            </p>
             {datas?.map(
               (data, index) =>
                 data?.image && (
                   <div
                     key={index}
-                    className={`w-[290px] mx-5 flex flex-col gap-1 rounded-lg 
+                    className={`w-[290px]  flex flex-col gap-1 rounded-lg 
                      
                        
-                        "bg-transparent border border-slate-500"
+                        "bg-transparent py-2"
                      p-4`}
                   >
                     <img
-                      className="w-full h-[100px] object-fill"
+                      className="lg:w-[75%] lg:h-[75%] w-[70%] h-[70%]"
                       src={data?.image}
                       alt={data?.title}
                     />

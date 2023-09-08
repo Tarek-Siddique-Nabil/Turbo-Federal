@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import IntersectSVG from "../../../libs/svg/IntersectSVG";
+import TechIcon from "../../../libs/Icon/TechIcon";
+import AiIcon from "../../../libs/Icon/AiIcon";
 
 const Cases = () => {
   const cases = [
@@ -59,7 +61,7 @@ const Cases = () => {
         { title: "AI Knowledge Management" },
         {
           title:
-            "Autonomous AI Assistants / Agents / Copilots for Research, Analysis, & complex cognitive tasks",
+            "Autonomous AI Assistants / Agents / Copilots for Research & Analysis ",
         },
         { title: "AI custom tools & services for unique use cases" },
         { title: "IoT, Kiosk, Web App, Wearable integration" },
@@ -81,11 +83,11 @@ const Cases = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "linear", delay: 0.2 }}
-      className="h-full lg:px-40 md:px-10 px-5 md:py-16  py-4 flex flex-col justify-center gap-16"
+      className="h-full lg:px-40 md:px-10 px-5 md:py-16  py-4 flex flex-col justify-center md:gap-16"
     >
       <div className="flex flex-col justify-start gap-5">
-        <p className="text-blue-800 text-xl">2023-2024</p>
-        <p className="text-4xl lg:text-6xl font-Manrope font-semibold">
+        {/* <p className="text-blue-800 text-xl">2023-2024</p> */}
+        <p className="text-[33px] md:text-4xl lg:text-6xl font-Manrope font-semibold">
           Turbo Federal Offers <span className="text-blue-800">●</span>
         </p>
       </div>
@@ -95,12 +97,18 @@ const Cases = () => {
             key={indexC}
             className="w-full md:w-1/2  p-3  flex  flex-col gap-5 items-start  "
           >
-            <p className="lg:text-[50px]   text-xl font-medium font-Manrope capitalize">
-              {item.title}
-            </p>
+            <div className="flex  items-center gap-3">
+              <p className="lg:text-[50px] text-[40px]    font-medium font-Manrope capitalize">
+                {item.title}
+              </p>
+              {indexC === 0 ? <TechIcon /> : <AiIcon />}
+            </div>
             <ul className="list-disc list-inside  text-justify text-base font-normal font-Manrope capitalize">
               {item?.services?.map((i, index) => (
-                <li key={index}> {i.title}</li>
+                <li key={index} className="md:text-xl text-base">
+                  {" "}
+                  {i.title}
+                </li>
               ))}
             </ul>
           </div>

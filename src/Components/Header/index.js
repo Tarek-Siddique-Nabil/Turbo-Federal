@@ -4,8 +4,8 @@ const navItem = [
     href: "/",
   },
   {
-    label: "Mission Statement",
-    href: "/mission-statement",
+    label: "About us",
+    href: "/about-us",
   },
   {
     label: "Services",

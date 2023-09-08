@@ -16,10 +16,10 @@ const Work = () => {
           className="flex flex-col items-center md:gap-10 gap-7 lg:px-48 md:px-20 px-5"
         >
           <p className="text-4xl lg:text-6xl text-[#050757] font-Manrope  capitalize">
-            Contract Vehicles
+            <span className="font-bold">Turbo Federal</span> Contract Vehicles
           </p>
-          <p className="lg:text-[45px] text-3xl">interactive experiences</p>
-          <img className="  -z-50" src={Table_Image1} />
+          {/* <p className="lg:text-[45px] text-3xl">interactive experiences</p> */}
+          <img className="scale-110  -z-50" src={Table_Image1} />
         </motion.div>
       </section>
       <motion.div
@@ -33,13 +33,27 @@ const Work = () => {
           <img className="object-cover -z-50 " src={Table_Image2} />
         </div>
         <div className="w-1/2  lg:text-end md:text-end text-center text-white flex flex-col gap-5">
-          <p className="text-4xl lg:text-6xl">Better company</p>
-          <p className="text-3xl lg:text-5xl text-violet-800">insights</p>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minimveniam,si.
-          </p>
+          <div className="text-2xl lg:text-4xl flex flex-col gap-1">
+            <p>AI and Digital Transformation Services to empower</p>{" "}
+            <span className="font-bold font-Manrope text-[#BF3B41] text-2xl lg:text-5xl">
+              organizations, centered around
+            </span>
+            <span className="font-bold font-Manrope text-[#BF3B41] text-2xl lg:text-5xl ">
+              {" "}
+              human guidance and control.
+            </span>
+          </div>
+          <p className="text-3xl lg:text-5xl text-[#BF3B41] font-Manrope"></p>
+          <div className="text-lg flex flex-col gap-1">
+            <span>
+              We adhere to responsible AI (RAI) principles set forth in our
+              approach to design, development, deployment,
+            </span>{" "}
+            <span className="">
+              and AI use that ensures the safety of our systems and their
+              ethical employment.
+            </span>
+          </div>
         </div>
       </motion.div>
     </>
