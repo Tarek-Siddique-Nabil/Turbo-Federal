@@ -13,8 +13,8 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.3, ease: "linear" }}
           >
-            <p className="text-3xl font-Manrope">Stay in the loop</p>
-            <p className="text-3xl font-Manrope">Sign up for the updates</p>
+            <p className="text-3xl font-Manrope">Contact Us.</p>
+            {/* <p className="text-3xl font-Manrope">Sign up for the updates</p> */}
           </motion.div>
 
           <motion.div
@@ -25,11 +25,11 @@ const Footer = () => {
             className="flex gap-3"
           >
             <input
-              placeholder="email@framer.com"
+              placeholder="kerry@turbofederal.com"
               className="px-6 py-3 bg-slate-200 rounded-2xl"
             />
             <button className="px-3 py-3 bg-[#383a9b] text-white font-Manrope rounded-lg">
-              Sign Up
+              Send Email
             </button>
           </motion.div>
           {/* <section>

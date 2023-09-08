@@ -27,12 +27,15 @@ const Work = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.3, ease: "linear", delay: 0.2 }}
-        className="flex lg:flex-row flex-col-reverse justify-center gap-10 items-center bg-black px-4 py-5 "
+        className="flex lg:flex-row flex-col-reverse justify-center gap-10 items-center bg-black py-5 lg:px-40 md:px-10 px-5 md:py-10 "
       >
-        <div className="relative">
-          <img className="object-cover -z-50 " src={Table_Image2} />
+        <div className="lg:w-1/2 relative">
+          <img
+            className="lg:h-[450px] w-fit   object-cover -z-50 "
+            src={Table_Image2}
+          />
         </div>
-        <div className="w-1/2  lg:text-end md:text-end text-center text-white flex flex-col gap-5">
+        <div className="lg:w-1/2  lg:text-end md:text-end text-center text-white flex flex-col gap-5">
           <div className="text-2xl lg:text-4xl flex flex-col gap-1">
             <p>AI and Digital Transformation Services to empower</p>{" "}
             <span className="font-bold font-Manrope text-[#BF3B41] text-2xl lg:text-5xl">

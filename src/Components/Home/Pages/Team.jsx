@@ -29,14 +29,26 @@ const Team = () => {
       </p>
       <section className="flex flex-wrap md:justify-start justify-center  gap-10 py-10">
         {person.map((i, index) => (
-          <div key={index} className="flex flex-col items-start gap-3">
-            <img
-              // style={{ borderRadius: "50px" }}
-              className="md:w-[208px] w-[116px]  md:h-[255px] h-[140px] object-cover rounded-3xl md:rounded-[50px] "
-              src={i.image}
-              alt={i.name}
-            />
-            <p className="font-Manrope text-3xl capitalize">{i.name}</p>
+          <div
+            key={index}
+            className="flex flex-col items-start gap-3 group hover:cursor-pointer "
+          >
+            <div className="relative">
+              <img
+                className="md:w-[208px] w-[116px] md:h-[255px] h-[140px] object-cover rounded-3xl md:rounded-[50px] group-hover:shadow-lg group-hover:shadow-[#050757] transition-all duration-150 ease-linear md:group-hover:blur-[2px]"
+                src={i.image}
+                alt={i.name}
+              />
+              <div className="hidden absolute inset-0 md:flex items-center justify-center lg:translate-y-[50%] opacity-0 lg:group-hover:translate-y-20 group-hover:opacity-100 transition-all duration-150 ease-linear">
+                <button className="text-white bg-[#050757] px-4 py-2 rounded-md">
+                  View Bio
+                </button>
+              </div>
+            </div>
+
+            <p className="font-Manrope text-3xl capitalize group-hover:italic transition-all duration-150 ease-in-out">
+              {i.name}
+            </p>
             <p className="font-Manrope text-xl capitalize">{i.role}</p>
             <div className="flex justify-start items-start gap-2">
               <button>
@@ -60,6 +72,9 @@ const Team = () => {
                 </svg>
               </button>
             </div>
+            <button className="md:hidden border p-2.5 rounded-lg  border-[#050757] hover:bg-slate-600 hover:text-white">
+              View Bio
+            </button>
           </div>
         ))}
       </section>

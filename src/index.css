@@ -103,7 +103,7 @@
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    transform: rotate(-4deg) translateY(-130%) translateX(50px);
+    transform: rotate(-7deg) translateY(-130%) translateX(50px);
   }
   .marquee2 {
     display: flex;
