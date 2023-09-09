@@ -23,7 +23,15 @@ const AboutUs = () => {
       email: "kerry@turbofederal.com",
       linkedin: "https://www.linkedin.com/in/kerry-p-gray-b689261/",
 
-      bio: "I am a Results driven executive with a passion for leveraging technology solutions to meet the mission of clients and I have 30+ years of experience working in executive and leadership roles for Fortune 500 companies, including Accenture, Booz Allen, and most recently, NTT DATA. Possess strong general management, sales/business development and delivery experience with a proven track record of delivering growth, establishing governance and delivery oversight, building executive client relationships and inspiring people. Strong, passionate, values-based leader that understands the importance of Client Relationships, Innovation and Teamwork as the foundation for success.I hold Bachelor of Science degrees in Aerospace Engineering and Economics from Northwestern University along with an MBA from the University of Michigan.We look to continue providing great consulting and business services to our clients along with strong leadership and development services for their projects and programs. At Turbo, we provide you “big consulting” expertise without the “big consulting” rates.Throughout my career, I have set myself apart by consistently solving difficult business problems and successfully turning around struggling programs from which most others shy away. By combining versatility and creative problem-solving and displaying comfort in ambiguous situations with no clear solution parameters, I have successfully helped clients identify the root causes of issues and align program goals with organizational strategy and/or business missions to create, clarify and communicate a clear program vision.",
+      bio: `
+      I am a Results-driven executive with a passion for leveraging technology solutions to meet the mission of clients and I have 30+ years of experience working in executive and leadership roles for Fortune 500 companies, including Accenture, Booz Allen, and most recently, NTT DATA. Possess strong general management, sales/business development and delivery experience with a proven track record of delivering growth, establishing governance and delivery oversight, building executive client relationships and inspiring people. Strong, passionate, values-based leader that understands the importance of Client Relationships, Innovation and Teamwork as the foundation for success.
+      
+      I hold Bachelor of Science degrees in Aerospace Engineering and Economics from Northwestern University along with an MBA from the University of Michigan.
+      
+      We look to continue providing great consulting and business services to our clients along with strong leadership and development services for their projects and programs. At Turbo, we provide you “big consulting” expertise without the “big consulting” rates.
+      
+      Throughout my career, I have set myself apart by consistently solving difficult business problems and successfully turning around struggling programs from which most others shy away. By combining versatility and creative problem-solving and displaying comfort in ambiguous situations with no clear solution parameters, I have successfully helped clients identify the root causes of issues and align program goals with organizational strategy and/or business missions to create, clarify and communicate a clear program vision
+      `,
     },
     {
       name: "Simon flom",
@@ -31,6 +39,11 @@ const AboutUs = () => {
       image: `${Simon_image}`,
       email: "sflom@turbofederal.com",
       linkedin: "https://www.linkedin.com/in/simon-flom-4a38038/",
+      bio: `Simon Flom has been supporting federal customers in a variety of capacities for over 15 years. He has led numerous large-scale cyber projects from inception to successful completion. He formed Turbo Federal to solve complex mission challenges unique to Federal agencies and accelerate desired objectives using customized agile cyber solutions.
+
+      Turbo Federal's dedicated engineering and support staff is the foundation of our business. Each individual is carefully selected based on strict technical qualifications, work ethic, spirit, and commitment to meeting our clients' goals. They all share our core company philosophy to:\n\n- Build a Positive Team Spirit.\n- Build Honest and Open Relationships with Communication.\n- Do More with Less.\n- Be Passionate and Determined.\n- Pursue Growth and Learning.\n- Embrace Creative Thought.
+
+      We look forward to accelerating your mission, regardless of size or complexity. To learn how Turbo can accelerate your mission, visit us http://www.turbofederal.com/.`,
     },
   ];
   return (
@@ -161,7 +174,7 @@ const AboutUs = () => {
         </div>
       </motion.div>
       <div className="flex flex-col items-center gap-5 md:my-16">
-        <p className="underline text-4xl md:text-4xl lg:text-7xl font-medium">
+        <p className=" text-4xl md:text-4xl lg:text-7xl font-medium">
           About Team
         </p>
         <div className="md:w-[65%]  flex flex-col md:gap-5 gap-8">
@@ -169,7 +182,7 @@ const AboutUs = () => {
             <div className="flex flex-col md:gap-5 gap-6" key={index}>
               <div className="flex items-center md:gap-4 gap-5">
                 <img
-                  className="w-60 h-60 rounded-lg"
+                  className="md:w-[208px] w-[116px] md:h-[255px] h-[140px] object-cover rounded-3xl md:rounded-[50px] shadow-lg shadow-gray-500"
                   src={person.image}
                   alt={person.name}
                 />
@@ -204,7 +217,7 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-              <p>{person.bio}</p>
+              <p className="whitespace-pre-line">{person.bio}</p>
             </div>
           ))}
         </div>
