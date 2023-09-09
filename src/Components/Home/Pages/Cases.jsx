@@ -79,6 +79,7 @@ const Cases = () => {
   ];
   return (
     <motion.section
+      id="services"
       initial={{ opacity: 0.5, y: "50vh" }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

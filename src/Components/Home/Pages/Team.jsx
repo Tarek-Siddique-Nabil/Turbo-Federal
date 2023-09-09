@@ -3,6 +3,7 @@ import Kerry_image from "../../../assets/KerryGray.jpg";
 import Simon_image from "../../../assets/SimonFlom.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import HandShake from "../../../libs/Icon/HandShake";
 const Team = () => {
   const person = [
     {
@@ -24,14 +25,16 @@ const Team = () => {
   ];
   return (
     <motion.div
+      id="team"
       initial={{ opacity: 0.75, y: "30vh" }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, ease: "linear", delay: 0.2 }}
       className="lg:px-40 md:px-10 px-5 md:py-10 py-4"
     >
-      <p className="text-4xl lg:text-6xl ">
-        Our Team<span className="text-[#050757]">✸</span>
+      <p className="text-4xl flex items-center lg:text-6xl ">
+        Our Team
+        <HandShake />
       </p>
       <section className="flex flex-wrap md:justify-start justify-center  gap-10 py-10">
         {person.map((i, index) => (

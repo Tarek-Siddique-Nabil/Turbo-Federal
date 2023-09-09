@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import logo from "../../assets/logo.jpg";
 const Footer = () => {
   return (
-    <footer className="lg:px-40 md:px-10 px-5 md:py-10 py-4">
+    <footer id="contact-us" className="lg:px-40 md:px-10 px-5 md:py-10 py-4">
       <hr className="border border-[#050757] my-5" />
       <container className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-4">
         <section className="flex flex-col gap-10">

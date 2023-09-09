@@ -3,7 +3,7 @@ import logo from "../../../src/assets/logo.jpg";
 import { motion } from "framer-motion";
 import navItem from ".";
 import { useSidebar } from "./zustand";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { isSidebarOpen, toggleSidebar } = useSidebar();
@@ -56,9 +56,22 @@ const Navbar = () => {
         </div>
         <div className="hidden text-lg lg:flex gap-5 ">
           {navItem.map((i, index) => (
-            <NavLink to={i.href} key={index}>
-              {i.label}
-            </NavLink>
+            <React.Fragment key={index}>
+              {i.hashLink !== true ? (
+                <NavLink
+                  onClick={() => {
+                    toggleSidebar(), i?.onclick?.();
+                  }}
+                  to={i.href}
+                >
+                  {i.label}
+                </NavLink>
+              ) : (
+                <a onClick={() => toggleSidebar()} href={i.href}>
+                  {i.label}
+                </a>
+              )}
+            </React.Fragment>
           ))}
         </div>
         <div className="lg:hidden">
@@ -127,9 +140,20 @@ const Navbar = () => {
                   whileTap={{ scale: 0.95 }}
                   key={index}
                 >
-                  <NavLink onClick={() => toggleSidebar()} to={i.href}>
-                    {i.label}
-                  </NavLink>
+                  {i.hashLink !== true ? (
+                    <NavLink
+                      onClick={() => {
+                        toggleSidebar(), i?.onclick?.();
+                      }}
+                      to={i.href}
+                    >
+                      {i.label}
+                    </NavLink>
+                  ) : (
+                    <a onClick={() => toggleSidebar()} href={i.href}>
+                      {i.label}
+                    </a>
+                  )}
                 </motion.li>
               ))}
             </motion.ul>
