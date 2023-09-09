@@ -177,7 +177,7 @@ const AboutUs = () => {
         <p className=" text-4xl md:text-4xl lg:text-7xl font-medium">
           About Team
         </p>
-        <div className="md:w-[65%]  flex flex-col md:gap-5 gap-8">
+        <div className="md:w-[65%]  flex flex-col md:gap-12 lg:gap-20  gap-8">
           {persons.map((person, index) => (
             <div className="flex flex-col md:gap-5 gap-6" key={index}>
               <div className="flex items-center md:gap-4 gap-5">
