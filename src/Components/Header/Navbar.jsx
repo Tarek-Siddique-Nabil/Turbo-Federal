@@ -127,13 +127,15 @@ const Navbar = () => {
                   whileTap={{ scale: 0.95 }}
                   key={index}
                 >
-                  <NavLink to={i.href}>{i.label}</NavLink>
+                  <NavLink onClick={() => toggleSidebar()} to={i.href}>
+                    {i.label}
+                  </NavLink>
                 </motion.li>
               ))}
             </motion.ul>
           </motion.div>
 
-          {isSidebarOpen && (
+          {/* {isSidebarOpen && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -142,7 +144,7 @@ const Navbar = () => {
               className="fixed top-0 left-0 z-50  h-screen w-screen "
               onClick={() => toggleSidebar()}
             ></motion.div>
-          )}
+          )} */}
         </div>
       </motion.header>
     </>

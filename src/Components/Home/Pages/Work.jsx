@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Table_Image1 from "../../../assets/table1.jpg";
 import Table_Image2 from "../../../assets/table2.jpg";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Work = () => {
   return (
