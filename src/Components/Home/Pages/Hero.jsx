@@ -116,8 +116,8 @@ const Hero = () => {
 
             <motion.button
               className={`${
-                isSidebarOpen && "-z-50"
-              } relative lg:ml-12 group  w-[150px] h-10 bg-[#050757] text-white rounded-3xl `}
+                isSidebarOpen && "-z-50 "
+              } relative lg:ml-12 group hidden sm:block   w-[150px] h-10 bg-[#050757] text-white rounded-3xl `}
             >
               <span className="w-7 h-7 top-1/2 right-2 group-focus:w-[90%] -translate-y-1/2 absolute rounded-full transition-all duration-150 ease-in-out bg-gray-200">
                 <span className="capitalize group-focus:flex items-center justify-center hidden text-black text-xs transition-all duration-150 delay-100 ease-in-out w-full h-full">
