@@ -10,7 +10,7 @@ const Team = () => {
       name: "Kerry Gray",
       role: "President & CEO",
       image: `${Kerry_image}`,
-      email: "kerry@turbofederal.com",
+      email: "info@turbofederal.com",
       linkedin: "https://www.linkedin.com/in/kerry-p-gray-b689261/",
 
       bio: "I am a Results driven executive with a passion for leveraging technology solutions to meet the mission of clients and I have 30+ years of experience working in executive and leadership roles for Fortune 500 companies, including Accenture, Booz Allen, and most recently, NTT DATA. Possess strong general management, sales/business development and delivery experience with a proven track record of delivering growth, establishing governance and delivery oversight, building executive client relationships and inspiring people. Strong, passionate, values-based leader that understands the importance of Client Relationships, Innovation and Teamwork as the foundation for success.I hold Bachelor of Science degrees in Aerospace Engineering and Economics from Northwestern University along with an MBA from the University of Michigan.We look to continue providing great consulting and business services to our clients along with strong leadership and development services for their projects and programs. At Turbo, we provide you “big consulting” expertise without the “big consulting” rates.Throughout my career, I have set myself apart by consistently solving difficult business problems and successfully turning around struggling programs from which most others shy away. By combining versatility and creative problem-solving and displaying comfort in ambiguous situations with no clear solution parameters, I have successfully helped clients identify the root causes of issues and align program goals with organizational strategy and/or business missions to create, clarify and communicate a clear program vision.",
@@ -19,7 +19,7 @@ const Team = () => {
       name: "Simon flom",
       role: "VP & COO",
       image: `${Simon_image}`,
-      email: "sflom@turbofederal.com",
+      email: "info@turbofederal.com",
       linkedin: "https://www.linkedin.com/in/simon-flom-4a38038/",
     },
   ];
@@ -32,7 +32,7 @@ const Team = () => {
       transition={{ duration: 0.3, ease: "linear", delay: 0.2 }}
       className="lg:px-40 md:px-10 px-5 md:py-10 py-4"
     >
-      <p className="text-4xl flex items-center lg:text-6xl ">
+      <p className="text-4xl flex items-center justify-center lg:text-6xl ">
         Our Team
         <HandShake />
       </p>

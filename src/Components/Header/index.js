@@ -14,13 +14,19 @@ const navItem = [
   },
   {
     label: "Services",
-    href: "/#services",
-    hashLink: true,
+    href: "/services",
+    hashLink: false,
+    onclick() {
+      window.scrollTo({ top: 0 });
+    },
   },
   {
     label: "Team",
-    href: "/#team",
-    hashLink: true,
+    href: "/team",
+    hashLink: false,
+    onclick() {
+      window.scrollTo({ top: 0 });
+    },
   },
   {
     label: "Contact us",

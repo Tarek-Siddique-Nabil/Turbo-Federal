@@ -1,9 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import logo from "../../assets/logo.jpg";
+import { useSidebar } from "../Header/zustand";
 const Footer = () => {
+  const { isSidebarOpen } = useSidebar();
   return (
-    <footer id="contact-us" className="lg:px-40 md:px-10 px-5 md:py-10 py-4">
+    <footer
+      id="contact-us"
+      className={`${
+        isSidebarOpen && "-z-50"
+      } lg:px-40 md:px-10 px-5 md:py-10 py-4`}
+    >
       <hr className="border border-[#050757] my-5" />
       <container className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-4">
         <section className="flex flex-col gap-10">
@@ -13,7 +20,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.3, ease: "linear" }}
           >
-            <p className="text-3xl font-Manrope">Contact Us.</p>
+            <p
+              className={`text-3xl font-Manrope ${
+                isSidebarOpen && "-z-50 opacity-0"
+              }`}
+            >
+              Contact Us.
+            </p>
             {/* <p className="text-3xl font-Manrope">Sign up for the updates</p> */}
           </motion.div>
 
@@ -25,7 +38,7 @@ const Footer = () => {
             className="flex gap-3"
           >
             <input
-              placeholder="kerry@turbofederal.com"
+              placeholder="info@turbofederal.com"
               className="px-6 py-3 bg-slate-200 rounded-2xl"
             />
             <button className="px-3 py-3 bg-[#383a9b] text-white font-Manrope rounded-lg">

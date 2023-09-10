@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 const Work = () => {
   return (
     <>
-      <section className="lg:px-40 md:px-10 px-5 md:py-32 py-4">
-        <hr className="border rounded-lg border-[#050757] my-5" />
+      <section className="lg:px-40 md:px-10 px-5 md:py-16 py-4">
         <motion.div
           initial={{ opacity: 0.75, y: "50vh" }}
           whileInView={{ opacity: 1, y: 0 }}

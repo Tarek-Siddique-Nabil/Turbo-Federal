@@ -4,8 +4,11 @@
 @layer base {
   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
 }
+.base-image-1 {
+  @apply w-[330px] md:w-[272px] lg:w-[398px] h-[141px] lg:h-[249px] md:h-[116px] shadow-lg;
+}
 .base-image {
-  @apply w-[330px] md:w-[272px] lg:w-[398px] h-[141px] lg:h-[249px] md:h-[116px] shadow-lg rounded-tl-[50px] rounded-br-[50px];
+  @apply w-[330px] md:w-[272px] lg:w-[398px] h-[141px] lg:h-[249px] md:h-[116px] shadow-lg;
 }
 .year-box {
   @apply h-[95px] w-[155px] rounded-lg text-6xl font-Manrope font-medium text-center text-white  shadow-gray-800;

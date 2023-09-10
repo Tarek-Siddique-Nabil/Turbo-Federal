@@ -47,9 +47,9 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
         className={`${
           progressStyle?.height > "1%"
-            ? "fixed w-full bg-white z-50 "
+            ? "fixed w-full bg-white z-50 shadow-md  shadow-gray-500"
             : "relative  "
-        }  flex  justify-between items-center lg:px-40 md:px-10  px-5 md:py- py-4 transition-all duration-150 ease-linear`}
+        }  flex  justify-between items-center lg:px-40 md:px-10  px-5 md:py- py-4 transition-all duration-150 ease-linear `}
       >
         <div>
           <img className="w-64 h-12" src={logo} alt="" />
@@ -74,7 +74,7 @@ const Navbar = () => {
             </React.Fragment>
           ))}
         </div>
-        <div className="lg:hidden">
+        <div className="lg:hidden ">
           <button
             className="flex items-center px-4 py-2 text-gray-500"
             onClick={() => toggleSidebar()}
@@ -112,7 +112,7 @@ const Navbar = () => {
             initial={{ x: "-100%" }}
             animate={{ x: isSidebarOpen ? "0" : "-100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed  top-0 left-0 h-screen w-1/2  bg-white shadow-md p-4"
+            className="fixed  top-0 left-0 h-screen w-1/2  bg-white  p-4 "
           >
             <motion.ul
               transition={{
@@ -120,7 +120,7 @@ const Navbar = () => {
                 delayChildren: 0.2,
                 staggerDirection: 1, // Positive direction to animate sequentially
               }}
-              className="flex flex-col items-baseline gap-4"
+              className="flex flex-col items-baseline gap-4 "
             >
               {navItem?.map((i, index) => (
                 <motion.li
