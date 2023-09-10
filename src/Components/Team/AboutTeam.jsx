@@ -35,7 +35,7 @@ const AboutTeam = () => {
   ];
   return (
     <>
-      <div className="flex flex-col items-center gap-5 ">
+      <div className="flex flex-col items-center gap-5 p-4">
         <p className=" text-4xl md:text-4xl lg:text-7xl font-medium">
           About Team
         </p>

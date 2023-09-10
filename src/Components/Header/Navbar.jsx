@@ -52,7 +52,7 @@ const Navbar = () => {
         }  flex  justify-between items-center lg:px-40 md:px-10  px-5 md:py- py-4 transition-all duration-150 ease-linear `}
       >
         <div>
-          <img className="w-64 h-12" src={logo} alt="" />
+          <img className="w-64 h-12 -mt-3 md:mt-0" src={logo} alt="" />
         </div>
         <div className="hidden text-lg lg:flex gap-5 ">
           {navItem.map((i, index) => (

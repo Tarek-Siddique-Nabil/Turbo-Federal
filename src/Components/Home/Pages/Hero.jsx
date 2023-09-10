@@ -78,13 +78,13 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="-z-50"
+          className="-z-50 flex flex-col gap-5"
         >
-          <p className="text-xl md:text-[26px] font-Manrope font-bold">
+          <p className="text-[22px] md:text-[26px] font-Manrope font-bold">
             {" "}
             AI Transformation Services to
           </p>
-          <ul className="text-[22px]  font-Manrope list-inside list-disc">
+          <ul className="text-[22px] leading-10 font-Manrope list-inside list-disc">
             <li>Increase Productivity by 10x</li>
             <li>Lower Costs</li>
             <li>Accelerate Objectives</li>
