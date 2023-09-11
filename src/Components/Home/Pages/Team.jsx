@@ -50,7 +50,7 @@ const Team = () => {
               />
               <div className="hidden absolute inset-0 md:flex items-center justify-center lg:translate-y-[50%] opacity-0 lg:group-hover:translate-y-20 group-hover:opacity-100 transition-all duration-150 ease-linear">
                 <Link
-                  to={"/about-us"}
+                  to={"/team"}
                   className="text-white bg-[#050757] px-4 py-2 rounded-md"
                 >
                   View Bio
@@ -63,7 +63,7 @@ const Team = () => {
             </p>
             <p className="font-Manrope text-xl capitalize">{i.role}</p>
             <div className="flex justify-start items-start gap-2">
-              <a href={`mailto:${i.email}`}>
+              <a href="/#contact-us">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -85,7 +85,7 @@ const Team = () => {
               </a>
             </div>
             <Link
-              to={"/about-us"}
+              to={"/team"}
               className="md:hidden border p-2.5 rounded-lg  border-[#050757] hover:bg-slate-600 hover:text-white"
             >
               View Bio
