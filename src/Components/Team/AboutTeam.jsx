@@ -56,7 +56,7 @@ const AboutTeam = () => {
                     {person.role}
                   </p>
                   <div className="flex justify-start items-start gap-3">
-                    <a href={`mailto:${person.email}`}>
+                    <a href="/#contact-us">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
