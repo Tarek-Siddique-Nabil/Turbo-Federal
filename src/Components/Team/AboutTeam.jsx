@@ -1,7 +1,10 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Kerry_image from "../../assets/KerryGray.jpg";
 import Simon_image from "../../assets/SimonFlom.jpg";
 const AboutTeam = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page when the component mounts
+  }, []);
   const persons = [
     {
       name: "Kerry Gray",
