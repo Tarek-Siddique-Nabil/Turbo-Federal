@@ -57,7 +57,7 @@ const AboutTeam = () => {
   return (
     <div
       ref={scrollContainerRef}
-      style={{ overflowY: "scroll" }}
+      // style={{ overflowY: "scroll" }}
       className="flex flex-col items-center gap-5 p-4"
     >
       <p className=" text-4xl md:text-4xl lg:text-7xl font-medium">
