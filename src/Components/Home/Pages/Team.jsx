@@ -7,6 +7,7 @@ import HandShake from "../../../libs/Icon/HandShake";
 const Team = () => {
   const person = [
     {
+      hash: "kerry",
       name: "Kerry Gray",
       role: "President & CEO",
       image: `${Kerry_image}`,
@@ -16,6 +17,7 @@ const Team = () => {
       bio: "I am a Results driven executive with a passion for leveraging technology solutions to meet the mission of clients and I have 30+ years of experience working in executive and leadership roles for Fortune 500 companies, including Accenture, Booz Allen, and most recently, NTT DATA. Possess strong general management, sales/business development and delivery experience with a proven track record of delivering growth, establishing governance and delivery oversight, building executive client relationships and inspiring people. Strong, passionate, values-based leader that understands the importance of Client Relationships, Innovation and Teamwork as the foundation for success.I hold Bachelor of Science degrees in Aerospace Engineering and Economics from Northwestern University along with an MBA from the University of Michigan.We look to continue providing great consulting and business services to our clients along with strong leadership and development services for their projects and programs. At Turbo, we provide you “big consulting” expertise without the “big consulting” rates.Throughout my career, I have set myself apart by consistently solving difficult business problems and successfully turning around struggling programs from which most others shy away. By combining versatility and creative problem-solving and displaying comfort in ambiguous situations with no clear solution parameters, I have successfully helped clients identify the root causes of issues and align program goals with organizational strategy and/or business missions to create, clarify and communicate a clear program vision.",
     },
     {
+      hash: "simon",
       name: "Simon flom",
       role: "VP & COO",
       image: `${Simon_image}`,
@@ -50,7 +52,7 @@ const Team = () => {
               />
               <div className="hidden absolute inset-0 md:flex items-center justify-center lg:translate-y-[50%] opacity-0 lg:group-hover:translate-y-20 group-hover:opacity-100 transition-all duration-150 ease-linear">
                 <Link
-                  to={"/team"}
+                  to={`/team#${i.hash}`}
                   className="text-white bg-[#050757] px-4 py-2 rounded-md"
                 >
                   View Bio
@@ -63,7 +65,7 @@ const Team = () => {
             </p>
             <p className="font-Manrope text-xl capitalize">{i.role}</p>
             <div className="flex justify-start items-start gap-2">
-              <a href="/#contact-us">
+              {/* <a href={`mailto:${i.email}`}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -72,7 +74,7 @@ const Team = () => {
                 >
                   <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z" />
                 </svg>
-              </a>
+              </a> */}
               <a href={i.linkedin}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +87,7 @@ const Team = () => {
               </a>
             </div>
             <Link
-              to={"/team"}
+              to={`/team#${i.hash}`}
               className="md:hidden border p-2.5 rounded-lg  border-[#050757] hover:bg-slate-600 hover:text-white"
             >
               View Bio

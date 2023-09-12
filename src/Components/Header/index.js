@@ -30,7 +30,7 @@ const navItem = [
   },
   {
     label: "Contact us",
-    href: "#contact-us",
+    href: "mailto:info@turbofederal.com ",
     hashLink: true,
   },
 ];

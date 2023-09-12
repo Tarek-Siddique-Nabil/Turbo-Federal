@@ -124,7 +124,7 @@ const Hero = () => {
       <section className=" lg:px-40 md:px-10 px-5 md:py-10 py-4 ">
         <div className="w-full flex flex-wrap justify-center items-center gap-10 md:gap-0 lg:gap-0 md:justify-between">
           <div className="md:w-1/2 flex flex-wrap  gap-2 justify-center md:justify-start">
-            <a href="/#contact-us" className="hero-btn">
+            <a href={`mailto:info@turbofederal.com`} className="hero-btn">
               Contact Us
             </a>
 
