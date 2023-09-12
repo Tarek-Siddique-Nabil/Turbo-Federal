@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import logo from "../../assets/logo.jpg";
 import { useSidebar } from "../Header/zustand";
+import { Link  } from "react-router-dom"
 const Footer = () => {
   const { isSidebarOpen } = useSidebar();
   return (
@@ -65,9 +66,9 @@ const Footer = () => {
           </container>
         </section> */}
         </section>
-        <section>
+        <Link to='/'>
           <img className="max-h-20" src={logo} />
-        </section>
+        </Link>
       </container>
     </footer>
   );
