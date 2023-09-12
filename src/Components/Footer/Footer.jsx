@@ -42,9 +42,9 @@ const Footer = () => {
               placeholder="info@turbofederal.com"
               className="px-6 py-3 bg-slate-200 rounded-2xl"
             />
-            <button className="px-3 py-3 bg-[#383a9b] text-white font-Manrope rounded-lg">
+            <a href={`mailto:info@turbofederal.com`} className="px-3 py-3 bg-[#383a9b] text-white font-Manrope rounded-lg">
               Send Email
-            </button>
+            </a>
           </motion.div>
           {/* <section>
           <container className="flex justify-between md:text-xl font-light font-Manrope capitalize">
