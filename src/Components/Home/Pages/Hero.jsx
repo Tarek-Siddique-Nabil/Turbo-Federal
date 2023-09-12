@@ -23,12 +23,8 @@ const Hero = () => {
           }}
           className="font-Manrope text-5xl md:text-5xl lg:text-[75px] font-medium -z-50"
         >
-          <p>
+          <p className="flex items-center">
             Accelerating{" "}
-            <span className="text-[#050757] animate-spin">&#10040;</span>{" "}
-          </p>
-          <p className="flex flex-wrap items-center gap-1">
-            <span>mission</span>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +40,11 @@ const Hero = () => {
                   d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                 />
               </svg>
-            </span>
+            </span>{" "}
+          </p>
+          <p className="flex flex-wrap items-center gap-1">
+            <span>mission</span>
+            <span className="text-[#050757] ">&#10040;</span>
             <span>success</span>
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ const Hero = () => {
         >
           <p className="text-[22px] md:text-[26px] font-Manrope font-bold">
             {" "}
-            AI Transformation Services to
+            AI Transformation Services to:
           </p>
           <ul className="text-[22px] leading-10 font-Manrope list-inside list-disc">
             <li>Increase Productivity by 10x</li>
@@ -128,7 +128,7 @@ const Hero = () => {
               Contact Us
             </a>
 
-            <motion.button
+            {/* <motion.button
               className={`${
                 isSidebarOpen && "-z-50 "
               } relative lg:ml-12 group hidden sm:block   w-[150px] h-10 bg-[#050757] text-white rounded-3xl `}
@@ -138,7 +138,7 @@ const Hero = () => {
                   artificial intelligence
                 </span>
               </span>
-            </motion.button>
+            </motion.button> */}
           </div>
 
           <div className="md:w-1/2 -z-50">

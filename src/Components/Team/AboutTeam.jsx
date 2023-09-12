@@ -47,11 +47,11 @@ const AboutTeam = () => {
       image: `${Simon_image}`,
       email: "info@turbofederal.com",
       linkedin: "https://www.linkedin.com/in/simon-flom-4a38038/",
-      bio: `Simon Flom has been supporting federal customers in a variety of capacities for over 15 years. He has led numerous large-scale cyber projects from inception to successful completion. He formed Turbo Federal to solve complex mission challenges unique to Federal agencies and accelerate desired objectives using customized agile cyber solutions.
+      bio: `Simon Flom has been supporting federal customers in a variety of capacities for over 15 years. He has led numerous large-scale cyber projects from inception to successful completion. He formed Turbo Federal to solve complex mission challenges unique to Federal agencies and accelerate desired objectives using customized agile solutions.
     
           Turbo Federal's dedicated engineering and support staff is the foundation of our business. Each individual is carefully selected based on strict technical qualifications, work ethic, spirit, and commitment to meeting our clients' goals. They all share our core company philosophy to:\n\n- Build a Positive Team Spirit.\n- Build Honest and Open Relationships with Communication.\n- Do More with Less.\n- Be Passionate and Determined.\n- Pursue Growth and Learning.\n- Embrace Creative Thought.
     
-          We look forward to accelerating your mission, regardless of size or complexity. To learn how Turbo can accelerate your mission, visit us http://www.turbofederal.com/.`,
+          We look forward to accelerating your mission, regardless of size or complexity. `,
     },
   ];
   return (
@@ -60,9 +60,7 @@ const AboutTeam = () => {
       // style={{ overflowY: "scroll" }}
       className="flex flex-col items-center gap-5 p-4"
     >
-      <p className=" text-4xl md:text-4xl lg:text-7xl font-medium">
-        About Team
-      </p>
+      <p className=" text-4xl md:text-4xl lg:text-7xl font-medium">Our Team</p>
       <div className="md:w-[65%]  flex flex-col md:gap-12 lg:gap-20  gap-8">
         {persons.map((person, index) => (
           <div

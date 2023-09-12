@@ -38,7 +38,7 @@ const Team = () => {
         Our Team
         <HandShake />
       </p>
-      <section className="flex flex-wrap md:justify-start justify-center  gap-10 py-10">
+      <section className="flex flex-wrap  justify-center  gap-10 py-10">
         {person.map((i, index) => (
           <div
             key={index}

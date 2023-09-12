@@ -61,8 +61,7 @@ const Services = () => {
         },
         { title: "AI Knowledge Management" },
         {
-          title:
-            "Autonomous AI Assistants / Agents / Copilots for Research & Analysis ",
+          title: "Autonomous AI Assistants / Agents / Copilots  ",
         },
         { title: "AI custom tools & services for unique use cases" },
         { title: "IoT, Kiosk, Web App, Wearable integration" },
