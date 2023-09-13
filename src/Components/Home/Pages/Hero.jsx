@@ -43,9 +43,9 @@ const Hero = () => {
             </span>{" "}
           </p>
           <p className="flex flex-wrap items-center gap-1">
-            <span>mission</span>
+            <span>Mission</span>
             <span className="text-[#050757] ">&#10040;</span>
-            <span>success</span>
+            <span>Success</span>
           </p>
         </motion.div>
 
