@@ -117,7 +117,7 @@ const AboutUs = () => {
             ))}
           </ul>
           <p className="my-6 text-lg md:text-2xl  font-Manrope font-semibold">
-            For each solution we have well qualified and acclaimed experts
+            For each solution, we have well-qualified and acclaimed experts
             committed to your organization’s mission and success. They share in
             our core company values to:
           </p>
