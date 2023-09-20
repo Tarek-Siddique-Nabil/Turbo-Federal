@@ -38,7 +38,7 @@ const AboutUs = () => {
           </div>
 
           <p className="my-6 text-lg md:text-2xl ">
-            Turbo Federal is a Top-Secret cleared trusted provider of digital
+            Turbo Federal is a Top-Secret cleared trusted provider of AI
             transformation, application modernization, cybersecurity, training,
             and program management/PMO services to federal government customers.
             Leveraging Agile and DevSecOps best practices specifically tailored
@@ -117,7 +117,7 @@ const AboutUs = () => {
             ))}
           </ul>
           <p className="my-6 text-lg md:text-2xl  font-Manrope font-semibold">
-            For each solution we have well qualified and acclaimed experts
+            For each solution, we have well-qualified and acclaimed experts
             committed to your organization’s mission and success. They share in
             our core company values to:
           </p>

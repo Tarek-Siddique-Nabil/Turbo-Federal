@@ -43,9 +43,9 @@ const Hero = () => {
             </span>{" "}
           </p>
           <p className="flex flex-wrap items-center gap-1">
-            <span>mission</span>
+            <span>Mission</span>
             <span className="text-[#050757] ">&#10040;</span>
-            <span>success</span>
+            <span>Success</span>
           </p>
         </motion.div>
 
@@ -81,8 +81,7 @@ const Hero = () => {
           className="-z-50 flex flex-col gap-5"
         >
           <p className="text-[22px] md:text-[26px] font-Manrope font-bold">
-            {" "}
-            AI Transformation Services to:
+            AI Transformation, IT Services and Management Consulting to:
           </p>
           <ul className="text-[22px] leading-10 font-Manrope list-inside list-disc">
             <li>Increase Productivity by 10x</li>

@@ -11,6 +11,7 @@ const Services = () => {
       title: "IT Services",
       services: [
         {
+          
           title: "IT Consultancy & Advisory",
         },
         {
@@ -26,7 +27,7 @@ const Services = () => {
           title: "Low-Code App/SW Dev & Mgmt",
         },
         {
-          title: "Case Management dev (simple / complex)",
+          title: "Case Management dev (simple/complex)",
         },
         {
           title: "App Modernization & Portfolio Rationalization",
