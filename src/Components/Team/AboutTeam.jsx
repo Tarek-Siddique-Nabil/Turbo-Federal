@@ -73,6 +73,7 @@ const AboutTeam = () => {
                 className="md:w-[208px] w-[116px] md:h-[255px] h-[140px] object-cover rounded-3xl md:rounded-[50px] shadow-lg shadow-gray-500"
                 src={person.image}
                 alt={person.name}
+                loading="lazy"
               />
               <div className="flex flex-col gap-2">
                 <p className="font-Manrope text-3xl capitalize  ">

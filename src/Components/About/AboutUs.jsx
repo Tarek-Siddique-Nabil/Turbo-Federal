@@ -58,6 +58,7 @@ const AboutUs = () => {
           className=" h-[250px] lg:h-[450px] md:h-[230px] w-full   -z-50 md:my-16 my-4"
         >
           <img
+            loading="lazy"
             className="h-full w-full rounded-xl object-cover"
             src={AiImage}
             alt=""

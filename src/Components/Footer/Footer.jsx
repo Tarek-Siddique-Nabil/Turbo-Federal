@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import logo from "../../assets/logo.jpg";
 import { useSidebar } from "../Header/zustand";
-import { Link  } from "react-router-dom"
+import { Link } from "react-router-dom";
 const Footer = () => {
   const { isSidebarOpen } = useSidebar();
   return (
@@ -42,7 +42,10 @@ const Footer = () => {
               placeholder="info@turbofederal.com"
               className="px-6 py-3 bg-slate-200 rounded-2xl"
             />
-            <a href={`mailto:info@turbofederal.com`} className="px-3 py-3 bg-[#383a9b] text-white font-Manrope rounded-lg">
+            <a
+              href={`mailto:info@turbofederal.com`}
+              className="px-3 py-3 bg-[#383a9b] text-white font-Manrope rounded-lg"
+            >
               Send Email
             </a>
           </motion.div>
@@ -66,8 +69,8 @@ const Footer = () => {
           </container>
         </section> */}
         </section>
-        <Link to='/'>
-          <img className="max-h-20" src={logo} />
+        <Link to="/">
+          <img loading="lazy" className="max-h-20" src={logo} />
         </Link>
       </container>
     </footer>

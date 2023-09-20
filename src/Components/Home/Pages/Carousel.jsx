@@ -64,6 +64,7 @@ const Carousel = () => {
                       className="lg:w-[75%] lg:h-[75%] w-[70%] h-[70%]  object-cover"
                       src={data?.image}
                       alt={data?.title}
+                      loading="lazy"
                     />
                   </div>
                 )

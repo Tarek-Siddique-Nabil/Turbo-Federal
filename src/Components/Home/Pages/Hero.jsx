@@ -62,10 +62,12 @@ const Hero = () => {
           <img
             className="base-image-1 object-cover rounded-tr-[50px] rounded-bl-[50px]"
             src={techPerson}
+            loading="lazy"
           />
           <img
             className="base-image object-cover rounded-tl-[50px] rounded-br-[50px]"
             src={aiImage}
+            loading="lazy"
             alt=""
           />
         </motion.figure>

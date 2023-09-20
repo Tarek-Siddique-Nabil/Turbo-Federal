@@ -49,6 +49,7 @@ const Team = () => {
                 className="md:w-[208px] w-[116px] md:h-[255px] h-[140px] object-cover rounded-3xl md:rounded-[50px] group-hover:shadow-lg group-hover:shadow-[#050757] transition-all duration-150 ease-linear md:group-hover:blur-[2px]"
                 src={i.image}
                 alt={i.name}
+                loading="lazy"
               />
               <div className="hidden absolute inset-0 md:flex items-center justify-center lg:translate-y-[50%] opacity-0 lg:group-hover:translate-y-20 group-hover:opacity-100 transition-all duration-150 ease-linear">
                 <Link
