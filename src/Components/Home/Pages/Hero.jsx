@@ -101,26 +101,23 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className=" md:flex flex-col   gap-1"
+          className=" md:flex flex-col  "
         >
-          <section className="flex lg:flex-row md:flex-col md:justify-center lg:justify-between gap-3 items-center">
-            <div className="lg:ml-10">
+          <section className="flex lg:flex-row md:flex-col md:justify-center lg:justify-between gap-3 items-start ">
+            <div className="h-[420px] w-[420px]">
               <video
                 width="420"
                 height="420"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                controls={false}
-                className="rounded-lg hover:scale-110 transition-all ease-in-out duration-150"
+                controls
+                className="rounded-lg scale-110 transition-all ease-in-out duration-150"
               >
                 <source src="/video/aiVideo.mp4" type="video/mp4" />
               </video>
             </div>
-            <div className="hidden md:flex flex-col items-end gap-1">
+            <div className="hidden md:flex flex-col items-end gap-1 ">
               <Link to={"/services"}>
                 <motion.button
-                  whileHover={{ width: "350px" }}
+                  whileHover={{ width: "300px" }}
                   style={{ boxShadow: "10px 10px  black  " }}
                   className="year-box font-Manrope  bg-[#050757]"
                 >
@@ -129,7 +126,7 @@ const Hero = () => {
               </Link>
               <Link to={"/services"}>
                 <motion.button
-                  whileHover={{ width: "350px" }}
+                  whileHover={{ width: "300px" }}
                   style={{ boxShadow: "7px 7px 1px 1px black " }}
                   className="year-box   transform-gpu z-50  shadow-gray-800 bg-[#BF3B41]"
                 >
