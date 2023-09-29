@@ -92,6 +92,7 @@ const Hero = () => {
             <li>Extract Knowledge & Insights</li>
           </ul>
         </motion.div>
+
         <motion.div
           initial={{ x: "100vh", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -100,26 +101,43 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="hidden md:flex flex-col items-end gap-1"
+          className="hidden md:flex flex-col   gap-1"
         >
-          <Link to={"/services"}>
-            <motion.button
-              whileHover={{ width: "350px" }}
-              style={{ boxShadow: "10px 10px  black  " }}
-              className="year-box font-Manrope  bg-[#050757]"
-            >
-              AI
-            </motion.button>
-          </Link>
-          <Link to={"/services"}>
-            <motion.button
-              whileHover={{ width: "350px" }}
-              style={{ boxShadow: "7px 7px 1px 1px black " }}
-              className="year-box   transform-gpu z-50  shadow-gray-800 bg-[#BF3B41]"
-            >
-              IT
-            </motion.button>
-          </Link>
+          <section className="flex flex-wrap md:justify-center lg:justify-between gap-3 items-center">
+            <div className="lg:ml-10">
+              <video
+                width="420"
+                height="420"
+                loop={true}
+                autoPlay={true}
+                muted={true}
+                controls={false}
+                className="rounded-lg"
+              >
+                <source src="/public/video/aiVideo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className="hidden md:flex flex-col items-end gap-1">
+              <Link to={"/services"}>
+                <motion.button
+                  whileHover={{ width: "350px" }}
+                  style={{ boxShadow: "10px 10px  black  " }}
+                  className="year-box font-Manrope  bg-[#050757]"
+                >
+                  AI
+                </motion.button>
+              </Link>
+              <Link to={"/services"}>
+                <motion.button
+                  whileHover={{ width: "350px" }}
+                  style={{ boxShadow: "7px 7px 1px 1px black " }}
+                  className="year-box   transform-gpu z-50  shadow-gray-800 bg-[#BF3B41]"
+                >
+                  IT
+                </motion.button>
+              </Link>
+            </div>{" "}
+          </section>
         </motion.div>
       </main>
       <section className=" lg:px-40 md:px-10 px-5 md:py-10 py-4 ">
