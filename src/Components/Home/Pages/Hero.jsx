@@ -101,7 +101,7 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="hidden md:flex flex-col   gap-1"
+          className=" md:flex flex-col   gap-1"
         >
           <section className="flex flex-wrap md:justify-center lg:justify-between gap-3 items-center">
             <div className="lg:ml-10">
@@ -114,7 +114,7 @@ const Hero = () => {
                 controls={false}
                 className="rounded-lg"
               >
-                <source src="/public/video/aiVideo.mp4" type="video/mp4" />
+                <source src="/video/aiVideo.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="hidden md:flex flex-col items-end gap-1">
