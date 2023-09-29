@@ -103,7 +103,7 @@ const Hero = () => {
           }}
           className=" md:flex flex-col   gap-1"
         >
-          <section className="flex flex-wrap md:justify-center lg:justify-between gap-3 items-center">
+          <section className="flex lg:flex-row md:flex-col md:justify-center lg:justify-between gap-3 items-center">
             <div className="lg:ml-10">
               <video
                 width="420"
@@ -112,7 +112,7 @@ const Hero = () => {
                 autoPlay={true}
                 muted={true}
                 controls={false}
-                className="rounded-lg"
+                className="rounded-lg hover:scale-110 transition-all ease-in-out duration-150"
               >
                 <source src="/video/aiVideo.mp4" type="video/mp4" />
               </video>
