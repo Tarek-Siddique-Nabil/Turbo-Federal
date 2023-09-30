@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import aiImage from "../../../assets/ai.webp";
 import { motion } from "framer-motion";
 import { useSidebar } from "../../Header/zustand";
@@ -6,6 +6,48 @@ import { Link } from "react-router-dom";
 import { techPerson } from "../../../assets/image";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  console.log("🚀 ~ file: Hero.jsx:10 ~ Hero ~ isFullscreen:", isFullscreen);
+  const videoRef = useRef();
+
+  const toggleFullscreen = () => {
+    if (!isFullscreen) {
+      if (videoRef.current.requestFullscreen) {
+        videoRef.current.requestFullscreen();
+      } else if (videoRef.current.webkitRequestFullscreen) {
+        videoRef.current.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+
+    setIsFullscreen(!isFullscreen);
+  };
+  const restartVideo = () => {
+    const video = videoRef.current;
+    video.currentTime = 0; // Reset the video to the beginning
+    video.play();
+  };
+  const togglePlayPause = () => {
+    const video = videoRef.current;
+    if (video.paused) {
+      if (video.ended) {
+        restartVideo();
+        toggleFullscreen();
+      } else {
+        video.play();
+        toggleFullscreen();
+      }
+    } else {
+      video.pause();
+      toggleFullscreen();
+    }
+  };
+
   return (
     <>
       <main
@@ -106,10 +148,14 @@ const Hero = () => {
           <section className="flex lg:flex-row md:flex-col md:justify-center lg:justify-between gap-3 items-start ">
             <div className="h-[420px] w-[420px]">
               <video
+                ref={videoRef}
                 width="420"
                 height="420"
-                controls
-                className="rounded-lg scale-110 transition-all ease-in-out duration-150"
+                controls={false}
+                className={`rounded-lg scale-110 transition-all ease-in-out duration-150 ${
+                  isFullscreen ? "fullscreen" : ""
+                }`}
+                onClick={isFullscreen ? toggleFullscreen : togglePlayPause}
               >
                 <source src="/video/aiVideo.mp4" type="video/mp4" />
               </video>
