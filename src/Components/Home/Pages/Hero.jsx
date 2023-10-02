@@ -7,15 +7,17 @@ import { techPerson } from "../../../assets/image";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
   const [isFullscreen, setIsFullscreen] = useState(false);
-  console.log("🚀 ~ file: Hero.jsx:10 ~ Hero ~ isFullscreen:", isFullscreen);
+
   const videoRef = useRef();
+  console.log("🚀 ~ file: Hero.jsx:13 ~ Hero ~ videoRef:", videoRef.current);
 
   const toggleFullscreen = () => {
+    const video = videoRef.current;
     if (!isFullscreen) {
-      if (videoRef.current.requestFullscreen) {
-        videoRef.current.requestFullscreen();
-      } else if (videoRef.current.webkitRequestFullscreen) {
-        videoRef.current.webkitRequestFullscreen();
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
       }
     } else {
       if (document.exitFullscreen) {
@@ -27,24 +29,23 @@ const Hero = () => {
 
     setIsFullscreen(!isFullscreen);
   };
+
   const restartVideo = () => {
     const video = videoRef.current;
     video.currentTime = 0; // Reset the video to the beginning
     video.play();
   };
+
   const togglePlayPause = () => {
     const video = videoRef.current;
     if (video.paused) {
       if (video.ended) {
         restartVideo();
-        toggleFullscreen();
-      } else {
-        video.play();
-        toggleFullscreen();
       }
+      video.play();
+      toggleFullscreen();
     } else {
       video.pause();
-      toggleFullscreen();
     }
   };
 
@@ -146,7 +147,7 @@ const Hero = () => {
           className=" md:flex flex-col  "
         >
           <section className="flex lg:flex-row md:flex-col md:justify-center lg:justify-between gap-3 items-start ">
-            <div className="h-[420px] w-[420px]">
+            <div className="relative h-[230px] w-[420px]">
               <video
                 ref={videoRef}
                 width="420"
@@ -155,10 +156,34 @@ const Hero = () => {
                 className={`rounded-lg scale-110 transition-all ease-in-out duration-150 ${
                   isFullscreen ? "fullscreen" : ""
                 }`}
-                onClick={isFullscreen ? toggleFullscreen : togglePlayPause}
               >
                 <source src="/video/aiVideo.mp4" type="video/mp4" />
               </video>
+              <button
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                style={{ zIndex: 1 }}
+                onClick={() => togglePlayPause()}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-24 h-24 stroke-zinc-400"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
+                  />
+                </svg>
+              </button>
             </div>
             <div className="hidden md:flex flex-col items-end gap-1 ">
               <Link to={"/services"}>
