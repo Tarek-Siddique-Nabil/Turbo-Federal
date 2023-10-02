@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import aiImage from "../../../assets/ai.webp";
 import { motion } from "framer-motion";
 import { useSidebar } from "../../Header/zustand";
@@ -9,46 +9,70 @@ const Hero = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const videoRef = useRef();
-  console.log("🚀 ~ file: Hero.jsx:13 ~ Hero ~ videoRef:", videoRef.current);
-
-  const toggleFullscreen = () => {
+  useEffect(() => {
     const video = videoRef.current;
-    if (!isFullscreen) {
-      if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
+    if (isFullscreen === true) {
+      if (video.ended) {
+        restartVideo();
       }
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      }
+      video.play();
+    } else if (isFullscreen === false) {
+      video.pause();
     }
+    // Function to handle full-screen change
+    const handleFullScreenChange = () => {
+      setIsFullscreen(
+        !!(
+          document.fullscreenElement ||
+          document.mozFullScreenElement ||
+          document.webkitFullscreenElement ||
+          document.msFullscreenElement
+        )
+      );
+    };
 
-    setIsFullscreen(!isFullscreen);
+    // Add event listeners for full-screen change
+    document.addEventListener("fullscreenchange", handleFullScreenChange);
+    document.addEventListener("mozfullscreenchange", handleFullScreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullScreenChange);
+    document.addEventListener("msfullscreenchange", handleFullScreenChange);
+
+    // Cleanup on unmount
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullScreenChange);
+      document.removeEventListener(
+        "mozfullscreenchange",
+        handleFullScreenChange
+      );
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        handleFullScreenChange
+      );
+      document.removeEventListener(
+        "msfullscreenchange",
+        handleFullScreenChange
+      );
+    };
+  }, [videoRef, isFullscreen]);
+
+  const toggleFullScreen = () => {
+    const video = videoRef.current;
+
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) {
+      video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      video.msRequestFullscreen();
+    }
   };
-
   const restartVideo = () => {
     const video = videoRef.current;
     video.currentTime = 0; // Reset the video to the beginning
     video.play();
   };
-
-  const togglePlayPause = () => {
-    const video = videoRef.current;
-    if (video.paused) {
-      if (video.ended) {
-        restartVideo();
-      }
-      video.play();
-      toggleFullscreen();
-    } else {
-      video.pause();
-    }
-  };
-
   return (
     <>
       <main
@@ -147,7 +171,7 @@ const Hero = () => {
           className=" md:flex flex-col  "
         >
           <section className="flex lg:flex-row md:flex-col md:justify-center lg:justify-between gap-3 items-start ">
-            <div className="relative h-[230px] w-[420px]">
+            <div className="relative flex  h-[230px] w-[420px]">
               <video
                 ref={videoRef}
                 width="420"
@@ -160,29 +184,48 @@ const Hero = () => {
                 <source src="/video/aiVideo.mp4" type="video/mp4" />
               </video>
               <button
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                className="absolute w-full h-full flex  justify-center items-center"
                 style={{ zIndex: 1 }}
-                onClick={() => togglePlayPause()}
+                onClick={() => {
+                  toggleFullScreen();
+                }}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-24 h-24 stroke-zinc-400"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
-                  />
-                </svg>
+                {!isFullscreen ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-24 h-24 stroke-black"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-24 h-24 stroke-black"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 5.25v13.5m-7.5-13.5v13.5"
+                    />
+                  </svg>
+                )}
               </button>
             </div>
             <div className="hidden md:flex flex-col items-end gap-1 ">
