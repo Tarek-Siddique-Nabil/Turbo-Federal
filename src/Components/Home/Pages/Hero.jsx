@@ -149,8 +149,9 @@ const Hero = () => {
           }}
           className="-z-50 flex flex-col gap-5"
         >
-          <p className="text-[22px] md:text-[26px] font-Manrope font-bold">
-            AI Transformation, IT Services and Management Consulting to:
+          <p className="text-[22px] md:text-[26px] font-Manrope font-bold flex flex-col">
+            <span>AI Transformation, IT Services and Management </span>{" "}
+            <span>Consulting to:</span>
           </p>
           <ul className="text-[22px] leading-10 font-Manrope list-inside list-disc">
             <li>Increase Productivity by 10x</li>
@@ -171,16 +172,16 @@ const Hero = () => {
           className=" md:flex flex-col  "
         >
           <section
-            className="flex justify-end
+            className="flex justify-center
           "
           >
-            <div className="relative flex  h-[300px] w-fit lg:w-[450px] ">
+            <div className="relative flex   ">
               <video
                 ref={videoRef}
-                width="450"
-                height="300"
+                width="700"
+                height="700"
                 controls={false}
-                className={`rounded-lg scale-110 transition-all ease-in-out duration-150 h-[300px] w-fit lg:w-[450px] aspect-video 
+                className={`rounded-lg scale-110 transition-all ease-in-out duration-150  aspect-video 
                   
                 `}
               >
