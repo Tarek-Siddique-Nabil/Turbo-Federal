@@ -170,18 +170,25 @@ const Hero = () => {
           }}
           className=" md:flex flex-col  "
         >
-          <section className="flex lg:flex-row md:flex-col md:justify-center lg:justify-between gap-3 items-start ">
-            <div className="relative flex  h-[230px] w-[420px]">
+          <section
+            className="flex justify-end
+          "
+          >
+            <div className="relative flex  h-[300px] w-fit lg:w-[450px] ">
               <video
                 ref={videoRef}
-                width="420"
-                height="420"
+                width="450"
+                height="300"
                 controls={false}
-                className={`rounded-lg scale-110 transition-all ease-in-out duration-150 ${
-                  isFullscreen ? "fullscreen" : ""
-                }`}
+                className={`rounded-lg scale-110 transition-all ease-in-out duration-150 h-[300px] w-fit lg:w-[450px] aspect-video 
+                  
+                `}
               >
-                <source src="/video/aiVideo.mp4" type="video/mp4" />
+                <source
+                  className="h-[300px] w-fit lg:w-[450px] "
+                  src="/video/aiVideo.mp4"
+                  type="video/mp4"
+                />
               </video>
               <button
                 className="absolute w-full h-full flex  justify-center items-center"
@@ -228,7 +235,7 @@ const Hero = () => {
                 )}
               </button>
             </div>
-            <div className="hidden md:flex flex-col items-end gap-1 ">
+            {/* <div className="hidden md:flex flex-col items-end gap-1 ">
               <Link to={"/services"}>
                 <motion.button
                   whileHover={{ width: "300px" }}
@@ -247,7 +254,7 @@ const Hero = () => {
                   IT
                 </motion.button>
               </Link>
-            </div>{" "}
+            </div>{" "} */}
           </section>
         </motion.div>
       </main>
