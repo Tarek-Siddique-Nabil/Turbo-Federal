@@ -3,7 +3,7 @@ import aiImage from "../../../assets/ai.webp";
 import { motion } from "framer-motion";
 import { useSidebar } from "../../Header/zustand";
 import { Link } from "react-router-dom";
-import { techPerson } from "../../../assets/image";
+import { poster, techPerson } from "../../../assets/image";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -181,6 +181,7 @@ const Hero = () => {
                 width="700"
                 height="700"
                 controls={false}
+                poster={poster}
                 className={`rounded-lg scale-110 transition-all ease-in-out duration-150  aspect-video 
                   
                 `}
