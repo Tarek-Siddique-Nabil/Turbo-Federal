@@ -66,6 +66,25 @@ const Hero = () => {
       video.webkitRequestFullscreen();
     } else if (video.msRequestFullscreen) {
       video.msRequestFullscreen();
+    } else {
+      // Fallback for browsers that don't support Fullscreen API
+      if (isFullscreen) {
+        // If already in fullscreen mode, exit fullscreen
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      } else {
+        // If not in fullscreen mode, enter fullscreen
+        if (video.webkitEnterFullscreen) {
+          video.webkitEnterFullscreen();
+        }
+      }
     }
   };
   const restartVideo = () => {
