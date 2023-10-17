@@ -29,6 +29,12 @@ const navItem = [
     },
   },
   {
+    label: "Solutions",
+    href: "/solutions",
+    hashLink: false,
+    onclick() {},
+  },
+  {
     label: "Contact us",
     href: "mailto:info@turbofederal.com ",
     hashLink: true,

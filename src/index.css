@@ -120,3 +120,7 @@
     transform: rotate(-7deg) translateY(-50%) translateX(60px);
   }
 }
+
+.tab-content-header {
+  @apply text-[32px] font-bold text-gray-900;
+}
