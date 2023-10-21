@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-const TabComponents = ({ header, secondary_header, image, image_alt }) => {
+const TabComponents = ({
+  id,
+  header,
+  secondary_header,
+  image,
+  image_alt,
+  extra_header,
+  extra_des,
+}) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -15,15 +23,39 @@ const TabComponents = ({ header, secondary_header, image, image_alt }) => {
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="flex flex-col gap-3 items-center lg:items-start"
+      className="flex flex-col gap-3 items-center lg:items-start w-full"
     >
-      <p className="tab-content-header lg:text-justify text-center">{header}</p>
       <p
-        className="text-xl font-Manrope"
+        className="tab-content-header lg:text-justify  text-center w-[80%]"
+        dangerouslySetInnerHTML={{ __html: header }}
+      />
+      <p
+        className="text-xl font-Manrope w-3/4"
         dangerouslySetInnerHTML={{ __html: secondary_header }}
       />
 
-      <img className="w-[275px] h-[255px] mt-3" src={image} alt={image_alt} />
+      {image && (
+        <img
+          className={`${
+            id === 6 ? "w-[450px] h-[400px]" : "w-[285px] h-[255px]"
+          }  mt-3`}
+          src={image}
+          alt={image_alt}
+        />
+      )}
+
+      {extra_header && (
+        <p
+          className="tab-content-header lg:text-justify text-center mt-4"
+          dangerouslySetInnerHTML={{ __html: extra_header }}
+        />
+      )}
+      {extra_des && (
+        <p
+          className="text-xl font-Manrope w-4/5"
+          dangerouslySetInnerHTML={{ __html: extra_des }}
+        />
+      )}
     </motion.div>
   );
 };

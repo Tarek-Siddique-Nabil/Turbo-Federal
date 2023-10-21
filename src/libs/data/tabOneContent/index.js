@@ -3,6 +3,8 @@ import {
   tabOne_Image2,
   tabOne_Image3,
   tabOne_Image4,
+  tabOne_Image5,
+  tabOne_Image6,
 } from "../../assets/tabContentImage/tab1";
 
 export const tabOneContent = [
@@ -34,5 +36,36 @@ export const tabOneContent = [
     secondary_header: `Verify and deprecate content with ease to ensure everyone is keeping pace as circumstances change.`,
     image: tabOne_Image4,
     image_alt: "Democratize document lifecycle management.",
+  },
+  {
+    id: 5,
+    header: "Features an enterprise-ready,next-generation AI work assistant ✨",
+    secondary_header: ``,
+    image: tabOne_Image5,
+    image_alt: "Democratize document lifecycle management.",
+    extra_header: "Organization knowledge and context",
+    extra_des:
+      "Delivers more relevant and accurate information by understanding your org&rsquo;s content, internal language, people and relationships.",
+  },
+  {
+    id: 6,
+    header: "Powered by Glean&rsquo;s trusted knowledge model",
+    secondary_header: `State-of-the-art technology ensures levels of accuracy and security not possible with general-purpose AI models.`,
+    image: tabOne_Image6,
+    image_alt: "Democratize document lifecycle management.",
+  },
+  {
+    id: 7,
+    header: "Permissions and data governance",
+    secondary_header: `Takes into account all real-time enterprise data permissions, and ensures that users only have access to information that they're allowed to see.`,
+    image: "",
+    image_alt: "Democratize document lifecycle management.",
+  },
+  {
+    id: 7,
+    header: "Full referenceability",
+    secondary_header: `Links to source information across documents, conversations and applications so you can trust the answers provided.`,
+    image: "",
+    image_alt: "Full referenceability",
   },
 ];
