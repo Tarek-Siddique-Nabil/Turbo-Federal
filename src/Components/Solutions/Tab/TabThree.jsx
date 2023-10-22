@@ -64,7 +64,7 @@ const TabThree = () => {
           </ul>
         </section>
         <img
-          className="w-[650px] h-[650px] mx-auto"
+          className="lg:w-[650px] lg:h-[650px] mx-auto"
           src={tabThree_imageOne}
           alt=""
         />

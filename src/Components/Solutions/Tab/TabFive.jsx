@@ -29,7 +29,7 @@ const TabFive = () => {
         <img
           src={tabFive_ImageOne}
           alt=""
-          className="px-6  h-[500px] w-[500px] mx-auto lg:-mt-20"
+          className="lg:px-6  lg:h-[500px] lg:w-[500px] mx-auto lg:-mt-20"
         />
       </div>
     </main>
