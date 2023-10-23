@@ -148,7 +148,9 @@ const Solutions = () => {
             }}
             onClick={() => setSelecetedButton(index)}
             className={`font-Manrope px-3 py-2.5 rounded-lg border border-[#383A95]  ${
-              selectedButton === index ? "bg-[#383A95] text-white" : "bg-white"
+              selectedButton === index
+                ? "bg-[#383A95] text-white font-bold"
+                : "bg-white font-bold"
             } transition-all duration-150 ease-linear`}
             key={button.id}
           >
@@ -165,8 +167,8 @@ const Solutions = () => {
             {" "}
             <div className="flex lg:items-start lg:justify-between md:flex-row flex-col">
               <div className="flex flex-col gap-7">
-                <p className="font-Manrope text-5xl font-bold">
-                  AI Knowledge Management
+                <p className=" font-Manrope text-5xl font-bold text-center md:text-left">
+                  AI Knowledge Management <span>🧠💼</span>
                 </p>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -178,16 +180,16 @@ const Solutions = () => {
                       ease: "easeInOut",
                     },
                   }}
-                  className="font-Manrope flex flex-col text-xl font-light"
+                  className="font-Manrope flex flex-col text-xl font-light text-center md:text-left"
                 >
                   <span>
                     {" "}
                     Our enterprise-ready solution for AI Knowledge Management
-                    solution utilizes Glean
+                    delivers
                   </span>{" "}
                   <span>
-                    to deliver cutting-edge search, discovery and workplace AI
-                    assistance to help you:
+                    cutting-edge search, discovery and workplace AI assistance
+                    to help you:
                   </span>
                 </motion.p>
                 <div className="relative flex  h-[300px] w-fit lg:w-[450px]  lg:left-6 ">

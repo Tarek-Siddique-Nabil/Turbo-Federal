@@ -13,14 +13,16 @@ import {
 
 const TabTwo = () => {
   return (
-    <main className="flex flex-col lg:gap-14 gap-8">
-      <p className="tab-content-header">AI Work Assistants 🧠🤖</p>
+    <main className="flex flex-col lg:gap-14 gap-10">
+      <p className="flex font-Manrope text-5xl font-bold text-center md:text-left">
+        AI Work Assistants 🧠🤖
+      </p>
       <div className="grid lg:grid-cols-2 items-center">
         <section className=" pt-4 pr-6 font-Manrope text-lg">
-          <p className="lg:w-[650px] ">
+          <p className="lg:w-[650px]  md:text-justify">
             We build <strong>enterprise-ready AI work assistants</strong> for
             knowledge, research, and task execution. Powered by next-gen AI,
-            they&rsquo;re designed to augment human workers by simplifying and{" "}
+            theyre designed to augment human workers by simplifying and{" "}
             <strong>automating mundane</strong> operations. They can be deployed
             to your users where they work now, in the form of website widgets,
             workplace chat, IoT, wearables, kiosks, HTML embeddings, and with
@@ -36,19 +38,41 @@ const TabTwo = () => {
             systems and tools to:
           </p>
           <br />
-          <ul className="font-bold text-lg">
-            <li>Search and discover information</li>
-            <li>Answer questions about any topic</li>
-            <li>Extract insights from multiple disparate data sources</li>
-            <li>Perform research on any subject matter</li>
-            <li>Assess and Analyze findings</li>
-            <li>Summarize long-form information</li>
-            <li>Write/rewrite use-case specific content</li>
-            <li>Automate mundane tasks and workflows</li>
+          <ul className="flex flex-col gap-1 font-normal  md:text-lg">
+            <li className="flex gap-1 items-center">
+              🔍<strong>Search</strong> and discover insights
+            </li>
+            <li className="flex gap-1 items-center">
+              ❓<strong>Answer</strong> questions on any topic
+            </li>
+            <li className="flex gap-1 items-start">
+              {" "}
+              💡<strong>Extract</strong> insights from data sources sources
+            </li>
+            <li className="flex gap-1 items-center">
+              {" "}
+              📚 <strong>Research</strong> any subject matter
+            </li>
+            <li className="flex gap-1 items-center">
+              {" "}
+              📊<strong>Analyze</strong> distill, assess findings
+            </li>
+            <li className="flex gap-1 items-center">
+              {" "}
+              📝<strong>Summarize</strong> long-form content
+            </li>
+            <li className="flex gap-1 items-center">
+              {" "}
+              🎨<strong>Create</strong> use-case specific content
+            </li>
+            <li className="flex gap-1 items-center">
+              {" "}
+              🤖<strong>Automate</strong> mundane tasks and workflows
+            </li>
           </ul>
         </section>
         <img
-          className="w-[500px] h-[500px] mx-auto"
+          className="lg:w-[500px] lg:h-[500px] mx-auto"
           src={tabTwo_Image1}
           alt=""
         />
@@ -61,13 +85,14 @@ const TabTwo = () => {
       </p>
 
       <p className="font-Manrope text-2xl ">
-        AI Assistants can generate new content, ideas, and solutions, based on
-        your orgs&rsquo; data. 🚀. They can be configured ⚙️ and tuned 🔧 for
-        any cognitive level of support functions, to include searching multiple
-        data stores concurrently, taking multiple actions and workflow steps on
-        behalf of the user, and equipping it any APIs to execute digital and
-        real-world tasks associated with the user&rsquo;s request, while being
-        guided by the user for human-in-the-loop control.
+        AI Work Assistants can generate new content, ideas, and solutions, based
+        on your organization&rsquo;s data. 🚀. They can be configured ⚙ and
+        tuned 🔧 for any cognitive process, to include searching multiple data
+        stores concurrently, and taking multiple actions and workflow steps on
+        behalf of the user. They can be equipped with external APIs to execute
+        digital and real-world tasks associated with the user&rsquo;s request.
+        All processes performed by AI Work Assistants are guided by the user for
+        human-in-the-loop control.
       </p>
 
       <p className="font-Manrope text-2xl">
@@ -77,14 +102,14 @@ const TabTwo = () => {
       </p>
 
       <p className="font-Manrope text-2xl">
-        Continuous data feed pipelines keep your AI work assistant&rsquo;s
-        knowledge current. 🧠🔄
+        Continuously syncing data pipelines keep your AI Work Assistant&rsquo;s
+        knowledge current. 🧠
       </p>
 
       <div>
-        <p className="font-Manrope font-bold text-2xl">
+        {/* <p className="font-Manrope font-bold text-2xl">
           Our popular AI Assistant types include:
-        </p>
+        </p> */}
         <br />
         <br />
         {/* container 2 */}
@@ -184,13 +209,15 @@ const TabTwo = () => {
           <img className="w-[400px] h-[350px] " src={tabTwo_Image5} alt="" />
         </div>
         {/* part3 */}
-        <div className="flex flex-col gap-10">
-          <p className="text-4xl font-semibold">AI Records 🗃️ Assistant:</p>
-          <p className="text-2xl font-semibold">
+        <div className="flex flex-col gap-10 ">
+          <p className="text-3xl md:text-4xl font-semibold text-center lg:text-left">
+            AI Records 🗃️ Assistant:
+          </p>
+          <p className="text-2xl font-semibold text-center lg:text-left">
             {" "}
             Use Case Example: Law Enforcement 🚨🚔
           </p>
-          <p className="text-2xl font-semibold">
+          <p className="text-2xl font-semibold text-center lg:text-left">
             AI Records 🗃️ Assistants can supercharge law enforcement
             records/case/incident management systems with:
           </p>

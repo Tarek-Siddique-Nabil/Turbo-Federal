@@ -3,27 +3,29 @@ import tabFive_ImageOne from "../../../libs/assets/tabContentImage/tab5/image1.p
 const TabFive = () => {
   return (
     <main>
-      <p className="tab-content-header">Custom AI Apps:</p>
+      <p className="font-Manrope text-5xl font-bold">Custom AI Apps:</p>
       <br />
       <br />
-      <div className="flex lg:flex-row flex-col items-start">
+      <div className="flex lg:flex-row flex-col items-start text-start">
         <section className="flex flex-col gap-8 text-xl">
-          <p>Next-gen LLM applications to power your specific use cases.</p>
           <p>
-            We can build on top of multi-agent conversations, with diverse
-            conversation patterns for complex human task workflows.
+            🚀 Next-gen LLM applications to power your specific use cases. 💼
+          </p>
+          <p>
+            We can build on top of multi-agent conversations 🗣, with diverse
+            conversation patterns for complex human task workflows. 🔄
           </p>
           <p>
             We can customize models to a wide range of applications from various
-            domains and complexities.
+            domains and complexities. 🌐
           </p>
           <p>
             Abstract and implement conversable agents designed to solve tasks
-            through inter-agent conversations.
+            through inter-agent conversations. 🤖💬
           </p>
           <p>
             Customizable to integrate LLMs, humans, tools, or a combination of
-            them.
+            them. 🔧👥🔗
           </p>
         </section>
         <img

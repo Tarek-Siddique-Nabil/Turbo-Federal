@@ -5,7 +5,7 @@ const navItem = [
     hashLink: false,
   },
   {
-    label: "About us",
+    label: "About",
     href: "/about-us",
     hashLink: false,
     onclick() {
@@ -35,7 +35,7 @@ const navItem = [
     onclick() {},
   },
   {
-    label: "Contact us",
+    label: "Contact ",
     href: "mailto:info@turbofederal.com ",
     hashLink: true,
   },
