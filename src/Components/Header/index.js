@@ -4,13 +4,12 @@ const navItem = [
     href: "/",
     hashLink: false,
   },
+
   {
-    label: "About",
-    href: "/about-us",
+    label: "Solutions",
+    href: "/solutions",
     hashLink: false,
-    onclick() {
-      window.scrollTo({ top: 0 });
-    },
+    onclick() {},
   },
   {
     label: "Services",
@@ -29,10 +28,12 @@ const navItem = [
     },
   },
   {
-    label: "Solutions",
-    href: "/solutions",
+    label: "About",
+    href: "/about-us",
     hashLink: false,
-    onclick() {},
+    onclick() {
+      window.scrollTo({ top: 0 });
+    },
   },
   {
     label: "Contact ",

@@ -16,13 +16,13 @@ import { motion } from "framer-motion";
 import ScrollableCarousel from "../ScrollableCarousel";
 const TabTwo = () => {
   return (
-    <main className="flex flex-col lg:gap-14 gap-10">
+    <main className="flex flex-col lg:gap-5 gap-1">
       <p className="flex font-Manrope text-5xl font-bold text-center md:text-left">
         AI Work Assistants 🧠🤖
       </p>
       <div className="grid lg:grid-cols-2 items-center">
-        <section className=" pt-4 pr-6 font-Manrope text-lg">
-          <p className="lg:w-[650px]  md:text-justify">
+        <section className=" pt-4 pr-6 font-Manrope ">
+          <p className="lg:w-[650px] text-xl font-Manrope md:text-justify">
             We build <strong>enterprise-ready AI work assistants</strong> for
             knowledge, research, and task execution. Powered by next-gen AI,
             they&rsquo;re designed to augment human workers by
@@ -36,13 +36,13 @@ const TabTwo = () => {
             more.
           </p>
           <br />
-          <p className="lg:w-[660px]">
+          <p className="lg:w-[660px] text-xl">
             AI work assistants super charge ⚡ team productivity by enhancing
             worker knowledge, skills and abilities (KSAs) 💪 and empowering IT
             systems and tools to:
           </p>
           <br />
-          <ul className="flex flex-col gap-1 font-normal  md:text-lg">
+          <ul className="flex flex-col gap-3 font-Manrope text-xl">
             <li className="flex gap-1 items-center">
               🔍<strong>Search</strong> and discover insights
             </li>
@@ -81,35 +81,35 @@ const TabTwo = () => {
           alt=""
         />
       </div>
+      <div className="flex flex-col gap-7">
+        <p className="font-Manrope text-xl">
+          It's like having a <strong>super-smart, always-on team member</strong>{" "}
+          🥇who can help you manage, organize, and leverage your organization's
+          collective knowledge, tools, and data.
+        </p>
 
-      <p className="font-Manrope text-xl">
-        It's like having a <strong>super-smart, always-on team member</strong>{" "}
-        🥇who can help you manage, organize, and leverage your organization's
-        collective knowledge, tools, and data.
-      </p>
+        <p className="font-Manrope text-xl">
+          AI Work Assistants can generate new content, ideas, and solutions,
+          based on your organization&rsquo;s data. 🚀. They can be configured ⚙
+          and tuned 🔧 for any cognitive process, to include searching multiple
+          data stores concurrently, and taking multiple actions and workflow
+          steps on behalf of the user. They can be equipped with external APIs
+          to execute digital and real-world tasks associated with the
+          user&rsquo;s request. All processes performed by AI Work Assistants
+          are guided by the user for human-in-the-loop control.
+        </p>
 
-      <p className="font-Manrope text-xl">
-        AI Work Assistants can generate new content, ideas, and solutions, based
-        on your organization&rsquo;s data. 🚀. They can be configured ⚙ and
-        tuned 🔧 for any cognitive process, to include searching multiple data
-        stores concurrently, and taking multiple actions and workflow steps on
-        behalf of the user. They can be equipped with external APIs to execute
-        digital and real-world tasks associated with the user&rsquo;s request.
-        All processes performed by AI Work Assistants are guided by the user for
-        human-in-the-loop control.
-      </p>
+        <p className="font-Manrope text-xl">
+          They connect to any structured or unstructured information from 100+
+          integrations, custom data sources via API, or from direct data
+          uploads. 📚
+        </p>
 
-      <p className="font-Manrope text-xl">
-        They connect to any structured or unstructured information from 100+
-        integrations, custom data sources via API, or from direct data uploads.
-        📚
-      </p>
-
-      <p className="font-Manrope text-xl">
-        Continuously syncing data pipelines keep your AI Work Assistant&rsquo;s
-        knowledge current. 🧠
-      </p>
-
+        <p className="font-Manrope text-xl">
+          Continuously syncing data pipelines keep your AI Work
+          Assistant&rsquo;s knowledge current. 🧠
+        </p>
+      </div>
       <div>
         {/* <p className="font-Manrope font-bold text-2xl">
           Our popular AI Assistant types include:
@@ -133,7 +133,7 @@ const TabTwo = () => {
           </section>
           <section className=" lg:w-[600px] mx-auto">
             <p className="font-Manrope font-bold text-2xl">
-              AI Knowledge 🧠 Assistant:
+              AI Knowledge 📚 Assistant:
             </p>
             <p className="font-Manrope text-xl">
               Human-guided AI assistant to get answers to questions about any of
@@ -156,7 +156,7 @@ const TabTwo = () => {
             </p>
           </section>
           <section className=" lg:w-[600px] mx-auto">
-            <p className="font-Manrope font-bold text-xl">
+            <p className="font-Manrope font-bold text-2xl">
               AI Support 🎧 Assistant:
             </p>
             <p className="font-Manrope text-xl">
@@ -223,9 +223,9 @@ const TabTwo = () => {
             {" "}
             Use Case Example: Law Enforcement 🚨🚔
           </p>
-          <p className="text-2xl font-semibold text-center lg:text-left">
-            AI Records 🗃️ Assistants can supercharge law enforcement
-            records/case/incident management systems with:
+          <p className="text-2xl font-normal font-Manrope text-center lg:text-left ">
+            ⚡Supercharge law enforcement records/case/incident management
+            systems with:
           </p>
           <p className="text-xl font-Manrope">
             <strong>1. Identity Verification:</strong> The AI Assistant can help
@@ -296,8 +296,8 @@ const TabTwo = () => {
         <br />
         <section className="flex flex-col lg:flex-row lg:justify-between lg:items-start ">
           <div className="lg:w-[45%] w-full ">
-            <p className="font-Manrope font-bold text-2xl">
-              Example 1: AI Records 🗃️ Assistant
+            <p className="font-Manrope font-normal text-2xl">
+              Example 1: Law Enforcement 🚨🚔
             </p>
             <br />
             <div>
@@ -437,7 +437,9 @@ const TabTwo = () => {
           </div>
           {/* example 2 */}
           <div className="lg:w-[45%] w-full ">
-            <p className="font-Manrope font-bold text-2xl">Example 2:</p>
+            <p className="font-Manrope font-normal text-2xl">
+              Example 2: Law Enforcement 🚨🚔
+            </p>
             <br />
             <div>
               {exampleTwoDialogue.map((speach, index) => (

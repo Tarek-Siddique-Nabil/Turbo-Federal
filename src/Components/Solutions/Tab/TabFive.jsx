@@ -3,7 +3,7 @@ import tabFive_ImageOne from "../../../libs/assets/tabContentImage/tab5/image1.p
 const TabFive = () => {
   return (
     <main>
-      <p className="font-Manrope text-5xl font-bold">Custom AI Apps:</p>
+      <p className="font-Manrope text-5xl font-bold">Custom AI Apps 🧠🛠️</p>
       <br />
       <br />
       <div className="flex lg:flex-row flex-col items-start text-start">

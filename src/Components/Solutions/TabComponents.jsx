@@ -26,7 +26,7 @@ const TabComponents = ({
       className="flex flex-col gap-3 items-center lg:items-start w-full"
     >
       <p
-        className="tab-content-header lg:text-justify  text-center w-[80%]"
+        className="tab-content-header text-center md:text-left w-[80%]"
         dangerouslySetInnerHTML={{ __html: header }}
       />
       <p

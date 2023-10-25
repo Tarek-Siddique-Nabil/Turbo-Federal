@@ -4,7 +4,7 @@ const TabFour = () => {
   return (
     <main className="flex flex-col gap-10 ">
       <p className="font-Manrope text-5xl font-bold text-center md:text-left">
-        Case Management Systems: 🗂💻
+        Case Management Systems 🗂💻
       </p>
       <div className="text-xl">
         <p>
@@ -13,7 +13,7 @@ const TabFour = () => {
           automation for their system of record in several ways:
         </p>
 
-        <ul className="flex flex-col gap-10 md:gap-3 py-8">
+        <ul className="flex flex-col gap-10 md:gap-7 py-8">
           <li>
             <strong>Automating Repetitive Tasks: 🔄</strong>
             <p>

@@ -10,14 +10,14 @@ import {
 export const tabOneContent = [
   {
     id: 1,
-    header: "Find everything you need to know 🔦🧠",
+    header: "Find everything you need to know 🔦",
     secondary_header: `Ensure your org&rsquo;s knowledge is working for its staff, rather than the other way around.`,
     image: tabOne_Image1,
     image_alt: "Find everything you need to know.",
   },
   {
     id: 2,
-    header: "Understand what your org knows, instantly💡🧠",
+    header: "Understand what your org knows, instantly💡",
     secondary_header: `Search across your org to find info buried in cloud storage and chats, with easy-to-use connectors for your important apps.
         `,
     image: tabOne_Image2,

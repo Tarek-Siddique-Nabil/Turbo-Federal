@@ -3,7 +3,7 @@ import aiImage from "../../../assets/ai.webp";
 import { motion } from "framer-motion";
 import { useSidebar } from "../../Header/zustand";
 import { Link } from "react-router-dom";
-import { poster, techPerson } from "../../../assets/image";
+import { magic_wand, poster, techPerson } from "../../../assets/image";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -97,7 +97,7 @@ const Hero = () => {
       <main
         className={`${
           isSidebarOpen && " -z-50"
-        } grid -z-50 md:grid-cols-2 grid-cols-1 items-center  justify-center md:justify-between gap-14 lg:px-40 md:px-10 px-5 md:py-10 py-4`}
+        } grid  md:grid-cols-2 grid-cols-1 items-center  justify-center md:justify-between gap-14 lg:px-40 md:px-10 px-5 md:py-10 py-4`}
       >
         <motion.div
           initial={{ x: "-100vh", opacity: 0 }}
@@ -107,9 +107,9 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="font-Manrope text-5xl md:text-5xl lg:text-[75px] font-medium -z-50"
+          className="font-Manrope text-5xl md:text-5xl lg:text-[75px] font-medium "
         >
-          <p className="flex items-center">
+          <p className="flex items-center ">
             Accelerating{" "}
             <span>
               <svg
@@ -128,11 +128,22 @@ const Hero = () => {
               </svg>
             </span>{" "}
           </p>
-          <p className="flex flex-wrap items-center gap-1">
+          <div className="flex flex-wrap items-center gap-1 ">
             <span>Mission</span>
             <span className="text-[#050757] ">&#10040;</span>
             <span>Success</span>
-          </p>
+          </div>
+          <Link
+            to={"/solutions"}
+            className="hero-btn w-60 text-lg flex  items-center gap-2 group"
+          >
+            {" "}
+            <img
+              src={magic_wand}
+              className="w-6 h-6 group-hover:scale-125 transition-all ease-in-out duration-150"
+            />{" "}
+            Explore Solutions{" "}
+          </Link>
         </motion.div>
 
         <motion.figure
@@ -169,14 +180,14 @@ const Hero = () => {
           className="-z-50 flex flex-col gap-5"
         >
           <p className="text-[22px] md:text-[26px] font-Manrope font-bold flex flex-col">
-            <span>AI Transformation, IT Services and Management </span>{" "}
+            <span>AI & IT Transformation, Services, and Management</span>{" "}
             <span>Consulting to:</span>
           </p>
-          <ul className="text-[22px] leading-10 font-Manrope list-inside list-disc">
-            <li>Increase Productivity by 10x</li>
-            <li>Lower Costs</li>
-            <li>Accelerate Objectives</li>
-            <li>Extract Knowledge & Insights</li>
+          <ul className="text-[22px] leading-10 font-Manrope list-inside ">
+            <li>🚀 Increase Productivity by 10x</li>
+            <li>💰 Lower Costs</li>
+            <li>🎯 Accelerate Objectives</li>
+            <li>💡 Extract Knowledge & Insights</li>
           </ul>
         </motion.div>
 
