@@ -135,7 +135,7 @@ const Hero = () => {
           </div>
           <Link
             to={"/solutions"}
-            className="hero-btn w-60 text-lg flex  items-center gap-2 group"
+            className="hero-btn w-60 mt-6 md:mt-10  text-lg flex  items-center gap-2 group"
           >
             {" "}
             <img
