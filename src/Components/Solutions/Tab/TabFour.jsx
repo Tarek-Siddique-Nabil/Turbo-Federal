@@ -4,7 +4,7 @@ const TabFour = () => {
   return (
     <main className="flex flex-col gap-10 ">
       <p className="font-Manrope text-5xl font-bold text-center md:text-left">
-        Case Management Systems 🗂💻
+        Case Management Systems 📁💻
       </p>
       <div className="text-xl">
         <p>

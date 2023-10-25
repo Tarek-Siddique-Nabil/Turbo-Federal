@@ -137,14 +137,11 @@ const Hero = () => {
           </div>
           <Link
             to={"/solutions"}
-            className="bg-black text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group "
+            className="bg-black hover:bg-violet-700 text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
           >
             {" "}
             Explore Solutions{" "}
-            <img
-              src={magic_wand}
-              className="w-6 h-6 group-hover:scale-125 transition-all ease-in-out duration-150"
-            />
+            <img src={magic_wand} className="w-6 h-6 group-hover:scale-125 " />
           </Link>
         </motion.div>
 
