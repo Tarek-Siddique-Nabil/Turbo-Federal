@@ -124,3 +124,12 @@
 .tab-content-header {
   @apply text-[32px] font-bold text-gray-900;
 }
+
+.bubbleOne {
+  height: 100%;
+  width: 350px;
+  background: linear-gradient(135deg, #e5e5e5 0%, #d3d3d3 100%);
+  padding: 1rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 25% 75%, 0 100%, 0 75%, 0% 75%);
+  border-radius: 1.2em;
+}

@@ -8,90 +8,90 @@ const Hero = () => {
   const { isSidebarOpen } = useSidebar();
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const videoRef = useRef();
-  useEffect(() => {
-    const video = videoRef.current;
-    if (isFullscreen === true) {
-      if (video.ended) {
-        restartVideo();
-      }
-      video.play();
-    } else if (isFullscreen === false) {
-      video.pause();
-    }
-    // Function to handle full-screen change
-    const handleFullScreenChange = () => {
-      setIsFullscreen(
-        !!(
-          document.fullscreenElement ||
-          document.mozFullScreenElement ||
-          document.webkitFullscreenElement ||
-          document.msFullscreenElement
-        )
-      );
-    };
+  // const videoRef = useRef();
+  // useEffect(() => {
+  //   const video = videoRef.current;
+  //   if (isFullscreen === true) {
+  //     if (video.ended) {
+  //       restartVideo();
+  //     }
+  //     video.play();
+  //   } else if (isFullscreen === false) {
+  //     video.pause();
+  //   }
+  //   // Function to handle full-screen change
+  //   const handleFullScreenChange = () => {
+  //     setIsFullscreen(
+  //       !!(
+  //         document.fullscreenElement ||
+  //         document.mozFullScreenElement ||
+  //         document.webkitFullscreenElement ||
+  //         document.msFullscreenElement
+  //       )
+  //     );
+  //   };
 
-    // Add event listeners for full-screen change
-    document.addEventListener("fullscreenchange", handleFullScreenChange);
-    document.addEventListener("mozfullscreenchange", handleFullScreenChange);
-    document.addEventListener("webkitfullscreenchange", handleFullScreenChange);
-    document.addEventListener("msfullscreenchange", handleFullScreenChange);
+  //   // Add event listeners for full-screen change
+  //   document.addEventListener("fullscreenchange", handleFullScreenChange);
+  //   document.addEventListener("mozfullscreenchange", handleFullScreenChange);
+  //   document.addEventListener("webkitfullscreenchange", handleFullScreenChange);
+  //   document.addEventListener("msfullscreenchange", handleFullScreenChange);
 
-    // Cleanup on unmount
-    return () => {
-      document.removeEventListener("fullscreenchange", handleFullScreenChange);
-      document.removeEventListener(
-        "mozfullscreenchange",
-        handleFullScreenChange
-      );
-      document.removeEventListener(
-        "webkitfullscreenchange",
-        handleFullScreenChange
-      );
-      document.removeEventListener(
-        "msfullscreenchange",
-        handleFullScreenChange
-      );
-    };
-  }, [videoRef, isFullscreen]);
+  //   // Cleanup on unmount
+  //   return () => {
+  //     document.removeEventListener("fullscreenchange", handleFullScreenChange);
+  //     document.removeEventListener(
+  //       "mozfullscreenchange",
+  //       handleFullScreenChange
+  //     );
+  //     document.removeEventListener(
+  //       "webkitfullscreenchange",
+  //       handleFullScreenChange
+  //     );
+  //     document.removeEventListener(
+  //       "msfullscreenchange",
+  //       handleFullScreenChange
+  //     );
+  //   };
+  // }, [videoRef, isFullscreen]);
 
-  const toggleFullScreen = () => {
-    const video = videoRef.current;
+  // const toggleFullScreen = () => {
+  //   const video = videoRef.current;
 
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) {
-      video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) {
-      video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) {
-      video.msRequestFullscreen();
-    } else {
-      // Fallback for browsers that don't support Fullscreen API
-      if (isFullscreen) {
-        // If already in fullscreen mode, exit fullscreen
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
-      } else {
-        // If not in fullscreen mode, enter fullscreen
-        if (video.webkitEnterFullscreen) {
-          video.webkitEnterFullscreen();
-        }
-      }
-    }
-  };
-  const restartVideo = () => {
-    const video = videoRef.current;
-    video.currentTime = 0; // Reset the video to the beginning
-    video.play();
-  };
+  //   if (video.requestFullscreen) {
+  //     video.requestFullscreen();
+  //   } else if (video.mozRequestFullScreen) {
+  //     video.mozRequestFullScreen();
+  //   } else if (video.webkitRequestFullscreen) {
+  //     video.webkitRequestFullscreen();
+  //   } else if (video.msRequestFullscreen) {
+  //     video.msRequestFullscreen();
+  //   } else {
+  //     // Fallback for browsers that don't support Fullscreen API
+  //     if (isFullscreen) {
+  //       // If already in fullscreen mode, exit fullscreen
+  //       if (document.exitFullscreen) {
+  //         document.exitFullscreen();
+  //       } else if (document.mozCancelFullScreen) {
+  //         document.mozCancelFullScreen();
+  //       } else if (document.webkitExitFullscreen) {
+  //         document.webkitExitFullscreen();
+  //       } else if (document.msExitFullscreen) {
+  //         document.msExitFullscreen();
+  //       }
+  //     } else {
+  //       // If not in fullscreen mode, enter fullscreen
+  //       if (video.webkitEnterFullscreen) {
+  //         video.webkitEnterFullscreen();
+  //       }
+  //     }
+  //   }
+  // };
+  // const restartVideo = () => {
+  //   const video = videoRef.current;
+  //   video.currentTime = 0; // Reset the video to the beginning
+  //   video.play();
+  // };
   return (
     <>
       <main
@@ -191,10 +191,18 @@ const Hero = () => {
           className=" md:flex flex-col  "
         >
           <section
-            className="flex justify-center
+            className="flex justify-center items-center
           "
           >
-            <div className="relative flex   ">
+            <iframe
+              src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
+              width="700"
+              height="320px"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            {/* <div className="relative flex   ">
               <video
                 ref={videoRef}
                 width="700"
@@ -207,7 +215,7 @@ const Hero = () => {
               >
                 <source
                   className="h-[300px] w-fit lg:w-[450px] "
-                  src="/video/aiVideo.mp4"
+                  src="https://player.vimeo.com/video/876921474"
                   type="video/mp4"
                 />
               </video>
@@ -255,7 +263,7 @@ const Hero = () => {
                   </svg>
                 )}
               </button>
-            </div>
+            </div> */}
             {/* <div className="hidden md:flex flex-col items-end gap-1 ">
               <Link to={"/services"}>
                 <motion.button

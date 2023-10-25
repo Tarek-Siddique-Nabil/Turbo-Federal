@@ -1,16 +1,19 @@
 import React from "react";
 import {
+  ai_Logo,
   tabTwo_Image1,
   tabTwo_Image2,
   tabTwo_Image3,
   tabTwo_Image4,
   tabTwo_Image5,
+  user_Logo,
 } from "../../../libs/assets/tabContentImage/tab2";
 import {
   exampleOneDialogue,
   exampleTwoDialogue,
 } from "../../../libs/data/tabTwoContent";
-
+import { motion } from "framer-motion";
+import ScrollableCarousel from "../ScrollableCarousel";
 const TabTwo = () => {
   return (
     <main className="flex flex-col lg:gap-14 gap-10">
@@ -22,7 +25,8 @@ const TabTwo = () => {
           <p className="lg:w-[650px]  md:text-justify">
             We build <strong>enterprise-ready AI work assistants</strong> for
             knowledge, research, and task execution. Powered by next-gen AI,
-            theyre designed to augment human workers by simplifying and{" "}
+            they&rsquo;re designed to augment human workers by
+            <strong> simplifying</strong> and{" "}
             <strong>automating mundane</strong> operations. They can be deployed
             to your users where they work now, in the form of website widgets,
             workplace chat, IoT, wearables, kiosks, HTML embeddings, and with
@@ -78,13 +82,13 @@ const TabTwo = () => {
         />
       </div>
 
-      <p className="font-Manrope text-2xl">
+      <p className="font-Manrope text-xl">
         It's like having a <strong>super-smart, always-on team member</strong>{" "}
         🥇who can help you manage, organize, and leverage your organization's
         collective knowledge, tools, and data.
       </p>
 
-      <p className="font-Manrope text-2xl ">
+      <p className="font-Manrope text-xl">
         AI Work Assistants can generate new content, ideas, and solutions, based
         on your organization&rsquo;s data. 🚀. They can be configured ⚙ and
         tuned 🔧 for any cognitive process, to include searching multiple data
@@ -95,13 +99,13 @@ const TabTwo = () => {
         human-in-the-loop control.
       </p>
 
-      <p className="font-Manrope text-2xl">
+      <p className="font-Manrope text-xl">
         They connect to any structured or unstructured information from 100+
         integrations, custom data sources via API, or from direct data uploads.
         📚
       </p>
 
-      <p className="font-Manrope text-2xl">
+      <p className="font-Manrope text-xl">
         Continuously syncing data pipelines keep your AI Work Assistant&rsquo;s
         knowledge current. 🧠
       </p>
@@ -152,7 +156,7 @@ const TabTwo = () => {
             </p>
           </section>
           <section className=" lg:w-[600px] mx-auto">
-            <p className="font-Manrope font-bold text-2xl">
+            <p className="font-Manrope font-bold text-xl">
               AI Support 🎧 Assistant:
             </p>
             <p className="font-Manrope text-xl">
@@ -202,12 +206,14 @@ const TabTwo = () => {
           </section>
         </div>
         {/* image part  */}
-        <div className="flex gap-5 my-14 w-full overflow-x-auto">
+
+        <div className="xl:flex gap-5 my-14 w-full overflow-x-auto hidden ">
           <img className="w-[400px] h-[350px] " src={tabTwo_Image2} alt="" />
           <img className="w-[400px] h-[350px] " src={tabTwo_Image3} alt="" />
           <img className="w-[400px] h-[350px] " src={tabTwo_Image4} alt="" />
           <img className="w-[400px] h-[350px] " src={tabTwo_Image5} alt="" />
         </div>
+        <ScrollableCarousel />
         {/* part3 */}
         <div className="flex flex-col gap-10 ">
           <p className="text-3xl md:text-4xl font-semibold text-center lg:text-left">
@@ -288,41 +294,283 @@ const TabTwo = () => {
         {/* example 1 */}
         <br />
         <br />
-        <section className="flex flex-col gap-12">
-          <div>
+        <section className="flex flex-col lg:flex-row lg:justify-between lg:items-start ">
+          <div className="lg:w-[45%] w-full ">
             <p className="font-Manrope font-bold text-2xl">
-              Example 1: AI Records 🗃️ Assistant back-and-forth conversation
-              flow for a law enforcement system:
+              Example 1: AI Records 🗃️ Assistant
             </p>
             <br />
             <div>
               {exampleOneDialogue.map((speach, index) => (
-                <div key={index} className="font-Manrope text-xl">
-                  <p>
-                    <span>User:</span>
-                    {speach.user}
-                  </p>
-                  <p>
-                    <span>AI:</span> {speach.assistant}
-                  </p>
+                <div
+                  key={index}
+                  className=" flex flex-col   font-Manrope text-xl overflow-hidden"
+                >
+                  <motion.div
+                    initial={{ opacity: 0.4 }}
+                    whileInView={{
+                      opacity: 1,
+
+                      transition: {
+                        type: "tween",
+                        duration: 0.3 * index,
+                        ease: "easeInOut",
+                      },
+                    }}
+                    className=" flex justify-end items-end  text-white font-Manrope   w-auto my-10"
+                  >
+                    <motion.section
+                      key={index}
+                      initial={{ scale: 0.8 }}
+                      whileInView={{
+                        scale: 1,
+
+                        transition: {
+                          type: "fade",
+                          duration: 0.25 * index,
+                          ease: "easeInOut",
+                        },
+                      }}
+                      viewport={{ once: true }}
+                      className="relative w-[310px]"
+                    >
+                      <svg
+                        className=" w-[310px] h-auto overflow-hidden  "
+                        viewBox="0 0 310 94"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M309.681 92.9748C296.233 77.4633 291.865 70.4627 291.865 56.0838V12.7585C291.865 5.71064 286.163 0 279.124 0H13.6032C6.56493 0 0.862061 5.71064 0.862061 12.7585V57.3266C0.862061 64.3745 6.56493 70.0851 13.6032 70.0851H264.702C283.241 90.4263 312.682 96.4358 309.681 92.9748Z"
+                          fill="url(#paint0_linear_51_3)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_51_3"
+                            x1="71.653"
+                            y1="-39.7542"
+                            x2="224.487"
+                            y2="112.856"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#3E89DB" />
+                            <stop offset="1" stop-color="#2B62B2" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <p className="absolute w-full h-[80px] inset-0 -top-1.5 rounded-lg  -left-3 text-base scale-[81%] text-start  overflow-hidden flex items-center ">
+                        {speach.user}
+                      </p>
+                    </motion.section>
+                    <img
+                      className=" rounded-[50%] w-[42.75px] h-[42.75px] object-cover"
+                      alt=""
+                      src={user_Logo}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0.4 }}
+                    whileInView={{
+                      opacity: 1,
+
+                      transition: {
+                        type: "tween",
+                        duration: 0.3 * index,
+                        ease: "easeInOut",
+                      },
+                    }}
+                    viewport={{ once: true }}
+                    className="flex items-end  text-black font-Manrope"
+                  >
+                    <img
+                      className=" rounded-[50%] w-[42.75px] h-[42.75px] object-cover"
+                      alt=""
+                      src={ai_Logo}
+                    />
+                    <motion.section
+                      key={index}
+                      initial={{ scale: 0.8 }}
+                      whileInView={{
+                        scale: 1,
+
+                        transition: {
+                          type: "fade",
+                          duration: 0.25 * index,
+                          ease: "easeInOut",
+                        },
+                      }}
+                      viewport={{ once: true }}
+                      className="relative w-[350px]"
+                    >
+                      <svg
+                        className=" w-[350px] h-auto overflow-hidden "
+                        viewBox="0 0 352 178"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.05542 175.673C21.5023 146.437 28.1428 133.242 28.1428 106.141V24.4816C28.1428 11.1979 36.8136 0.43457 47.5148 0.43457H331.836C342.538 0.43457 351.208 11.1979 351.208 24.4816V108.483C351.208 121.767 342.538 132.53 331.836 132.53H69.4187C41.2326 170.869 -3.50691 182.196 1.05542 175.673Z"
+                          fill="url(#paint0_linear_51_17)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_51_17"
+                            x1="72.6912"
+                            y1="-32.5671"
+                            x2="332.015"
+                            y2="176.341"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#E5E5E5" />
+                            <stop offset="1" stop-color="#D3D3D3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <p className="absolute w-full h-[150px] inset-0 -top-3 rounded-lg  left-6 text-base scale-[81%] text-start  overflow-hidden flex items-center">
+                        {speach.assistant}
+                      </p>
+                    </motion.section>
+                  </motion.div>
                 </div>
               ))}
             </div>
           </div>
           {/* example 2 */}
-          <div>
+          <div className="lg:w-[45%] w-full ">
             <p className="font-Manrope font-bold text-2xl">Example 2:</p>
             <br />
             <div>
               {exampleTwoDialogue.map((speach, index) => (
-                <div key={index} className="font-Manrope text-xl">
-                  <p>
-                    <span>User:</span>
-                    {speach.user}
-                  </p>
-                  <p>
-                    <span>AI:</span> {speach.assistant}
-                  </p>
+                <div
+                  key={index}
+                  className=" flex flex-col  font-Manrope text-xl"
+                >
+                  <motion.div
+                    initial={{ opacity: 0.4 }}
+                    whileInView={{
+                      opacity: 1,
+
+                      transition: {
+                        type: "tween",
+                        duration: 0.3 * index,
+                        ease: "easeInOut",
+                      },
+                    }}
+                    viewport={{ once: true }}
+                    className=" flex justify-end items-end  text-white font-Manrope   my-10"
+                  >
+                    <motion.section
+                      key={index}
+                      initial={{ scale: 0.8 }}
+                      whileInView={{
+                        scale: 1,
+
+                        transition: {
+                          type: "fade",
+                          duration: 0.25 * index,
+                          ease: "easeInOut",
+                        },
+                      }}
+                      viewport={{ once: true }}
+                      className="relative w-[310px]"
+                    >
+                      <svg
+                        className=" w-[310px] h-auto overflow-hidden  "
+                        viewBox="0 0 310 94"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M309.681 92.9748C296.233 77.4633 291.865 70.4627 291.865 56.0838V12.7585C291.865 5.71064 286.163 0 279.124 0H13.6032C6.56493 0 0.862061 5.71064 0.862061 12.7585V57.3266C0.862061 64.3745 6.56493 70.0851 13.6032 70.0851H264.702C283.241 90.4263 312.682 96.4358 309.681 92.9748Z"
+                          fill="url(#paint0_linear_51_3)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_51_3"
+                            x1="71.653"
+                            y1="-39.7542"
+                            x2="224.487"
+                            y2="112.856"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#3E89DB" />
+                            <stop offset="1" stop-color="#2B62B2" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <p className="absolute w-full h-[80px] inset-0 -top-1.5 rounded-lg  -left-3 text-base scale-[80%] text-start  overflow-hidden flex items-center ">
+                        {speach.user}
+                      </p>
+                    </motion.section>
+                    <img
+                      className=" rounded-[50%] w-[42.75px] h-[42.75px] object-cover"
+                      alt=""
+                      src={user_Logo}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0.4 }}
+                    whileInView={{
+                      opacity: 1,
+
+                      transition: {
+                        type: "tween",
+                        duration: 0.3 * index,
+                        ease: "easeInOut",
+                      },
+                    }}
+                    viewport={{ once: true }}
+                    className="flex items-end  text-black font-Manrope"
+                  >
+                    <img
+                      className=" rounded-[50%] w-[42.75px] h-[42.75px] object-cover"
+                      alt=""
+                      src={ai_Logo}
+                    />
+                    <motion.section
+                      key={index}
+                      initial={{ scale: 0.8 }}
+                      whileInView={{
+                        scale: 1,
+
+                        transition: {
+                          type: "fade",
+                          duration: 0.25 * index,
+                          ease: "easeInOut",
+                        },
+                      }}
+                      viewport={{ once: true }}
+                      className="relative w-[350px]"
+                    >
+                      <svg
+                        className=" w-[350px] h-auto overflow-hidden "
+                        viewBox="0 0 352 178"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.05542 175.673C21.5023 146.437 28.1428 133.242 28.1428 106.141V24.4816C28.1428 11.1979 36.8136 0.43457 47.5148 0.43457H331.836C342.538 0.43457 351.208 11.1979 351.208 24.4816V108.483C351.208 121.767 342.538 132.53 331.836 132.53H69.4187C41.2326 170.869 -3.50691 182.196 1.05542 175.673Z"
+                          fill="url(#paint0_linear_51_17)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_51_17"
+                            x1="72.6912"
+                            y1="-32.5671"
+                            x2="332.015"
+                            y2="176.341"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#E5E5E5" />
+                            <stop offset="1" stop-color="#D3D3D3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <p className="absolute w-full h-[150px] inset-0 -top-3 rounded-lg  left-6 text-base scale-[81%] text-start  overflow-hidden flex items-center">
+                        {speach.assistant}
+                      </p>
+                    </motion.section>
+                  </motion.div>
                 </div>
               ))}
             </div>
