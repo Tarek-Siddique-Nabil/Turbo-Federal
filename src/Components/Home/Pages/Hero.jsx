@@ -107,7 +107,9 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="font-Manrope text-5xl md:text-5xl lg:text-[75px] font-medium "
+          className={`font-Manrope text-5xl md:text-5xl lg:text-[75px] font-medium ${
+            isSidebarOpen && "-z-50"
+          }`}
         >
           <p className="flex items-center ">
             Accelerating{" "}
@@ -135,14 +137,14 @@ const Hero = () => {
           </div>
           <Link
             to={"/solutions"}
-            className="hero-btn w-60 mt-6 md:mt-10  text-lg flex  items-center gap-2 group"
+            className="bg-black text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group "
           >
             {" "}
+            Explore Solutions{" "}
             <img
               src={magic_wand}
               className="w-6 h-6 group-hover:scale-125 transition-all ease-in-out duration-150"
-            />{" "}
-            Explore Solutions{" "}
+            />
           </Link>
         </motion.div>
 
@@ -202,7 +204,7 @@ const Hero = () => {
           className=" md:flex flex-col  "
         >
           <section
-            className="flex justify-center items-center
+            className="flex justify-center items-center 
           "
           >
             <iframe

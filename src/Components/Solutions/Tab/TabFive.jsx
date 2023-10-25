@@ -8,9 +8,7 @@ const TabFive = () => {
       <br />
       <div className="flex lg:flex-row flex-col items-start text-start">
         <section className="flex flex-col gap-8 text-xl">
-          <p>
-            🚀 Next-gen LLM applications to power your specific use cases. 💼
-          </p>
+          <p>Next-gen LLM applications to power your specific use cases.💼🚀</p>
           <p>
             We can build on top of multi-agent conversations 🗣, with diverse
             conversation patterns for complex human task workflows. 🔄
