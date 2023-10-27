@@ -447,69 +447,71 @@ const TabTwo = () => {
                   key={index}
                   className=" flex flex-col  font-Manrope text-xl"
                 >
-                  <motion.div
-                    initial={{ opacity: 0.4 }}
-                    whileInView={{
-                      opacity: 1,
-
-                      transition: {
-                        type: "tween",
-                        duration: 0.3 * index,
-                        ease: "easeInOut",
-                      },
-                    }}
-                    viewport={{ once: true }}
-                    className=" flex justify-end items-end  text-white font-Manrope   my-10"
-                  >
-                    <motion.section
-                      key={index}
-                      initial={{ scale: 0.8 }}
+                  {speach.user?.length > 1 && (
+                    <motion.div
+                      initial={{ opacity: 0.4 }}
                       whileInView={{
-                        scale: 1,
+                        opacity: 1,
 
                         transition: {
-                          type: "fade",
-                          duration: 0.25 * index,
+                          type: "tween",
+                          duration: 0.3 * index,
                           ease: "easeInOut",
                         },
                       }}
                       viewport={{ once: true }}
-                      className="relative w-[310px]"
+                      className=" flex justify-end items-end  text-white font-Manrope   my-10"
                     >
-                      <svg
-                        className=" w-[310px] h-auto overflow-hidden  "
-                        viewBox="0 0 310 94"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <motion.section
+                        key={index}
+                        initial={{ scale: 0.8 }}
+                        whileInView={{
+                          scale: 1,
+
+                          transition: {
+                            type: "fade",
+                            duration: 0.25 * index,
+                            ease: "easeInOut",
+                          },
+                        }}
+                        viewport={{ once: true }}
+                        className="relative w-[310px]"
                       >
-                        <path
-                          d="M309.681 92.9748C296.233 77.4633 291.865 70.4627 291.865 56.0838V12.7585C291.865 5.71064 286.163 0 279.124 0H13.6032C6.56493 0 0.862061 5.71064 0.862061 12.7585V57.3266C0.862061 64.3745 6.56493 70.0851 13.6032 70.0851H264.702C283.241 90.4263 312.682 96.4358 309.681 92.9748Z"
-                          fill="url(#paint0_linear_51_3)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_51_3"
-                            x1="71.653"
-                            y1="-39.7542"
-                            x2="224.487"
-                            y2="112.856"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stop-color="#3E89DB" />
-                            <stop offset="1" stop-color="#2B62B2" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      <p className="absolute w-full h-[80px] inset-0 -top-1.5 rounded-lg  -left-3 text-base scale-[80%] text-start  overflow-hidden flex items-center ">
-                        {speach.user}
-                      </p>
-                    </motion.section>
-                    <img
-                      className=" rounded-[50%] w-[42.75px] h-[42.75px] object-cover"
-                      alt=""
-                      src={user_Logo}
-                    />
-                  </motion.div>
+                        <svg
+                          className=" w-[310px] h-auto overflow-hidden  "
+                          viewBox="0 0 310 94"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M309.681 92.9748C296.233 77.4633 291.865 70.4627 291.865 56.0838V12.7585C291.865 5.71064 286.163 0 279.124 0H13.6032C6.56493 0 0.862061 5.71064 0.862061 12.7585V57.3266C0.862061 64.3745 6.56493 70.0851 13.6032 70.0851H264.702C283.241 90.4263 312.682 96.4358 309.681 92.9748Z"
+                            fill="url(#paint0_linear_51_3)"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_51_3"
+                              x1="71.653"
+                              y1="-39.7542"
+                              x2="224.487"
+                              y2="112.856"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#3E89DB" />
+                              <stop offset="1" stop-color="#2B62B2" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <p className="absolute w-full h-[80px] inset-0 -top-1.5 rounded-lg  -left-3 text-base scale-[80%] text-start  overflow-hidden flex items-center ">
+                          {speach.user}
+                        </p>
+                      </motion.section>
+                      <img
+                        className=" rounded-[50%] w-[42.75px] h-[42.75px] object-cover"
+                        alt=""
+                        src={user_Logo}
+                      />
+                    </motion.div>
+                  )}
                   <motion.div
                     initial={{ opacity: 0.4 }}
                     whileInView={{

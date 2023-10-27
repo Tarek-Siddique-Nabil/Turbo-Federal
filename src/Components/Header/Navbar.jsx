@@ -64,17 +64,15 @@ const Navbar = () => {
             <React.Fragment key={index}>
               {i.hashLink !== true ? (
                 <NavLink
-                  onClick={() => {
-                    toggleSidebar(), i?.onclick?.();
-                  }}
+                  // onClick={() => {
+                  //   i?.onclick?.();
+                  // }}
                   to={i.href}
                 >
                   {i.label}
                 </NavLink>
               ) : (
-                <a onClick={() => toggleSidebar()} href={i.href}>
-                  {i.label}
-                </a>
+                <a href={i.href}>{i.label}</a>
               )}
             </React.Fragment>
           ))}

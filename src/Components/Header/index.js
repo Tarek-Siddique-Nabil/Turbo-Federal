@@ -3,13 +3,18 @@ const navItem = [
     label: "Home",
     href: "/",
     hashLink: false,
+    onclick() {
+      window.scrollTo({ top: 0 });
+    },
   },
 
   {
     label: "Solutions",
     href: "/solutions",
     hashLink: false,
-    onclick() {},
+    onclick() {
+      window.scrollTo({ top: 0 });
+    },
   },
   {
     label: "Services",

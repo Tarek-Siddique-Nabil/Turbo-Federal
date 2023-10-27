@@ -37,7 +37,7 @@ const TabComponents = ({
       {image && (
         <img
           className={`${
-            id === 6 ? "w-[450px] h-[400px]" : "w-[285px] h-[255px]"
+            id === 6 ? "w-full h-full" : "w-[285px] h-[255px]"
           }  mt-3`}
           src={image}
           alt={image_alt}
