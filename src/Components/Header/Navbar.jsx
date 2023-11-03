@@ -64,6 +64,11 @@ const Navbar = () => {
             <React.Fragment key={index}>
               {i.hashLink !== true ? (
                 <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#383A95] font-medium font-Manrope transition-all duration-100 ease-linear border-b-[3px] border-[#383A95]"
+                      : " font-Manrope transition-all duration-100 ease-linear font-medium"
+                  }
                   // onClick={() => {
                   //   i?.onclick?.();
                   // }}
@@ -72,7 +77,9 @@ const Navbar = () => {
                   {i.label}
                 </NavLink>
               ) : (
-                <a href={i.href}>{i.label}</a>
+                <a className="font-Manrope  font-medium" href={i.href}>
+                  {i.label}
+                </a>
               )}
             </React.Fragment>
           ))}
@@ -149,6 +156,11 @@ const Navbar = () => {
                         toggleSidebar(), i?.onclick?.();
                       }}
                       to={i.href}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "text-[#383A95] border-b-4 border-[#383A95]"
+                          : ""
+                      }
                     >
                       {i.label}
                     </NavLink>
