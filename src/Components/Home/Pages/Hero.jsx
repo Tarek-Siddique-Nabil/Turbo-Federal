@@ -136,7 +136,7 @@ const Hero = () => {
             <span className="text-[#050757] ">&#10040;</span>
             <span>Success</span>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <div className="flex gap-3">
               <Link
                 to="/solutions"
@@ -163,7 +163,7 @@ const Hero = () => {
               <Link
                 to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
                 target="_blank"
-                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl mt-6 md:mt-10  text-lg  gap-2 group transition-all ease-in-out duration-150"
+                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl   text-lg  group transition-all ease-in-out duration-150"
               >
                 {" "}
                 Assess my AI Readiness 📋
@@ -171,7 +171,7 @@ const Hero = () => {
               <Link
                 to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
                 target="_blank"
-                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl mt-6 md:mt-10  text-lg  gap-2 group transition-all ease-in-out duration-150"
+                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl  text-lg   group transition-all ease-in-out duration-150"
               >
                 {" "}
                 Questions❓
