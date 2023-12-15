@@ -109,7 +109,7 @@ const Hero = () => {
             delay: 0.2,
           }}
           className={`font-Manrope text-5xl md:text-5xl lg:text-[75px] font-medium ${
-            isSidebarOpen ? "-z-50" : "z-50"
+            isSidebarOpen ? "-z-50" : "z-0"
           }`}
         >
           <p className="flex items-center ">
@@ -136,18 +136,28 @@ const Hero = () => {
             <span className="text-[#050757] ">&#10040;</span>
             <span>Success</span>
           </div>
-          <Link
-            to="/solutions"
-            className="bg-black hover:bg-violet-700 text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
-          >
-            {" "}
-            Explore Solutions{" "}
-            <img
-              src={magic_wand}
-              className="w-6 h-6 group-hover:scale-125 "
-              alt=""
-            />
-          </Link>
+          <div className="flex gap-3">
+            <Link
+              to="/solutions"
+              className="bg-black hover:bg-violet-700 text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
+            >
+              {" "}
+              Explore Solutions{" "}
+              <img
+                src={magic_wand}
+                className="w-6 h-6 group-hover:scale-125 "
+                alt=""
+              />
+            </Link>
+            <Link
+              to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
+              target="_blank"
+              className="bg-black hover:bg-violet-700 text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
+            >
+              {" "}
+              Request Demo 🤯
+            </Link>
+          </div>
         </motion.div>
 
         <motion.figure

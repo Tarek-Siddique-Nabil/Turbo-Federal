@@ -13,12 +13,26 @@ import TabFour from "./Tab/TabFour";
 import TabFive from "./Tab/TabFive";
 const Solutions = () => {
   const [selectedButton, setSelecetedButton] = useState(0);
-  console.log(
-    "🚀 ~ file: Solutions.jsx:12 ~ Solutions ~ selectedButton:",
-    selectedButton
-  );
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const { isSidebarOpen } = useSidebar();
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      const scrollPercentage =
+        (scrollTop / (documentHeight - windowHeight)) * 100;
+      setScrollPercentage(scrollPercentage);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const progressStyle = {
+    height: `${scrollPercentage}%`,
+  };
   // const videoRef = useRef();
 
   // useEffect(() => {
@@ -130,7 +144,7 @@ const Solutions = () => {
   return (
     <main className="lg:px-40 md:px-10 px-4">
       {/* tab buttons */}
-      <div className="flex flex-row overflow-x-auto gap-3 py-10 ">
+      <motion.header className=" flex flex-row overflow-x-auto gap-3 py-10 ">
         {buttonsText.map((button, index) => (
           <motion.button
             initial={{ x: -70, opacity: 0 }}
@@ -157,7 +171,7 @@ const Solutions = () => {
             {button.text}
           </motion.button>
         ))}
-      </div>
+      </motion.header>
 
       {/* tab content */}
       {/* tab 1 */}

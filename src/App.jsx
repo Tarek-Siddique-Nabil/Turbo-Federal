@@ -10,8 +10,9 @@ import Home from "./Components/Home/Home";
 import AboutUs from "./Components/About/AboutUs";
 import Footer from "./Components/Footer/Footer";
 import AboutTeam from "./Components/Team/AboutTeam";
-import Services from "./Components/Home/Pages/Services";
+
 import Solutions from "./Components/Solutions/Solutions";
+import Services from "./Components/Services/TabNavigation/Services";
 
 const App = () => {
   return (
