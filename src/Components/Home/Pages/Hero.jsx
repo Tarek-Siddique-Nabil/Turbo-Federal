@@ -3,7 +3,7 @@ import aiImage from "../../../assets/ai.webp";
 import { motion } from "framer-motion";
 import { useSidebar } from "../../Header/zustand";
 import { Link } from "react-router-dom";
-import { magic_wand, poster, techPerson } from "../../../assets/image";
+import { magic_wand, techPerson } from "../../../assets/image";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
   console.log("🚀 ~ file: Hero.jsx:9 ~ Hero ~ isSidebarOpen:", isSidebarOpen);
@@ -136,27 +136,47 @@ const Hero = () => {
             <span className="text-[#050757] ">&#10040;</span>
             <span>Success</span>
           </div>
-          <div className="flex gap-3">
-            <Link
-              to="/solutions"
-              className="bg-black hover:bg-violet-700 text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
-            >
-              {" "}
-              Explore Solutions{" "}
-              <img
-                src={magic_wand}
-                className="w-6 h-6 group-hover:scale-125 "
-                alt=""
-              />
-            </Link>
-            <Link
-              to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
-              target="_blank"
-              className="bg-black hover:bg-violet-700 text-white font-Manrope w-52 p-2 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
-            >
-              {" "}
-              Request Demo 🤯
-            </Link>
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-3">
+              <Link
+                to="/solutions"
+                className="bg-black hover:bg-violet-700 text-white font-Manrope w-52  p-3 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
+              >
+                {" "}
+                Explore Solutions{" "}
+                <img
+                  src={magic_wand}
+                  className="w-6 h-6 group-hover:scale-125 "
+                  alt=""
+                />
+              </Link>
+              <Link
+                to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
+                target="_blank"
+                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl mt-6 md:mt-10  text-lg  gap-2 group transition-all ease-in-out duration-150"
+              >
+                {" "}
+                Request Demo 🤯
+              </Link>
+            </div>
+            <div className="flex gap-3">
+              <Link
+                to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
+                target="_blank"
+                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl mt-6 md:mt-10  text-lg  gap-2 group transition-all ease-in-out duration-150"
+              >
+                {" "}
+                Assess my AI Readiness 📋
+              </Link>
+              <Link
+                to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
+                target="_blank"
+                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl mt-6 md:mt-10  text-lg  gap-2 group transition-all ease-in-out duration-150"
+              >
+                {" "}
+                Questions❓
+              </Link>
+            </div>
           </div>
         </motion.div>
 
@@ -216,7 +236,7 @@ const Hero = () => {
           className=" md:flex flex-col  "
         >
           <section
-            className="flex justify-center items-center 
+            className="flex relative justify-center items-center 
           "
           >
             <iframe
@@ -226,6 +246,7 @@ const Hero = () => {
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowfullscreen
+              className={`${isSidebarOpen ? "-z-50" : "z-0"} `}
             ></iframe>
             {/* <div className="relative flex   ">
               <video
