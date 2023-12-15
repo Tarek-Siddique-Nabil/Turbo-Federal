@@ -137,7 +137,7 @@ const Hero = () => {
             <span>Success</span>
           </div>
           <div className="flex flex-col gap-3">
-            <div className="flex gap-3">
+            <div className="flex gap-3.5">
               <Link
                 to="/solutions"
                 className="bg-black hover:bg-violet-700 text-white font-Manrope w-52  p-3 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
