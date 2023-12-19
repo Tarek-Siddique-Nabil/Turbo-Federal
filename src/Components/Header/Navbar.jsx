@@ -59,11 +59,7 @@ const Navbar = () => {
             alt=""
           />
         </Link>
-        <div
-          className={`${
-            progressStyle?.height > "1%" ? "xl:flex gap-2 hidden " : "hidden"
-          }`}
-        >
+        <div className="xl:flex gap-2 hidden">
           <Link
             to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
             target="_blank"
