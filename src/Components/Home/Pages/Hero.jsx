@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useSidebar } from "../../Header/zustand";
 import { Link } from "react-router-dom";
 import { magic_wand, techPerson } from "../../../assets/image";
+import CountUp from "react-countup";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
   console.log("🚀 ~ file: Hero.jsx:9 ~ Hero ~ isSidebarOpen:", isSidebarOpen);
@@ -136,7 +137,7 @@ const Hero = () => {
             <span className="text-[#050757] ">&#10040;</span>
             <span>Success</span>
           </div>
-           <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3">
             <div className="flex gap-3.5">
               <Link
                 to="/solutions"
@@ -211,17 +212,20 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="-z-50 flex flex-col gap-5"
+          className="-z-50 flex flex-col gap-5  "
         >
           <p className="text-[22px] md:text-[26px] font-Manrope font-bold flex flex-col">
             <span>AI & IT Transformation, Services, and Management</span>{" "}
             <span>Consulting to:</span>
           </p>
           <ul className="text-[22px] leading-10 font-Manrope list-inside ">
-            <li>🚀 Increase Productivity by 10x</li>
+            <li>
+              🚀 Increase Employee Productivity by{" "}
+              <span className="text-green-600 font-semibold">10x</span>
+            </li>
             <li>💰 Lower Costs</li>
-            <li>🎯 Accelerate Objectives</li>
-            <li>💡 Extract Knowledge & Insights</li>
+            <li>🎯 Accelerate Mission Objectives</li>
+            <li>💡 Extract Knowledge & Key Insights</li>
           </ul>
         </motion.div>
 
@@ -236,121 +240,55 @@ const Hero = () => {
           className=" md:flex flex-col  "
         >
           <section
-            className="flex relative justify-center items-center 
+            className="flex relative justify-center items-center md:justify-end md:items-end
           "
           >
             <iframe
               src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
               width="700"
-              height="320px"
+              height="320"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowfullscreen
               className={`${isSidebarOpen ? "-z-50" : "z-0"} `}
             ></iframe>
-            {/* <div className="relative flex   ">
-              <video
-                ref={videoRef}
-                width="700"
-                height="700"
-                controls={false}
-                poster={poster}
-                className={`rounded-lg scale-110 transition-all ease-in-out duration-150  aspect-video 
-                  
-                `}
-              >
-                <source
-                  className="h-[300px] w-fit lg:w-[450px] "
-                  src="https://player.vimeo.com/video/876921474"
-                  type="video/mp4"
-                />
-              </video>
-              <button
-                className="absolute w-full h-full flex  justify-center items-center"
-                style={{ zIndex: 1 }}
-                onClick={() => {
-                  toggleFullScreen();
-                }}
-              >
-                {!isFullscreen ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-24 h-24 stroke-black"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-24 h-24 stroke-black"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 5.25v13.5m-7.5-13.5v13.5"
-                    />
-                  </svg>
-                )}
-              </button>
-            </div> */}
-            {/* <div className="hidden md:flex flex-col items-end gap-1 ">
-              <Link to={"/services"}>
-                <motion.button
-                  whileHover={{ width: "300px" }}
-                  style={{ boxShadow: "10px 10px  black  " }}
-                  className="year-box font-Manrope  bg-[#050757]"
-                >
-                  AI
-                </motion.button>
-              </Link>
-              <Link to={"/services"}>
-                <motion.button
-                  whileHover={{ width: "300px" }}
-                  style={{ boxShadow: "7px 7px 1px 1px black " }}
-                  className="year-box   transform-gpu z-50  shadow-gray-800 bg-[#BF3B41]"
-                >
-                  IT
-                </motion.button>
-              </Link>
-            </div>{" "} */}
           </section>
         </motion.div>
       </main>
+      {/* //number list */}
+      <div className="flex flex-col md:flex-row text-center justify-center items-center px-5">
+        <Count
+          number="130"
+          duration="5"
+          sign="+"
+          label="Gen-AI project integrations"
+        />
+        <Count
+          number="200"
+          duration="7"
+          sign="k+"
+          label="Gen-AI user prompts processed"
+        />
+        <Count
+          number="20"
+          duration="5"
+          sign="+"
+          label="Gen-AI Engineers & Developers"
+        />
+        <Count
+          number="2"
+          duration="5"
+          sign="M"
+          label="Records Prcessed by AI"
+        />
+      </div>
+
       <section className=" lg:px-40 md:px-10 px-5 md:py-10 py-4 ">
         <div className="w-full flex flex-wrap justify-center items-center gap-10 md:gap-0 lg:gap-0 md:justify-between">
           <div className="md:w-1/2 flex flex-wrap  gap-2 justify-center md:justify-start">
             <a href={`mailto:info@turbofederal.com`} className="hero-btn">
               Contact Us
             </a>
-
-            {/* <motion.button
-              className={`${
-                isSidebarOpen && "-z-50 "
-              } relative lg:ml-12 group hidden sm:block   w-[150px] h-10 bg-[#050757] text-white rounded-3xl `}
-            >
-              <span className="w-7 h-7 top-1/2 right-2 group-focus:w-[90%] -translate-y-1/2 absolute rounded-full transition-all duration-150 ease-in-out bg-gray-200">
-                <span className="capitalize group-focus:flex items-center justify-center hidden text-black text-xs transition-all duration-150 delay-100 ease-in-out w-full h-full">
-                  artificial intelligence
-                </span>
-              </span>
-            </motion.button> */}
           </div>
 
           <div className="md:w-1/2 -z-50">
@@ -367,3 +305,20 @@ const Hero = () => {
 };
 
 export default Hero;
+
+const Count = ({ ...props }) => {
+  return (
+    <div
+      className="w-full flex flex-col justify-center items-center gap-2 
+    "
+    >
+      <p className="text-4xl font-bold text-red-600">
+        <CountUp start={0} end={props?.number} duration={props?.duration} />
+        {props.sign}
+      </p>
+      <p className="text-xl font-semibold text-gray-800 italic capitalize">
+        {props.label}
+      </p>
+    </div>
+  );
+};

@@ -61,7 +61,7 @@ const Navbar = () => {
         </Link>
         <div
           className={`${
-            progressStyle?.height > "1%" ? "lg:flex gap-2 " : "hidden"
+            progressStyle?.height > "1%" ? "xl:flex gap-2 hidden " : "hidden"
           }`}
         >
           <Link
