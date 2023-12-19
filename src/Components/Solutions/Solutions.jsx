@@ -13,26 +13,8 @@ import TabFour from "./Tab/TabFour";
 import TabFive from "./Tab/TabFive";
 const Solutions = () => {
   const [selectedButton, setSelecetedButton] = useState(0);
-  const [scrollPercentage, setScrollPercentage] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      const scrollTop = window.scrollY;
-      const scrollPercentage =
-        (scrollTop / (documentHeight - windowHeight)) * 100;
-      setScrollPercentage(scrollPercentage);
-    };
+  const { isSidebarOpen } = useSidebar();
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  const progressStyle = {
-    height: `${scrollPercentage}%`,
-  };
   // const videoRef = useRef();
 
   // useEffect(() => {
@@ -206,74 +188,17 @@ const Solutions = () => {
                     to help you:
                   </span>
                 </motion.p>
-                <iframe
-                  src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
-                  width="470"
-                  height="300"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                {/* <div className="relative flex  h-[300px] w-fit lg:w-[450px]  lg:left-6 ">
-                  <video
-                    ref={videoRef}
-                    width="700"
-                    height="700"
-                    controls={false}
-                    poster={poster}
-                    className={`rounded-lg scale-110 transition-all ease-in-out duration-150  aspect-video `}
-                  >
-                    <source
-                      className="h-[300px] w-fit lg:w-[450px] "
-                      src="/video/aiVideo.mp4"
-                      type="video/mp4"
-                    />
-                  </video>
-                  <button
-                    className="absolute w-full h-full flex  justify-center items-center"
-                    style={{ zIndex: 1 }}
-                    onClick={() => {
-                      toggleFullScreen();
-                    }}
-                  >
-                    {!isFullscreen ? (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-24 h-24 stroke-black"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
-                        />
-                      </svg>
-                    ) : (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-24 h-24 stroke-black"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15.75 5.25v13.5m-7.5-13.5v13.5"
-                        />
-                      </svg>
-                    )}
-                  </button>
-                </div> */}
+                <section className="flex relative justify-center items-center md:items-start md:justify-start">
+                  <iframe
+                    src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
+                    width="470"
+                    height="300"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    className={`${isSidebarOpen ? "-z-50" : "z-0"} `}
+                  ></iframe>
+                </section>
               </div>
               <motion.img
                 initial={{ y: 100, opacity: 0.3 }}
