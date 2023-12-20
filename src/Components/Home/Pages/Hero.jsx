@@ -242,7 +242,7 @@ const Count = ({ ...props }) => {
         <CountUp start={0} end={props?.number} duration={props?.duration} />
         {props.sign}
       </p>
-      <p className="text-2xl lg:text-4xl font-semibold text-gray-800 font-Manrope capitalize">
+      <p className="text-2xl lg:text-4xl font-normal text-gray-800 font-Manrope capitalize">
         {props.label}
       </p>
     </div>
