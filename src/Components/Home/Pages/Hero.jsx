@@ -190,7 +190,7 @@ const Hero = () => {
             number="200"
             duration="7"
             sign="k+"
-            label="Gen-AI user prompts processed"
+            label="User prompts processed"
           />
           <Count
             number="2"
