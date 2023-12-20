@@ -29,15 +29,15 @@ const Hero = () => {
             label="Gen-AI user prompts processed"
           />
           <Count
-            number="2"
-            duration="5"
-            sign="M+"
-            label="Gen-AI Engineers & Developers"
-          />
-          <Count
             number="20"
             duration="5"
             sign="+"
+            label="Gen-AI Engineers & Developers"
+          />
+          <Count
+            number="2"
+            duration="5"
+            sign="M+"
             label="Records Prcessed by AI"
           />
         </div>
@@ -152,7 +152,9 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className="-z-50 flex flex-col justify-center items-center md:justify-start md:items-start gap-5   "
+          className={`${
+            isSidebarOpen ? "-z-50" : ""
+          } flex flex-col justify-center items-center md:justify-start md:items-start gap-5   `}
         >
           <Link
             to="/solutions"
@@ -167,10 +169,9 @@ const Hero = () => {
             />
           </Link>
           <p className=" font-Manrope font-bold flex flex-col">
-            <span className="lg:text-5xl text-3xl ">
-              AI, IT, and Management{" "}
+            <span className="lg:text-5xl text-3xl text-center ">
+              AI, IT and Management Consulting to :{" "}
             </span>{" "}
-            <span className="lg:text-4xl text-2xl ">Consulting to:</span>
           </p>
           <ul className="lg:text-2xl text-lg font-semibold leading-10 font-Manrope list-inside lg:space-y-5 space-y-3 ">
             <li>
@@ -191,22 +192,19 @@ const Hero = () => {
             ease: "linear",
             delay: 0.2,
           }}
-          className=" md:flex flex-col  "
+          className={`${
+            isSidebarOpen ? "-z-50" : ""
+          } flex relative justify-center items-center md:justify-end md:items-end  `}
         >
-          <section
-            className="flex relative justify-center items-center md:justify-end md:items-end
-          "
-          >
-            <iframe
-              src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
-              width="700"
-              height="320"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-              className={`${isSidebarOpen ? "-z-50" : "z-0"} `}
-            ></iframe>
-          </section>
+          <iframe
+            src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
+            width="700"
+            height="320"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            className={`${isSidebarOpen ? "-z-50" : "z-0"} `}
+          ></iframe>
         </motion.div>
       </main>
       {/* //number list */}
