@@ -5,9 +5,9 @@ import AiIcon from "../../../libs/Icon/AiIcon";
 
 const AiServices = () => {
   return (
-    <section className="flex flex-wrap justify-center md:justify-between md:gap-y-40">
-      <div className="w-full md:w-1/2  p-3  flex  flex-col gap-5 items-start  ">
-        <div className="flex  items-center gap-3">
+    <section className="flex flex-wrap justify-center md:justify-between  ">
+      <div className="w-full md:w-1/2    flex  flex-col  items-start  ">
+        <div className="flex  items-center gap-3 ">
           <p className="font-Manrope text-5xl font-bold text-center md:text-left">
             {aiServicesData.title}
           </p>

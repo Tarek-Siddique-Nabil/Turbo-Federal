@@ -70,9 +70,9 @@ export const aiServicesData = {
 };
 
 export const aiReadinessData = {
-  title: "Generative AI Readiness Assessment Package 🤖🔍",
+  title: "Generative AI Readiness Assessment  🤖🔍",
   subTitile:
-    "Turbo Federal offers a comprehensive Generative AI Readiness Assessment Package designed to evaluate your organization's needs and readiness for implementing generative AI solutions such as chatGPT, AI copilots, and assistants.",
+    "Turbo Federal offers a comprehensive Generative AI Readiness Assessments designed to evaluate your organization's needs and readiness for implementing generative AI solutions such as chatGPT, AI copilots, and assistants.",
   services: [
     {
       title: "Needs Assessment 📋",
@@ -112,15 +112,15 @@ export const aiReadinessData = {
     {
       title: "Implementation and Support 🚀",
       subTitle:
-        "If you decide to proceed, our team can assist with the implementation process and provide ongoing support to ensure the successful integration of generative AI solutions into your operations. This package is designed to provide a comprehensive understanding of your organization's readiness for generative AI solutions, helping you make informed decisions and prepare for a successful implementation. Contact us today to learn more about our Generative AI Readiness Assessment Package.🎯",
+        "If you decide to proceed, our team can assist with the implementation process and provide ongoing support to ensure the successful integration of generative AI solutions into your operations. This  is designed to provide a comprehensive understanding of your organization's readiness for generative AI solutions, helping you make informed decisions and prepare for a successful implementation. Contact us today to learn more about our Generative AI Readiness Assessment .🎯",
     },
   ],
 };
 
 export const aiTextRangeData = {
-  pageTitle: "AI Testing Package 🤖🧪",
+  pageTitle: "Generative AI Testing 🤖🧪",
   pageContent:
-    "Turbo Federal offers a comprehensive AI Testing and Training Package designed to help organizations explore, test, train, and integrate the latest generative AI solutions such as AI bots, AI assistants, and AI copilots for Large Language Models (LLM).",
+    "Turbo Federal offers a comprehensive generative AI Testing and Training Package designed to help organizations explore, test, train, and integrate the latest generative AI solutions such as AI bots, AI assistants, and AI copilots for Large Language Models (LLM).",
   packageDetails: [
     {
       title: "Generative AI Test-Range: 🎯🤖",

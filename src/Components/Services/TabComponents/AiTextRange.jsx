@@ -6,8 +6,8 @@ const AiTextRange = () => {
   return (
     <div>
       <div>
-        <div className="w-full   p-3  flex  flex-col gap-5 items-center md:items-start ">
-          <div className="flex flex-col  gap-3 items-start">
+        <div className="w-full    flex  flex-col  gap-5 items-center md:items-start ">
+          <div className="flex flex-col  gap-3 items-start ">
             <p className="font-Manrope text-5xl font-bold md:text-left text-center">
               {aiTextRangeData.pageTitle}
             </p>
@@ -18,7 +18,7 @@ const AiTextRange = () => {
           <Link
             to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
             target="_blank"
-            className="bg-black hover:bg-violet-700 text-center text-white font-Manrope  p-3 rounded-2xl mt-6 md:mt-10  text-lg   transition-all ease-in-out duration-150"
+            className="bg-black hover:bg-violet-700 text-center text-white font-Manrope  p-3 rounded-2xl my-6  lg:my-3 text-lg   transition-all ease-in-out duration-150"
           >
             {" "}
             Test my AI ideas 💡

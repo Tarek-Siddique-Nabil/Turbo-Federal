@@ -143,9 +143,9 @@ const Solutions = () => {
               transition: { duration: 0.3 },
             }}
             onClick={() => setSelecetedButton(index)}
-            className={`font-Manrope px-3 py-2.5 rounded-lg border border-[#383A95]  ${
+            className={`font-Manrope lg:px-3 lg:py-2.5 px-7 py-2  rounded-lg border border-[#383A95]  ${
               selectedButton === index
-                ? "bg-[#383A95] text-white font-bold"
+                ? "bg-[#383A95] text-white lg:font-bold font-semibold"
                 : "bg-white font-bold"
             } transition-all duration-150 ease-linear`}
             key={button.id}

@@ -60,15 +60,9 @@ const Services = () => {
       // transition={{ duration: 0.5, ease: "linear", delay: 0.2 }}
       className={`${
         isSidebarOpen ? "-z-50 opa" : "z-10"
-      } h-full lg:px-40 md:px-10 px-5 md:py-16  py-4 flex flex-col justify-center md:gap-16`}
+      }  lg:px-40 md:px-10 px-5 md:pt-16  py-4 flex flex-col justify-center  gap-5`}
     >
-      <div className={`flex flex-col justify-start gap-5`}>
-        {/* <p className="text-blue-800 text-xl">2023-2024</p> */}
-        <p className="text-[33px] md:text-4xl lg:text-6xl font-Manrope font-semibold">
-          Turbo Federal Offers <span className="text-blue-800">●</span>
-        </p>
-      </div>
-      <motion.header className=" flex flex-row overflow-x-auto gap-3 py-10 ">
+      <motion.header className=" flex flex-row overflow-x-auto gap-5 mt-5  ">
         {buttonsText.map((button, index) => (
           <motion.button
             initial={{ x: -70, opacity: 0 }}
@@ -85,9 +79,9 @@ const Services = () => {
               transition: { duration: 0.1 },
             }}
             onClick={() => setSelectedButton(index)}
-            className={`font-Manrope px-3 py-2.5 rounded-lg border border-[#383A95]  ${
+            className={`font-Manrope lg:px-3 lg:py-2.5 px-7 rounded-lg border border-[#383A95]  ${
               selectedButton === index
-                ? "bg-[#383A95] text-white font-bold"
+                ? "bg-[#383A95] text-white lg:font-bold font-semibold"
                 : "bg-white font-bold"
             } transition-all duration-150 ease-linear`}
             key={button.id}

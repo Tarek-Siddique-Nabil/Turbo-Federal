@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import aiImage from "../../../assets/ai.webp";
+import React from "react";
 import { motion } from "framer-motion";
 import { useSidebar } from "../../Header/zustand";
 import { Link } from "react-router-dom";
@@ -7,117 +6,11 @@ import { magic_wand, techPerson } from "../../../assets/image";
 import CountUp from "react-countup";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
-
   return (
-    <>
-      <main
-        className={`${
-          isSidebarOpen ? "-z-50" : "z-0"
-        } grid  md:grid-cols-2 grid-cols-1 items-center  justify-center md:justify-between gap-14 lg:px-40 md:px-10 px-5 md:py-10 py-4`}
-      >
-        {/* <motion.div
-          initial={{ x: "-100vh", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: "linear",
-            delay: 0.2,
-          }}
-          className={`font-Manrope text-5xl md:text-5xl lg:text-[75px] font-medium ${
-            isSidebarOpen ? "-z-50" : "z-0"
-          }`}
-        >
-          <p className="flex items-center ">
-            Accelerating{" "}
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-10 lg:w-24 lg:h-24 h-10 text-red-600 mt-2 animation-pulse"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </span>{" "}
-          </p>
-          <div className="flex flex-wrap items-center gap-1 ">
-            <span>Mission</span>
-            <span className="text-[#050757] ">&#10040;</span>
-            <span>Success</span>
-          </div>
-          <div className="flex flex-col gap-3">
-            <div className="flex gap-3.5">
-              <Link
-                to="/solutions"
-                className="bg-black hover:bg-violet-700 text-white font-Manrope w-52  p-3 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
-              >
-                {" "}
-                Explore Solutions{" "}
-                <img
-                  src={magic_wand}
-                  className="w-6 h-6 group-hover:scale-125 "
-                  alt=""
-                />
-              </Link>
-              <Link
-                to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
-                target="_blank"
-                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl mt-6 md:mt-10  text-lg  gap-2 group transition-all ease-in-out duration-150"
-              >
-                {" "}
-                Request Demo 🤯
-              </Link>
-            </div>
-            <div className="flex gap-3">
-              <Link
-                to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
-                target="_blank"
-                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl   text-lg  group transition-all ease-in-out duration-150"
-              >
-                {" "}
-                Assess my AI Readiness 📋
-              </Link>
-              <Link
-                to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
-                target="_blank"
-                className="bg-black hover:bg-violet-700 text-white font-Manrope  p-3 rounded-2xl  text-lg   group transition-all ease-in-out duration-150"
-              >
-                {" "}
-                Questions❓
-              </Link>
-            </div>
-          </div>
-        </motion.div> */}
-
-        {/* <motion.figure
-          initial={{ x: "100vh", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: "linear",
-            delay: 0.2,
-          }}
-          className=" order-last md:order-none flex md:flex-row flex-col gap-2 items-center justify-center md:justify-end -z-50"
-        >
-          <img
-            className="base-image-1 object-cover rounded-tr-[50px] rounded-bl-[50px]"
-            src={techPerson}
-            loading="lazy"
-          />
-          <img
-            className="base-image object-cover rounded-tl-[50px] rounded-br-[50px]"
-            src={aiImage}
-            loading="lazy"
-            alt=""
-          />
-        </motion.figure> */}
-
+    <main className="flex flex-col lg:gap-14 gap-5 lg:px-40 md:px-10 px-5 md:py-10">
+      {/* section One */}
+      <section className=" flex xl:flex-row flex-col xl:justify-between xl:items-center md:items-center items-center justify-center gap-5 xl:gap-0 mt-10 md:mt-0">
+        {/* div one */}
         <motion.div
           initial={{ x: "-100vh", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -127,10 +20,10 @@ const Hero = () => {
             delay: 0.2,
           }}
           className={`${
-            isSidebarOpen ? "-z-50" : ""
-          } flex flex-col justify-center items-center md:justify-start md:items-start gap-5  lg:-mt-2.5 mt-5`}
+            isSidebarOpen ? "-z-50" : "z-0"
+          } flex flex-col lg:justify-center lg:items-start justify-center items-center lg:gap-5 gap-3  xl:w-1/2 `}
         >
-          <p className="xl:text-4xl md:text-xl  text-3xl text-center md:text-start font-Manrope md:font-semibold font-bold  ">
+          <p className="lg:text-4xl md:text-xl  text-3xl text-center md:text-start font-Manrope md:font-semibold font-bold  ">
             AI, IT and Management Consulting to:{" "}
           </p>{" "}
           <ul className="lg:text-2xl md:text-start text-center text-lg font-semibold leading-10 font-Manrope list-inside lg:space-y-5 space-y-3 ">
@@ -154,7 +47,33 @@ const Hero = () => {
               alt=""
             />
           </Link>
+          <Link
+            to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
+            target="_blank"
+            className={`lg:hidden bg-black text-white hover:bg-violet-700  font-Manrope p-3  rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
+          >
+            {" "}
+            Request Demo 🤯
+          </Link>
+          <Link
+            to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
+            target="_blank"
+            className={`lg:hidden bg-black text-white hover:bg-violet-700  font-Manrope p-3  rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
+          >
+            {" "}
+            Assess my AI Readiness 📋
+          </Link>
+          <Link
+            to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
+            target="_blank"
+            className={`lg:hidden bg-black text-white hover:bg-violet-700  font-Manrope p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
+          >
+            {" "}
+            Questions❓
+          </Link>
         </motion.div>
+
+        {/* div two*/}
 
         <motion.div
           initial={{ x: "100vh", opacity: 0 }}
@@ -165,20 +84,24 @@ const Hero = () => {
             delay: 0.2,
           }}
           className={`${
-            isSidebarOpen ? "-z-50" : ""
-          } flex  relative  justify-center items-center md:justify-end md:items-end  -my-24 lg:my-0`}
+            isSidebarOpen ? "-z-50" : "z-0"
+          } flex lg:justify-end lg:items-end justify-center items-center xl:w-1/2 w-full   `}
         >
           <iframe
             src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
-            width="700"
             height="420"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
-            className={`${isSidebarOpen ? "-z-50" : "z-0"} w-full  lg:pl-10`}
+            className={`${
+              isSidebarOpen ? "-z-50" : "z-0"
+            } xl:w-fit w-full aspect-video `}
           ></iframe>
         </motion.div>
+      </section>
 
+      {/* section two */}
+      <section>
         <div className="flex flex-col md:flex-row text-center justify-center items-center px-5 lg:col-span-2 gap-9 md:gap-0 ">
           <Count
             number="150"
@@ -205,10 +128,9 @@ const Hero = () => {
             label="Gen-AI Engineers & Developers"
           />
         </div>
-      </main>
-      {/* //number list */}
-
-      <section className=" lg:px-40 md:px-10 px-5 md:py-10 py-4 ">
+      </section>
+      {/* section three */}
+      <section>
         <div className="w-full flex flex-wrap justify-center items-center gap-10 md:gap-0 lg:gap-0 md:justify-between">
           <div className="md:w-1/2 flex flex-wrap  gap-2 justify-center md:justify-start">
             <a href={`mailto:info@turbofederal.com`} className="hero-btn">
@@ -225,7 +147,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };
 

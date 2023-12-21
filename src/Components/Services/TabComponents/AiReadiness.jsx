@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const AiReadiness = () => {
   return (
     <div>
-      <div className="w-full   p-3  flex  flex-col gap-5 items-center md:items-start ">
+      <div className="w-full    flex  flex-col gap-5 items-center md:items-start ">
         <div className="flex flex-col  gap-3 items-start">
           <p className="font-Manrope text-5xl font-bold text-center md:text-left">
             {aiReadinessData.title}
@@ -18,7 +18,7 @@ const AiReadiness = () => {
         <Link
           to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
           target="_blank"
-          className="bg-black hover:bg-violet-700 text-white font-Manrope text-center p-3 rounded-2xl mt-6 md:mt-10  text-lg   transition-all ease-in-out duration-150"
+          className="bg-black hover:bg-violet-700 text-white font-Manrope text-center p-3 rounded-2xl my-6  lg:my-3  text-lg   transition-all ease-in-out duration-150"
         >
           {" "}
           Assess my AI Readiness 📋
