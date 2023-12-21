@@ -15,32 +15,6 @@ const Hero = () => {
           isSidebarOpen ? "-z-50" : "z-0"
         } grid  md:grid-cols-2 grid-cols-1 items-center  justify-center md:justify-between gap-14 lg:px-40 md:px-10 px-5 md:py-10 py-4`}
       >
-        <div className="flex flex-col md:flex-row text-center justify-center items-center px-5 lg:col-span-2 gap-9 md:gap-0 ">
-          <Count
-            number="130"
-            duration="5"
-            sign="+"
-            label="Gen-AI project integrations"
-          />
-          <Count
-            number="200"
-            duration="7"
-            sign="k+"
-            label="Gen-AI user prompts processed"
-          />
-          <Count
-            number="20"
-            duration="5"
-            sign="+"
-            label="Gen-AI Engineers & Developers"
-          />
-          <Count
-            number="2"
-            duration="5"
-            sign="M+"
-            label="Records Prcessed by AI"
-          />
-        </div>
         {/* <motion.div
           initial={{ x: "-100vh", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -154,11 +128,23 @@ const Hero = () => {
           }}
           className={`${
             isSidebarOpen ? "-z-50" : ""
-          } flex flex-col justify-center items-center md:justify-start md:items-start gap-5   `}
+          } flex flex-col justify-center items-center md:justify-start md:items-start gap-5  lg:-mt-2.5 mt-5`}
         >
+          <p className="xl:text-4xl md:text-xl  text-3xl text-center md:text-start font-Manrope md:font-semibold font-bold  ">
+            AI, IT and Management Consulting to:{" "}
+          </p>{" "}
+          <ul className="lg:text-2xl md:text-start text-center text-lg font-semibold leading-10 font-Manrope list-inside lg:space-y-5 space-y-3 ">
+            <li>
+              🚀 Increase Employee Productivity by{" "}
+              <span className="text-red-600 font-semibold">10x</span>
+            </li>
+            <li>💰 Lower Costs</li>
+            <li>🎯 Accelerate Mission Objectives</li>
+            <li>💡 Extract Knowledge & Key Insights</li>
+          </ul>
           <Link
             to="/solutions"
-            className="bg-black hover:bg-violet-700 text-white font-Manrope w-52  p-3 lg:my-5 my-3 rounded-2xl mt-6 md:mt-10  text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
+            className="bg-black hover:bg-violet-700 text-white font-Manrope w-52  p-3 my-3 rounded-2xl   text-lg flex justify-center items-center gap-2 group transition-all ease-in-out duration-150"
           >
             {" "}
             Explore Solutions{" "}
@@ -168,20 +154,6 @@ const Hero = () => {
               alt=""
             />
           </Link>
-          <p className=" font-Manrope font-bold flex flex-col">
-            <span className="lg:text-5xl text-3xl text-center ">
-              AI, IT and Management Consulting to :{" "}
-            </span>{" "}
-          </p>
-          <ul className="lg:text-2xl text-lg font-semibold leading-10 font-Manrope list-inside lg:space-y-5 space-y-3 ">
-            <li>
-              🚀 Increase Employee Productivity by{" "}
-              <span className="text-red-600 font-semibold">10x</span>
-            </li>
-            <li>💰 Lower Costs</li>
-            <li>🎯 Accelerate Mission Objectives</li>
-            <li>💡 Extract Knowledge & Key Insights</li>
-          </ul>
         </motion.div>
 
         <motion.div
@@ -194,18 +166,45 @@ const Hero = () => {
           }}
           className={`${
             isSidebarOpen ? "-z-50" : ""
-          } flex relative justify-center items-center md:justify-end md:items-end  `}
+          } flex  relative  justify-center items-center md:justify-end md:items-end  -my-24 lg:my-0`}
         >
           <iframe
             src="https://player.vimeo.com/video/876921474?h=d5916c4221&color=ff9933&title=0&byline=0&portrait=0"
             width="700"
-            height="320"
+            height="420"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
-            className={`${isSidebarOpen ? "-z-50" : "z-0"} `}
+            className={`${isSidebarOpen ? "-z-50" : "z-0"} w-full  lg:pl-10`}
           ></iframe>
         </motion.div>
+
+        <div className="flex flex-col md:flex-row text-center justify-center items-center px-5 lg:col-span-2 gap-9 md:gap-0 ">
+          <Count
+            number="150"
+            duration="5"
+            sign="+"
+            label="Gen-AI project integrations"
+          />
+          <Count
+            number="200"
+            duration="7"
+            sign="k+"
+            label="User prompts processed"
+          />
+          <Count
+            number="2"
+            duration="5"
+            sign="M+"
+            label="Records Prcessed by AI"
+          />
+          <Count
+            number="20"
+            duration="5"
+            sign="+"
+            label="Gen-AI Engineers & Developers"
+          />
+        </div>
       </main>
       {/* //number list */}
 
@@ -242,7 +241,7 @@ const Count = ({ ...props }) => {
         <CountUp start={0} end={props?.number} duration={props?.duration} />
         {props.sign}
       </p>
-      <p className="text-2xl lg:text-4xl font-semibold text-gray-800 font-Manrope capitalize">
+      <p className="text-xl lg:text-2xl font-normal text-gray-800 font-Manrope capitalize">
         {props.label}
       </p>
     </div>

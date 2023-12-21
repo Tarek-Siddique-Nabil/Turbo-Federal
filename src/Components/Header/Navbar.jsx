@@ -63,7 +63,11 @@ const Navbar = () => {
           <Link
             to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
             target="_blank"
-            className="bg-black hover:bg-violet-700 text-white font-Manrope p-1 lg:p-3 rounded-2xl  text-lg  group transition-all ease-in-out duration-150"
+            className={`${
+              progressStyle?.height > "1%"
+                ? "bg-black text-white"
+                : "bg-white text-black  border-b-2 border-blue-500"
+            } hover:bg-violet-700  font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
           >
             {" "}
             Request Demo 🤯
@@ -72,7 +76,11 @@ const Navbar = () => {
           <Link
             to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
             target="_blank"
-            className="bg-black hover:bg-violet-700 text-white font-Manrope p-1 lg:p-3 rounded-2xl   text-lg group transition-all ease-in-out duration-150"
+            className={`${
+              progressStyle?.height > "1%"
+                ? "bg-black text-white"
+                : "bg-white text-black  border-b-2 border-blue-500"
+            } hover:bg-violet-700  font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
           >
             {" "}
             Assess my AI Readiness 📋
@@ -80,7 +88,11 @@ const Navbar = () => {
           <Link
             to="https://forms.gle/rcDn4QnfQ8ap5ErX9"
             target="_blank"
-            className="bg-black hover:bg-violet-700 text-white font-Manrope p-1 lg:p-3 rounded-2xl   text-lg  group transition-all ease-in-out duration-150"
+            className={`${
+              progressStyle?.height > "1%"
+                ? "bg-black text-white"
+                : "bg-white text-black  border-b-2 border-blue-500"
+            } hover:bg-violet-700  font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
           >
             {" "}
             Questions❓
