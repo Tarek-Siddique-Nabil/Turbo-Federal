@@ -62,7 +62,7 @@ const Services = () => {
         isSidebarOpen ? "-z-50 opa" : "z-10"
       }  lg:px-40 md:px-10 px-5 md:pt-16  py-4 flex flex-col justify-center  gap-5`}
     >
-      <motion.header className=" flex flex-row overflow-x-auto gap-5 mt-5  ">
+      <motion.header className=" flex flex-row overflow-x-auto overflow-y-hidden gap-5 mt-5  ">
         {buttonsText.map((button, index) => (
           <motion.button
             initial={{ x: -70, opacity: 0 }}

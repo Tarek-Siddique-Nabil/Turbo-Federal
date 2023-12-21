@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const AiReadiness = () => {
   return (
     <div>
-      <div className="w-full    flex  flex-col gap-5 items-center md:items-start ">
-        <div className="flex flex-col  gap-3 items-start">
+      <div className="w-full    flex  flex-col gap-5 items-center md:items-start   ">
+        <div className="flex flex-col  gap-7 items-start mt-7">
           <p className="font-Manrope text-5xl font-bold text-center md:text-left">
             {aiReadinessData.title}
           </p>

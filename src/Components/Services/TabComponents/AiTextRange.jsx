@@ -6,8 +6,8 @@ const AiTextRange = () => {
   return (
     <div>
       <div>
-        <div className="w-full    flex  flex-col  gap-5 items-center md:items-start ">
-          <div className="flex flex-col  gap-3 items-start ">
+        <div className="w-full    flex  flex-col  gap-5 items-center md:items-start  ">
+          <div className="flex flex-col  gap-7 items-start mt-7 ">
             <p className="font-Manrope text-5xl font-bold md:text-left text-center">
               {aiTextRangeData.pageTitle}
             </p>

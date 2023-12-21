@@ -8,7 +8,7 @@ const AiServices = () => {
     <section className="flex flex-wrap justify-center md:justify-between  ">
       <div className="w-full md:w-1/2    flex  flex-col  items-start  ">
         <div className="flex  items-center gap-3 ">
-          <p className="font-Manrope text-5xl font-bold text-center md:text-left">
+          <p className="font-Manrope text-5xl font-bold text-center md:text-left ">
             {aiServicesData.title}
           </p>
           <AiIcon />

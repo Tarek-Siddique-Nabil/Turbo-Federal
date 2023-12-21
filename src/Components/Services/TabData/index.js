@@ -72,7 +72,7 @@ export const aiServicesData = {
 export const aiReadinessData = {
   title: "Generative AI Readiness Assessment  🤖🔍",
   subTitile:
-    "Turbo Federal offers a comprehensive Generative AI Readiness Assessments designed to evaluate your organization's needs and readiness for implementing generative AI solutions such as chatGPT, AI copilots, and assistants.",
+    "Turbo Federal offers a comprehensive Generative AI Readiness Assessment designed to evaluate your organization's needs and readiness for implementing generative AI solutions such as chatGPT, AI copilots, and assistants.",
   services: [
     {
       title: "Needs Assessment 📋",
