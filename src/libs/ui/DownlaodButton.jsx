@@ -5,8 +5,7 @@ const DownlaodButton = () => {
     const path = "/public/Turbo Federal Capabilities.pdf";
     const link = document.createElement("a");
     link.download = "Turbo Federal Capabilities.pdf";
-    link.href = "https://turbofederal.com";
-    +path;
+    link.href = path;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
