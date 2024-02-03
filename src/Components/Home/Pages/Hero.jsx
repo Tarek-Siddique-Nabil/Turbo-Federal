@@ -4,6 +4,7 @@ import { useSidebar } from "../../Header/zustand";
 import { Link } from "react-router-dom";
 import { magic_wand, techPerson } from "../../../assets/image";
 import CountUp from "react-countup";
+import DownlaodButton from "../../../libs/ui/DownlaodButton";
 const Hero = () => {
   const { isSidebarOpen } = useSidebar();
   return (
@@ -136,6 +137,7 @@ const Hero = () => {
             <a href={`mailto:info@turbofederal.com`} className="hero-btn">
               Contact Us
             </a>
+            <DownlaodButton />
           </div>
 
           <div className="md:w-1/2 -z-50">

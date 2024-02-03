@@ -9,6 +9,7 @@ import ItServices from "../TabComponents/ItServices";
 import AiServices from "../TabComponents/AiServices";
 import AiReadiness from "../TabComponents/AiReadiness";
 import AiTextRange from "../TabComponents/AiTextRange";
+import DownlaodButton from "../../../libs/ui/DownlaodButton";
 
 const Services = () => {
   const [selectedButton, setSelectedButton] = useState(0);
@@ -89,6 +90,7 @@ const Services = () => {
             {button.text}
           </motion.button>
         ))}
+        <DownlaodButton />
       </motion.header>
       {tabContent}
     </motion.section>

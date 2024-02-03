@@ -11,6 +11,7 @@ import TabTwo from "./Tab/TabTwo";
 import TabThree from "./Tab/TabThree";
 import TabFour from "./Tab/TabFour";
 import TabFive from "./Tab/TabFive";
+import DownlaodButton from "../../libs/ui/DownlaodButton";
 const Solutions = () => {
   const [selectedButton, setSelecetedButton] = useState(0);
   const { isSidebarOpen } = useSidebar();
@@ -153,6 +154,7 @@ const Solutions = () => {
             {button.text}
           </motion.button>
         ))}
+        <DownlaodButton />
       </motion.header>
 
       {/* tab content */}
