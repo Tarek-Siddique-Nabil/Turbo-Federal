@@ -2,7 +2,8 @@ import React from "react";
 
 const DownlaodButton = () => {
   const hnadleDownload = () => {
-    const path = "/public/Turbo Federal Capabilities.pdf";
+    const path =
+      "https://utfs.io/f/29a5caa4-066f-435a-a511-78b0cc4debd7-5bo0at.pdf";
     const link = document.createElement("a");
     link.download = "Turbo Federal Capabilities.pdf";
     link.href = path;
