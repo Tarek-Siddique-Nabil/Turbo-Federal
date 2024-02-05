@@ -1,6 +1,8 @@
 import React from "react";
+import { useSidebar } from "../../Components/Header/zustand";
 
 const DownlaodButton = () => {
+  const { isSidebarOpen } = useSidebar();
   const hnadleDownload = () => {
     const path =
       "https://utfs.io/f/29a5caa4-066f-435a-a511-78b0cc4debd7-5bo0at.pdf";
@@ -15,7 +17,9 @@ const DownlaodButton = () => {
     <button
       onClick={hnadleDownload}
       href="#_"
-      class="relative inline-flex items-center justify-center w-auto  p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-2xl  group -z-50"
+      class={`relative inline-flex items-center justify-center w-auto  p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-2xl  group ${
+        isSidebarOpen ? "-z-50" : "z-0"
+      }`}
     >
       <span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
       <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
