@@ -90,8 +90,14 @@ const Services = () => {
             {button.text}
           </motion.button>
         ))}
-        <DownlaodButton />
+        <div className="md:flex justify-center items-center my-2 hidden">
+          <DownlaodButton />
+        </div>
       </motion.header>
+      <div className="flex justify-center items-center my-2 md:hidden">
+        <DownlaodButton />
+      </div>
+
       {tabContent}
     </motion.section>
   );
