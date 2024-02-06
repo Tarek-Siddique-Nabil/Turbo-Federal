@@ -3,20 +3,11 @@ import { useSidebar } from "../../Components/Header/zustand";
 
 const DownlaodButton = () => {
   const { isSidebarOpen } = useSidebar();
-  const hnadleDownload = () => {
-    const path =
-      "https://utfs.io/f/29a5caa4-066f-435a-a511-78b0cc4debd7-5bo0at.pdf";
-    const link = document.createElement("a");
-    link.download = "Turbo Federal Capabilities.pdf";
-    link.href = path;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
   return (
-    <button
-      onClick={hnadleDownload}
-      href="#_"
+    <a
+      download={"Turbo Federal Capabilities.pdf"}
+      href={"/Turbo Federal Capabilities.pdf"}
       class={`relative inline-flex items-center justify-center w-auto  p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-2xl  group ${
         isSidebarOpen ? "-z-50" : "z-0"
       }`}
@@ -29,7 +20,7 @@ const DownlaodButton = () => {
       <span class="relative text-white font-semibold">
         Download Capabilities
       </span>
-    </button>
+    </a>
   );
 };
 
