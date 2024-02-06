@@ -67,7 +67,7 @@ const Navbar = () => {
               progressStyle?.height > "1%"
                 ? "bg-black text-white"
                 : "bg-white text-black  border-b-2 border-blue-500"
-            } hover:bg-violet-700  font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
+            } hover:bg-violet-700 hover:text-white font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
           >
             {" "}
             Request Demo 🤯
@@ -80,7 +80,7 @@ const Navbar = () => {
               progressStyle?.height > "1%"
                 ? "bg-black text-white"
                 : "bg-white text-black  border-b-2 border-blue-500"
-            } hover:bg-violet-700  font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
+            } hover:bg-violet-700 hover:text-white font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
           >
             {" "}
             Assess my AI Readiness 📋
@@ -92,7 +92,7 @@ const Navbar = () => {
               progressStyle?.height > "1%"
                 ? "bg-black text-white"
                 : "bg-white text-black  border-b-2 border-blue-500"
-            } hover:bg-violet-700  font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
+            } hover:bg-violet-700  hover:text-white font-Manrope p-1 lg:p-3 rounded-2xl  text-lg   transition-all ease-in-out duration-150`}
           >
             {" "}
             Questions❓
